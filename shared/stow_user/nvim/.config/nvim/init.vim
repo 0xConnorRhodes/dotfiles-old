@@ -84,6 +84,10 @@ set nospell
 set spelllang=en
 set spellfile=/home/connor/sync/config/en.utf-8.add
 
+" create backup files in cache directory
+set backupdir=~/.cache/nvim,. 
+set dir=~/.cache/nvim//,.
+
 
 " \w toggles wrap
 "noremap <silent> <Leader>w :call ToggleWrap()<CR>
