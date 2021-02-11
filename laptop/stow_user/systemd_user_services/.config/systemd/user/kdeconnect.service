@@ -1,0 +1,13 @@
+[Unit]
+Description=KDE Connect
+After=graphical.target
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/lib/kdeconnectd
+ExecStop=/usr/bin/kquitapp5 kdeconnectd
+Restart=on-failure
+BusName=org.kde.kdeconnect
+
+[Install]
+WantedBy=default.target

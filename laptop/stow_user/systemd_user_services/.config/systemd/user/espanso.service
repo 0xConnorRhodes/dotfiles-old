@@ -1,0 +1,12 @@
+[Unit]
+Description=espanso daemon
+
+[Service]
+Environment="DISPLAY=:0"
+ExecStart=/usr/bin/espanso daemon
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+

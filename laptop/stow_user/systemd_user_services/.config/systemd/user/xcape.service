@@ -1,0 +1,14 @@
+[Unit]
+Description=Xcape Daemon
+After=graphical.target
+
+[Service]
+Type=forking
+Environment=DISPLAY=:0
+#ExecStart=/usr/bin/xcape -e 'Control_L=Escape;Hyper_L=Tab;Hyper_R=backslash;Control_R=semicolon'
+ExecStart=/usr/bin/xcape -e 'Control_L=Escape;Hyper_L=Tab;Hyper_R=bracketright;Control_R=semicolon'
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target
