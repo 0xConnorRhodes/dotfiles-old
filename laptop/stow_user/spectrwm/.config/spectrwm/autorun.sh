@@ -1,6 +1,5 @@
 #!/bin/sh
 
-xset b off &
 xset r rate 300 45 &
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
 xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
@@ -16,7 +15,8 @@ emacs --daemon &
 urxvtd &
 mpd &
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
-sleep 6
+betterlockscreen --lock
+xdotool key meta+shift+r #this refreshes spectrwm which is necessary for the top bar to scale properly
 ~/bin/notifications-on.sh
 ~/bin/refbar
 #systemctl --user restart xcape #this used to be necessary, but an update made it unneccessary

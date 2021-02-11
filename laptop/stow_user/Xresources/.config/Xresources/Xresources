@@ -1,0 +1,101 @@
+Xft.dpi: 125
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+*foreground: #eaeaea
+*foreground_bold: #a8a19f
+*cursor: #a8a19f
+!!*backgroundURxvt.secondaryScreen:	[70]#1b1918
+!!*background: rgba(0, 0, 0. .7)
+
+!! black
+!*color0: #000000
+!*color8: #000000
+*color0: #000000
+*color8: #666666
+!! red
+*color1: #d54e53
+*color9: #d54e53
+!! green (used to be 5ab738)
+*color2: #b9ca4a
+*color10: #b9ca4a
+!! yellow
+*color3: #e6c547
+*color11: #e6c547
+!! blue
+*color4: #6fbdff
+*color12: #6fbdff
+!! magenta
+*color5: #c397d8
+*color13: #c397d8
+!! cyan
+*color6: #54ced6
+*color14: #54ced6
+!! white
+*color7: #eaeaea
+*color15: #eaeaea
+
+
+
+
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+Urxvt*buffered: false
+URxvt.intensityStyles: false
+URxvt.letterSpace: 0
+URxvt.font: xft:HackNerdFontMono:size=16, \
+            xft:RobotoMono Nerd Font:size=13, \
+            xft:Noto Sans Mono:size=13, \
+	    xft:UbuntuMono Nerd Font:size=13, \
+            xft:Monospace:style=Medium:size=13
+
+URxvt.saveLines: 2000
+((
+URxvt.background:	#000000
+URxvt.intensityStyles:	false
+URxvt.scrollBar:	false
+URxvt.cursorColor:	white
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+URxvt.cursorBlink: False
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+!URxvt.borderLess: true
+URxvt.keysym.C-Delete:       \033[33~
+!fix control arrow keys
+!perhaps in the future make the kp_arrows do nothing so no obs shortcut clashing
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+URxvt.keysym.Control-KP_Up:     \033[1;5A
+URxvt.keysym.Control-KP_Down:   \033[1;5B
+URxvt.keysym.Control-KP_Left:   \033[1;5D
+URxvt.keysym.Control-KP_Right:  \033[1;5C
+
+!! Extensions
+URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select
+URxvt.colorUL:		#6fbdff
+!! url-select:
+URxvt.keysym.M-u:	perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape:	perl:keyboard-select;activate
+!! resize-font
+URxvt.resize-font.smaller:	C-minus
+URxvt.resize-font.bigger:	C-plus
+!! matcher
+URxvt.url-launcher:	/usr/bin/xdg-open
+URxvt.matcher.button:	1
