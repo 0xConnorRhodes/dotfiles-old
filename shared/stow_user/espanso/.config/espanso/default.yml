@@ -1,0 +1,76 @@
+# espanso configuration file
+
+toggle_key: META # sets it to super key on my keymap
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+  - trigger: ":e"
+    replace: "espanso is running"
+    word: true
+  - trigger: ";ttl"
+    replace: "#+TITLE:"
+    word: true
+  - trigger: ";ssh"
+    replace: "ssh connor@192.168.18.42"
+  - trigger: "c2"
+    replace: "192.168.18.42"
+    word: true
+  - trigger: "{{"
+    replace: "- [ ] "
+  - trigger: "td"
+    replace: "TODO"
+    word: true
+  - trigger: "pca"
+    replace: "I hope our paths cross again in the future."
+    word: true
+  - trigger: "cr"
+    replace: "Connor Rhodes"
+    word: true
+  - trigger: ";gtm"
+    replace: "It was great to meet you at "
+  - trigger: "sfg"
+    replace: "Southlake Focus Group"
+  - trigger: "yrss"
+    replace: "https://www.youtube.com/feeds/videos.xml?channel_id="
+  - trigger: ";lt"
+    replace: "#+LaTeX: "
+  - trigger: "-yt360"
+    replace: "-f 'bestvideo[height<=?360][fps<=?30][vcodec!=?vp9][ext=mp4]+bestaudio/best'"
+  - trigger: ";ersync"
+    replace: "rsync -rv -zz -P --rsh='ssh -p45385' connor@192.168.18.42:/mnt/pool/"
+    word: false
+  - trigger: "49d"
+    replace: "$(date +'%Y%m%d_%H%M%S')"
+    word: false
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+  - trigger: "mdy"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date +%Y-%m-%d" #kills xcape to avoid doubles. the xcape.service will restart is
+          trim: true
+
+  - trigger: ";tim"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date +%H:%M" #kills xcape to avoid doubles. the xcape.service will restart is
+          trim: true
