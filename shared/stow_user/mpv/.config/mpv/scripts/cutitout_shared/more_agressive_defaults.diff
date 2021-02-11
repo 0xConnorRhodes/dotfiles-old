@@ -1,0 +1,59 @@
+@@ 16,21 16,21 @@
+     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ """
+ 
+-# Margin before and after a clip (default: 200ms)
+-clip_margin = 0.2
++# Margin before and after a clip (in seconds)
++clip_margin = 0.4
+ assert clip_margin >= 0.0
+ 
+ # How loud should noise be to be considered a sound?
+ audio_treshold = 0.02
+ assert audio_treshold > 0.0 and audio_treshold <= 1.0
+ 
+-# Minimum clip length, in seconds
++# Minimum clip length (in seconds)
+ # Sounds shorter than that will be considered noise and cut.
+-min_clip_length = 0.3
++min_clip_length = 0.2
+ assert min_clip_length > 0.0
+ 
+-# Minimum distance before we bother skipping
+-min_skip_length = 3.0
++# Minimum silence length to skip (in seconds)
++min_skip_length = 5.0
+ assert min_skip_length > 2 * clip_margin
+ 
+ 
+
+
+@@ 86,19 86,17 @@ def print_skips(stream, sample_rate):
+ 
+     # Turn clips into skips
+     skips = []
+-    last_skip = 0
++    last_skip = 0.0
++    index_to_time = lambda index: index / 100
+     for clip in clips:
+-        if clip[0] - last_skip < min_skip_length * 100:
+-            last_skip = clip[1]
+-        else:
+-            skips.append(
+-                (last_skip + (clip_margin * 100), clip[0] - (clip_margin * 100))
+-            )
+-            last_skip = clip[1]
++        clip_start = index_to_time(clip[0])
++        clip_end = index_to_time(clip[1])
+ 
+-    # Fix time format (1 index = 10ms)
+-    index_to_time = lambda index: index / 100
+-    skips = [(index_to_time(skip[0]), index_to_time(skip[1])) for skip in skips]
++        if clip_start - last_skip < min_skip_length:
++            last_skip = clip_end + clip_margin
++        else:
++            skips.append((last_skip + clip_margin, clip_start - clip_margin))
++            last_skip = clip_end + clip_margin
+ 
+     skips = ["{" + f"{v[0]},{v[1]}" + "}" for v in skips]
+     print("return {" + ",".join(skips) + "}")
