@@ -54,9 +54,7 @@ set undofile "undo history across close and open in a file
 :set nu rnu
 
 " autocmd
-autocmd BufRead,BufNewFile ~/sync/configs/sncli_tmp_files/* set syntax=markdown " set syntax based on directory
 autocmd BufWritePost /home/connor/.config/espanso/default.yml !/home/connor/bin/res
-autocmd BufWritePost /home/connor/sync/bin/init-keyboard.sh !/home/connor/bin/init-keyboard.sh
 autocmd BufWritePost /home/connor/.config/spectrwm/baraction.sh !/home/connor/bin/refbar
 autocmd BufWritePost /home/connor/.Xresources !xrdb ~/.Xresources
 autocmd VimLeave /home/connor/.local/config_sync/clip.md !xclip -r -selection clipboard -i /home/connor/.local/config_sync/clip.md ; ~/bin/clip3.sh &
