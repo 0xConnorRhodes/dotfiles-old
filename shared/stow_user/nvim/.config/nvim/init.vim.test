@@ -1,0 +1,27 @@
+" This line makes pacman-installed global Arch Linux vim packages work.
+source /usr/share/nvim/archlinux.vim
+
+call plug#begin('~/local/share/nvim/plugged')
+" plugins go here in the form of: Plug 'vim-airline/vim-airline'
+" so it's Plug 'githubauthor/nameofgithub'
+" or any git url such as Plug
+" 'https://github.com/junegunn/vim-github-dashboard.git
+" then save the file, reload vim, and run :PlugInstall
+" :PlugUpgrade to upgrame vimplug
+" :PlugUpdate updates all installed plugins
+" uninstall by removing the line, save and quit, and then :PlugClean
+" - [ ] see github for how to load plugins only on particular files or when
+"   particular conditions are met
+Plug '907th/vim-auto-save'
+
+call plug#end()
+
+" startup options
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_silent = 1  " do not display the auto-save notification
+" let g:auto_save_events = ["InsertLeave", "TextChanged"] " update when you enter and leave insert mode
+let g:auto_save_events = ["CursorHold", "CursorHoldI"] " update according to the updatetime interval
+set updatetime=2000 " in milliseconds
+
+" autocmd
+autocmd BufRead,BufNewFile ~/Gdrive/configs/sncli_tmp_files/* set syntax=markdown " set syntax based on directory
