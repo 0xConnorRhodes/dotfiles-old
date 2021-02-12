@@ -48,10 +48,10 @@ Urxvt*buffered: false
 URxvt.intensityStyles: false
 URxvt.letterSpace: 0
 URxvt.font: xft:HackNerdFontMono:size=16, \
-            xft:RobotoMono Nerd Font:size=13, \
-            xft:Noto Sans Mono:size=13, \
-	    xft:UbuntuMono Nerd Font:size=13, \
-            xft:Monospace:style=Medium:size=13
+            xft:RobotoMono Nerd Font:size=16, \
+            xft:Noto Sans Mono:size=16, \
+	    xft:UbuntuMono Nerd Font:size=16, \
+            xft:Monospace:style=Medium:size=16
 
 URxvt.saveLines: 2000
 ((

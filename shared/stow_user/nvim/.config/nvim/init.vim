@@ -56,7 +56,7 @@ set undofile "undo history across close and open in a file
 " autocmd
 autocmd BufWritePost /home/connor/.config/espanso/default.yml !/home/connor/bin/res
 autocmd BufWritePost /home/connor/.config/spectrwm/baraction.sh !/home/connor/bin/refbar
-autocmd BufWritePost /home/connor/.Xresources !xrdb ~/.Xresources
+autocmd BufWritePost /home/connor/.confic/Xresources/Xresources !xrdb ~/.config/Xresources/Xresources
 autocmd VimLeave /home/connor/.local/config_sync/clip.md !xclip -r -selection clipboard -i /home/connor/.local/config_sync/clip.md ; ~/bin/clip3.sh &
 autocmd VimLeave /home/connor/.cache/tesseract-ocr/ocr.txt !xclip -r -selection clipboard -i /home/connor/.cache/tesseract-ocr/ocr.txt ; xclip -r -selection primary -i /home/connor/.cache/tesseract-ocr/ocr.txt
 autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
