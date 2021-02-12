@@ -14,6 +14,7 @@ pcmanfm -d &
 emacs --daemon &
 urxvtd &
 mpd &
+redshift &
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
 betterlockscreen --lock
 xrdb /home/connor/.config/Xresources/Xresources &

@@ -87,6 +87,7 @@ kismet
 kmag
 ksnip
 lf-bin
+libldac
 libreoffice-still
 libtool
 libva-mesa-driver
@@ -236,6 +237,7 @@ xorg-xinput
 xorg-xkill
 xournalpp
 xsel
+xterm
 yad
 yay
 yetris
