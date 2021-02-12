@@ -13,9 +13,12 @@ unclutter --timeout 1 --jitter 5 --ignore-scrolling &
 pcmanfm -d &
 emacs --daemon &
 urxvtd &
-mpd &
 redshift &
+playerctld &
+#mpd &
+#emacs --daemon
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
+#calcurse --daemon &
 betterlockscreen --lock
 xrdb /home/connor/.config/Xresources/Xresources &
 xdotool key meta+shift+r #this refreshes spectrwm which is necessary for the top bar to scale properly
