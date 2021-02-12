@@ -24,5 +24,5 @@ xrdb /home/connor/.config/Xresources/Xresources &
 xdotool key meta+shift+r #this refreshes spectrwm which is necessary for the top bar to scale properly
 ~/bin/notifications-on.sh
 ~/bin/refbar
-xterm -e mplayer -novideo -loop 0 -volume 1 -ao pulse /home/connor/.cache/mplayer/torukia.m4a &
+#xterm -e mplayer -novideo -loop 0 -volume 1 -ao pulse /home/connor/.cache/mplayer/torukia.m4a &
 #systemctl --user restart xcape #this used to be necessary, but an update made it unneccessary
