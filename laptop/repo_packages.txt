@@ -15,6 +15,7 @@ autorandr
 base
 bat
 betterlockscreen
+bfg
 binutils
 bison
 bluez
@@ -45,6 +46,7 @@ emacs
 engrampa
 espanso-bin
 etcher-bin
+etckeeper
 exfat-utils
 f2fs-tools
 fakeroot

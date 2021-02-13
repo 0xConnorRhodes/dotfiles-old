@@ -1,6 +1,7 @@
 appimagelauncher
 auto-cpufreq
 betterlockscreen
+bfg
 brave-bin
 dashbinsh
 devour
