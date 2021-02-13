@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "enter days in the future: " DAYS
+TEXT=$(date -d "+$DAYS days" "+%Y-%m-%d")
+xdotool key Meta_L+k
+xdotool type "$TEXT"

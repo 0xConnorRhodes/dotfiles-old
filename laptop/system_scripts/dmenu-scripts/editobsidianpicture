@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/connor/dox/notes/zattachments
+ksnip -e "/home/connor/dox/notes/zattachments/$(fzf -m)"

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+url=`xsel -o -b`
+echo $url
+devour mpv $url

@@ -1,0 +1,7 @@
+#!/bin/zsh
+# script adds the chosen path from my fasd history into my foldopen list
+
+source ~/.config/fasd/.fasd-init-zsh
+FOLDER=$(fasd_cd -d | awk '{ print $2 }' | fzf)
+echo $FOLDER >> ~/.config/foldopen/foldopen_dirs.txt
+sed -i '/^$/d' ~/.config/foldopen/foldopen_dirs.txt

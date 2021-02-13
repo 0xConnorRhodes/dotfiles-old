@@ -60,7 +60,7 @@ autocmd BufWritePost /home/connor/.confic/Xresources/Xresources !xrdb ~/.config/
 autocmd VimLeave /home/connor/.local/config_sync/clip.md !xclip -r -selection clipboard -i /home/connor/.local/config_sync/clip.md ; ~/bin/clip3.sh &
 autocmd VimLeave /home/connor/.cache/tesseract-ocr/ocr.txt !xclip -r -selection clipboard -i /home/connor/.cache/tesseract-ocr/ocr.txt ; xclip -r -selection primary -i /home/connor/.cache/tesseract-ocr/ocr.txt
 autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd VimLeave */etc/** !echo $(pass sysadmin/laptop-password) | sudo termite -e /home/connor/.local/dotfiles/laptop/system_scripts/nopath/vim-etckeeper-update.sh
+autocmd VimLeave */etc/** !echo $(pass sysadmin/laptop-password) | sudo termite -e /home/connor/.local/dotfiles/shared/system_scripts/nopath/vim-etckeeper-update.sh
 
 " Use system clipboard
 set clipboard+=unnamedplus

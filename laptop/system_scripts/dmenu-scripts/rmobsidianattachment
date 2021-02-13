@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/connor/dox/notes/zattachments
+trash-put "$(fzf -m)"

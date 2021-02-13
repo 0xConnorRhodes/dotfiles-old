@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /home/connor/dwn
+
+NEWFILE="$(ls -t | head -n1)"
+winname="dragon"
+
+devour dragon-drag-and-drop "$NEWFILE" 2>/dev/null
+
+while true; do
+    read -p "Delete file? $NEWFILE [y/n]: " yn
+    case $yn in
+        [Yy]* ) trash-put "$NEWFILE"; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+# refiles an obsidian note by fzf
+
+# output fzf selections one per line to this file. (this is the only way I could get file quotes for spaces to work with the mv command
+find ~/dox/notes -name '*.md' | fzf -m > ~/.cache/orefile-selection.txt
+
+# prompt for destination folder selection
+FOLDER=$(find /home/connor/dox/notes -type d | fzf)
+
+# from https://stackoverflow.com/questions/19058404/reading-files-line-by-line-in-by-using-for-loop-bash-script
+while read line || [[ $line ]]; do
+  mv -n "$line" "$FOLDER"
+done < ~/.cache/orefile-selection.txt
+
+xdg-open obsidian:///"$FOLDER/$(sed -n 1p ~/.cache/orefile-selection.txt | awk -F/ '{ print $NF }')"
