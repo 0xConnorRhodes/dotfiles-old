@@ -21,6 +21,7 @@ bison
 bluez
 bluez-utils
 bmon
+borg
 brave-bin
 bridge-utils
 broot
@@ -43,6 +44,7 @@ earlyoom
 ebtables
 efibootmgr
 emacs
+emborg
 engrampa
 espanso-bin
 etcher-bin
@@ -72,12 +74,14 @@ gron-bin
 gucharmap
 gutenprint
 guvcview
+gvfs
 highlight
 htop
 iftop
 imwheel
 inetutils
 iotop
+iperf3
 iwd
 jami-daemon
 jami-gnome
@@ -158,6 +162,7 @@ pulseaudio-bluetooth
 pulseaudio-zeroconf
 putty
 pv
+python-llfuse
 qdirstat
 qemu
 rclone

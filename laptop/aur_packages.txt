@@ -6,6 +6,7 @@ brave-bin
 dashbinsh
 devour
 dragon-drag-and-drop
+emborg
 espanso-bin
 etcher-bin
 fontpreview-git
@@ -29,10 +30,14 @@ pauker
 pavumeter
 pistol-git
 postman-bin
+python-braceexpand
 python-casttube
 python-gpsoauth
+python-inform
 python-mechanicalsoup
 python-proboscis
+python-quantiphy
+python-shlib
 python-validictory
 qdirstat
 rclone-browser
