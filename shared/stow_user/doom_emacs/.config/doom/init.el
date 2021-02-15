@@ -1,3 +1,4 @@
+;; Doom Emacs config by Connor Rhodes (connorrhodes.com)
 ;;; init.el -*- lexical-binding: t; -*-
 
 ;; This file controls what Doom modules are enabled and what order they load

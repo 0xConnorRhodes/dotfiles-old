@@ -1,3 +1,4 @@
+;; Doom Emacs config by Connor Rhodes (connorrhodes.com)
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/packages.el
 
