@@ -3,4 +3,5 @@
 # modified by Connor Rhodes (connorrhodes.com)
 # depends on ttf-permanent-marker in the aur
 
-alacritty --config-file /home/connor/.config/alacritty/sticky-note.yml
+
+alacritty --config-file /home/connor/.config/sticky-note/sticky-note.yml -e bash --rcfile /home/connor/.config/sticky-note/.bashrc
