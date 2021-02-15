@@ -1,0 +1,70 @@
+<TaskerData sr="" dvi="1" tv="4.1b1m">
+	<Task sr="task54">
+		<cdate>1340586441681</cdate>
+		<edate>1369445351826</edate>
+		<id>54</id>
+		<nme>getFormattedDate</nme>
+		<pri>10</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="3">
+			<code>129</code>
+			<Str sr="arg0" ve="3">var gsMonthNames = new Array(
+'January',
+'February',
+'March',
+'April',
+'May',
+'June',
+'July',
+'August',
+'September',
+'October',
+'November',
+'December'
+);
+
+var gsDayNames = new Array(
+'Sunday',
+'Monday',
+'Tuesday',
+'Wednesday',
+'Thursday',
+'Friday',
+'Saturday'
+);
+
+var d = new Date(par[0] * 1000);
+var f = par[1];
+
+var formatteddate = f.replace(/(yyyy|yy|mmmm|mmm|mm|dddd|ddd|dd|hh|nn|ss|a\/p)/gi,
+    function($1)
+    {
+        switch ($1)
+        {
+        case 'yyyy': return d.getFullYear();
+        case 'yy':   return ('0' + d.getFullYear()).slice(-2);
+        case 'mmmm': return gsMonthNames[d.getMonth()];
+        case 'mmm':  return gsMonthNames[d.getMonth()].slice(0,3);
+        case 'mm':   return ('0' + (d.getMonth() + 1)).slice(-2);
+        case 'dddd': return gsDayNames[d.getDay()];
+        case 'ddd':  return gsDayNames[d.getDay()].slice(0,3);
+        case 'dd':   return ('0' + d.getDate()).slice(-2);
+        case 'hh':   return ('0' + ((h = d.getHours() % 12) ? h : 12)).slice(-2);
+        case 'HH':   return ('0' + d.getHours()).slice(-2);
+        case 'nn':   return ('0' + d.getMinutes()).slice(-2);
+        case 'ss':   return ('0' + d.getSeconds()).slice(-2);
+        case 'a/p':  return d.getHours() &lt; 12 ? 'a' : 'p';
+        }
+    }
+);</Str>
+			<Str sr="arg1" ve="3">45</Str>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+		<Action sr="act1" ve="3">
+			<code>126</code>
+			<Str sr="arg0" ve="3">%formatteddate</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+	</Task>
+</TaskerData>
