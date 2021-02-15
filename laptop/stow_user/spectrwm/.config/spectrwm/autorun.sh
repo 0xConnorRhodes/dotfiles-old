@@ -16,7 +16,7 @@ urxvtd &
 redshift &
 playerctld &
 #mpd &
-#emacs --daemon
+emacs --daemon
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
 #calcurse --daemon &
 betterlockscreen --lock
