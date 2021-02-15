@@ -8,4 +8,4 @@ The differences between this and the original project are:
 
 Connor Rhodes
 
-connorrhodes.com
+[connorrhodes.com](http://connorrhodes.com)
