@@ -32,6 +32,7 @@ call plug#begin('~/.local/share/nvim/plugged')
             Plug 'vimwiki/vimwiki' " Use Vimwiki
 	    Plug 'dhruvasagar/vim-table-mode' " table plugin closest to org-mode functionality
 	    Plug 'danro/rename.vim'
+	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	"{{{ SYNTAX HIGHLIGHTING }}}
 	    "Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
 
@@ -149,6 +150,7 @@ imap <F19> <ESC>ldei
 " change word comma is already something else, so likely change?
 "nmap , ciw
 nmap Y y$
+nmap <Alt>p o<ESC>p
 
 " plugin settings
 "

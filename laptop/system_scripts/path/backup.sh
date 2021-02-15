@@ -1,6 +1,7 @@
 #!/bin/bash
 pacman -Qqe > /home/connor/.local/dotfiles/laptop/repo_packages.txt
 pacman -Qqm > /home/connor/.local/dotfiles/laptop/aur_packages.txt
+groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
 yay -Syu --noconfirm
 nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
 #~/.emacs.d/bin/doom -y upgrade

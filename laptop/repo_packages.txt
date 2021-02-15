@@ -108,6 +108,7 @@ make
 man-db
 mediainfo
 mesa-vdpau
+miraclecast-git
 mousepad
 mpc
 mpd

@@ -19,6 +19,7 @@ gstreamer0.10-base
 i3lock-color
 ksnip
 lf-bin
+miraclecast-git
 mpv-mpris
 mutt-wizard-git
 nerd-fonts-complete
