@@ -20,8 +20,10 @@ sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
 backintime backup
 rm /tmp/backintime/backup
-# TODO
-#emborg create
+
+export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/restic
+export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-virtualmachines-password | head -n1)
+exec restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
