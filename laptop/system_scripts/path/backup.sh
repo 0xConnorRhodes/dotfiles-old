@@ -2,14 +2,25 @@
 # nightly backup script running a variety of daily maintainance tasks
 # Connor Rhodes (connorrhodes.com)
 
+# updates
 pacman -Qqe > /home/connor/.local/dotfiles/laptop/repo_packages.txt
 pacman -Qqm > /home/connor/.local/dotfiles/laptop/aur_packages.txt
 groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
 yay -Syu --noconfirm
-nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
 ~/.emacs.d/bin/doom -y upgrade
+nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
+
+# backups
+sudo rm /tmp/backintime.lock
+rm /home/connor/.local/share/backintime/worker.lock
 sudo backintime backup
+sudo rm /tmp/backintime.lock
+rm /home/connor/.local/share/backintime/worker.lock
 backintime backup
+rm /tmp/backintime/backup
+#emborg create
+
+# cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
-shutdown -h 03:00
-notify-send "The Computer will shut down at 3am"
+shutdown -h +15
+notify-send -u critical "The Computer will shut down in 15 minutes"
