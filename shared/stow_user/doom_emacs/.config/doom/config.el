@@ -1,5 +1,3 @@
-;; Doom Emacs config by Connor Rhodes (connorrhodes.com)
-
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
@@ -43,8 +41,8 @@
 (setq org-directory "~/dox/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type 'relative)
+;; numbers are disabled. For relative line numbers, set this to `relative'. For absolute, absolute.
+(setq display-line-numbers-type 'absolute)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:

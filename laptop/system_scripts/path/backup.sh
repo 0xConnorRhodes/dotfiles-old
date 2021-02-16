@@ -21,6 +21,7 @@ rm /home/connor/.local/share/backintime/worker.lock
 backintime backup
 rm /tmp/backintime/backup
 
+# backup VMs using restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-virtualmachines-password | head -n1)
 exec restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/

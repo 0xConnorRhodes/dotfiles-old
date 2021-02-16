@@ -51,8 +51,8 @@ set t_Co=256
 set undofile "undo history across close and open in a file
 
 " turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
+":set number relativenumber
+:set number
 
 " autocmd
 autocmd BufWritePost /home/connor/.config/espanso/default.yml !/home/connor/bin/res

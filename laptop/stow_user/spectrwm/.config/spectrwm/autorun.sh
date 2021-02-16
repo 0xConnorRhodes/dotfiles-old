@@ -1,7 +1,9 @@
 #!/bin/sh
 # autorun script for Lenovo ThinkPad e15 by Connor Rhodes (connorrhodes.com)
 
-xset r rate 300 45 &
+#xset r rate 300 45 &
+#xset r rate 155 75 &
+xset r rate 200 50 & # I think this is the perfect one.
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
 xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
 xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0 #disables reverse scrolling on trackpoint while keeping it set on touchpad per /usr/share/X11/xorg.conf.d/40-libinput.conf
