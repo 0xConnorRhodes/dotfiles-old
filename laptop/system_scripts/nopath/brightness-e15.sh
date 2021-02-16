@@ -26,10 +26,13 @@ new_brightness=$(( $max_brightness * $new_brightness_p / 100 ))
 
 # echo the suplied brightness amount, unless the script fails (because the interval is wrong) in that case echo max brightness
 
+# if $1 has a minus, echo down the new brightness unless there's an error, then echo minimum brightness
+# this is necessary because the script will error out if you try to lower the brightness below the minimum supported amount
 if [[ $1 == *'-'* ]]; then
 
   echo $new_brightness > $handler"brightness" || echo 1 > $handler"brightness"
 
+# same as above but for positive brightness
 else
 
   echo $new_brightness > $handler"brightness" || echo 255 > $handler"brightness"

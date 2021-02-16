@@ -1,1 +1,1 @@
-src_dirs = '~/.local/virtual_machines'
+src_dirs = '/home/connor/.local/virtual_machines'
