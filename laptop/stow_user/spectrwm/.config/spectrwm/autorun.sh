@@ -1,4 +1,5 @@
 #!/bin/sh
+# autorun script for Lenovo ThinkPad e15 by Connor Rhodes (connorrhodes.com)
 
 xset r rate 300 45 &
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2

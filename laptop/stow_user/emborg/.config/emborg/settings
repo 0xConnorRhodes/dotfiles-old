@@ -11,7 +11,7 @@ encryption = 'none'
 # basic settings
 notifier = 'notify-send -u normal {prog_name} "{msg}" ; echo $(date) >> /home/connor/EMBORG_FAILED'
 
-remote_ratelimit = 46050                  # bandwidth limit in kbps.
+remote_ratelimit = 20000                  # bandwidth limit in kbps.
 # got bandwidth by testing with iperf3 and cutting in half so I'll always have 1/2 of the network bandwidth for other purposes
 # this will take 3 minutes per gb to back up
 

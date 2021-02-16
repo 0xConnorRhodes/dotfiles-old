@@ -3,8 +3,10 @@
 # Connor Rhodes (connorrhodes.com)
 
 # updates
-pacman -Qqe > /home/connor/.local/dotfiles/laptop/repo_packages.txt
-pacman -Qqm > /home/connor/.local/dotfiles/laptop/aur_packages.txt
+pacman -Qqe > /home/connor/.local/dotfiles_secret/laptop/repo_packages.txt
+pacman -Qqm > /home/connor/.local/dotfiles_secret/laptop/aur_packages.txt
+pip list --user > /home/connor/.local/dotfiles_secret/laptop/pip_user_packages.txt
+pip list > /home/connor/.local/dotfiles_secret/laptop/pip_all_packages.txt
 groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
 yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y upgrade
@@ -18,6 +20,7 @@ sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
 backintime backup
 rm /tmp/backintime/backup
+# TODO
 #emborg create
 
 # cleaning up
