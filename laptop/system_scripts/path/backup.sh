@@ -12,7 +12,7 @@ yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y upgrade
 nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
 
-# backups
+# backup OS and user data
 sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
 sudo backintime backup
@@ -23,7 +23,7 @@ rm /tmp/backintime/backup
 
 # backup VMs using restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/restic
-export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-virtualmachines-password | head -n1)
+export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
 exec restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
 exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
 

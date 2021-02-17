@@ -153,7 +153,7 @@ imap <F19> <ESC>ldei
 "nmap , ciw
 nmap Y y$
 nmap <Alt>p o<ESC>p
-nmap '' ``
+nmap '' ``zz
 
 " plugin settings
 "
