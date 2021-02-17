@@ -19,5 +19,8 @@ stow -R -t /home/connor *
 cd /home/connor/.local/dotfiles/$(hostname)/stow_root
 sudo stow -R -t / *
 
-cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_user
+cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_user/symlinked
 stow -R -t /home/connor *
+
+cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_user/adopted
+stow -R --adopt -t /home/connor *
