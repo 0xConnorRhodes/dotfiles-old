@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /home/connor/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/dmenu-scriptlaunch
+exec /home/connor/.local/dotfiles/$(hostname)/system_scripts/nopath/dmenu-scriptlaunch.sh

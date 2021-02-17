@@ -8,6 +8,7 @@ sleep 3.5
 xset dpmd force off
 xinput --set-prop 14 "Device Enabled" "0" # this disables the mouse
 xinput --set-prop 13 "Device Enabled" "0" # this disables the trackpoint
+pkill obsidian #kills obsidian, so I can edit dayplanner on phone without sync conflict
 betterlockscreen --lock
 xinput --set-prop 14 "Device Enabled" "1"
 xinput --set-prop 13 "Device Enabled" "1"

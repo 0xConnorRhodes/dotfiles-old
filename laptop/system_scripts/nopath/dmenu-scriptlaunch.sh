@@ -7,6 +7,6 @@ NAME=$(ls \
 
 FULLPATH=$(ls -d \
 	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/* \
-	~/.local/dotfiles/laptop/system_scripts/dmenu-scripts | grep $NAME)
+	~/.local/dotfiles/laptop/system_scripts/dmenu-scripts/* | grep $NAME)
 
-exec urxvtc -e $FULLPATH
+exec urxvtc -e "$FULLPATH"

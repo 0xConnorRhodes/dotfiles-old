@@ -63,6 +63,7 @@ autocmd VimLeave /home/connor/.cache/tesseract-ocr/ocr.txt !xclip -r -selection 
 autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd VimLeave */etc/** !echo $(pass sysadmin/laptop-password) | sudo alacritty -e /home/connor/.local/dotfiles/shared/system_scripts/nopath/vim-etckeeper-update.sh
 autocmd VimLeave /dev/shm/pass** /home/connor/.local/dotfiles_secret/shared/system_scripts/nopath/pass-git-update.sh
+autocmd BufReadPre /home/connor/dox/notes/mind/daily_notes/* !/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/vim-fix-daily-note.sh
 
 " Use system clipboard
 set clipboard+=unnamedplus

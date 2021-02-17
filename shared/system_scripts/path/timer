@@ -1,0 +1,3 @@
+#!/bin/bash
+termdown $1
+aplay /usr/lib/notifications/airplane_chime.wav&

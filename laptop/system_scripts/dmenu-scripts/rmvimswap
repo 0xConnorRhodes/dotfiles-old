@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /home/connor/.local/share/nvim/swap
-rm "$(fzf -m)"
+#cd /home/connor/.local/share/nvim/swap
+cd /home/connor/.cache/nvim/
+rm "$(find . -name "*.swp" | fzf -m)"
