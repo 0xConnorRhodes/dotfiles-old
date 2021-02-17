@@ -2,6 +2,8 @@
 # markdown notes sync script. 
 # Inspired by https://gist.github.com/tallguyjenks/ca3339b8b5353159f631836268e3f791#file-zk_sync-sh
 # modified by Connor Rhodes (connorrhodes.com)
+# note that I run with this cronjob:
+# */30 * * * * /home/connor/dotfiles/infra/system_scripts/nopath/cron >/dev/null 2>&1
 
 NOTES_PATH="/home/connor/dox/notes"
 

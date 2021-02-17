@@ -62,7 +62,7 @@ autocmd VimLeave /home/connor/.local/config_sync/clip.md !xclip -r -selection cl
 autocmd VimLeave /home/connor/.cache/tesseract-ocr/ocr.txt !xclip -r -selection clipboard -i /home/connor/.cache/tesseract-ocr/ocr.txt ; xclip -r -selection primary -i /home/connor/.cache/tesseract-ocr/ocr.txt
 autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd VimLeave */etc/** !echo $(pass sysadmin/laptop-password) | sudo alacritty -e /home/connor/.local/dotfiles/shared/system_scripts/nopath/vim-etckeeper-update.sh
-autocmd VimLeave /dev/shm/pass** !alacritty -e /home/connor/.local/dotfiles_secret/shared/system_scripts/nopath/pass-git-update.sh
+autocmd VimLeave /dev/shm/pass** /home/connor/.local/dotfiles_secret/shared/system_scripts/nopath/pass-git-update.sh
 
 " Use system clipboard
 set clipboard+=unnamedplus
@@ -152,6 +152,7 @@ imap <F19> <ESC>ldei
 "nmap , ciw
 nmap Y y$
 nmap <Alt>p o<ESC>p
+nmap '' ``
 
 " plugin settings
 "
