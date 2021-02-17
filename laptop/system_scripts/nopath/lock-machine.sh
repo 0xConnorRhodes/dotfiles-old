@@ -12,3 +12,4 @@ pkill obsidian #kills obsidian, so I can edit dayplanner on phone without sync c
 betterlockscreen --lock
 xinput --set-prop 14 "Device Enabled" "1"
 xinput --set-prop 13 "Device Enabled" "1"
+obsidian &!

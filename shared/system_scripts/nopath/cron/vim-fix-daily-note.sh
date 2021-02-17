@@ -4,18 +4,23 @@
 # Connor Rhodes (connorrhodes.com)
 
 
+# if listing the processes of obsidian is more lines than 0, kill it
 if [ "$(pgrep obsidian | wc -l)" -ne 0 ]; then
 	pkill obsidian
+else
+	# else (obsidian is not running) so exit the script. No need to re-launch a program that wasn't launched
+	exit 0
 fi
 
-# I would like the script to also launch obsidian after editing IFF obsidian was already running. Code currently doesn't work. WIP
 
-#VIMSTATUS=$(lsof -u connor -a -c nvim | grep daily_notes | wc -l)
-#
-#while [ -n "$VIMSTATUS" ];
-#do 
-#	sleep 1
-#done
-#
-#DISPLAY=:0
-#pcmanfm &!
+VIMSTATUS=$(lsof -u connor -a -c nvim | grep "daily_notes" | grep -v "deleted" | wc -l)
+
+# while vim is editing the file, wait 1 second and check again if vim is editing the file
+while [[ "$VIMSTATUS"  != "0" ]]
+do 
+	sleep 1
+        VIMSTATUS=$(lsof -u connor -a -c nvim | grep "daily_notes" | grep -v "deleted" | wc -l)
+done
+
+# launching obsidian this way is the only way I could get it to go to my x server
+urxvtc -e nohup obsidian &!
