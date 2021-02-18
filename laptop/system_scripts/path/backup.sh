@@ -9,8 +9,8 @@ pip list --user > /home/connor/.local/dotfiles_secret/laptop/pip_user_packages.t
 pip list > /home/connor/.local/dotfiles_secret/laptop/pip_all_packages.txt
 groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
 yay -Syu --noconfirm
-~/.emacs.d/bin/doom -y sync
-~/.emacs.d/bin/doom -y upgrade
+#~/.emacs.d/bin/doom -y sync
+#~/.emacs.d/bin/doom -y upgrade
 nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
 
 # push git repos
@@ -54,6 +54,6 @@ exec restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_ma
 exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
 
 # cleaning up
-/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
-shutdown -h +15
+#/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
+shutdown +15
 notify-send -u critical "The Computer will shut down in 15 minutes"
