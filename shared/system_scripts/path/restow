@@ -9,8 +9,8 @@ stow -R -t /home/connor *
 #cd /home/connor/.local/dotfiles/shared/stow_root
 #stow -R -t /home/connor *
 
-#cd /home/connor/.local/dotfiles_secret/shared/stow_root
-#stow -R -t /home/connor *
+cd /home/connor/.local/dotfiles_secret/shared/stow_user
+stow -R -t /home/connor *
 
 # machine-specific
 cd /home/connor/.local/dotfiles/$(hostname)/stow_user

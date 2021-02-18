@@ -3,7 +3,6 @@ Version=1.0
 Name=Firefox
 GenericName=Web Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
-#Exec=env GTK_THEME="Adwaita:dark" /usr/lib/firefox/firefox %u
 Exec=/usr/lib/firefox/firefox %u
 Icon=firefox
 Terminal=false
