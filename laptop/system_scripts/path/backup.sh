@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # nightly backup script running a variety of daily maintainance tasks
 # Connor Rhodes (connorrhodes.com)
 
@@ -56,5 +56,5 @@ echo "wemadeit"
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
-/usr/bin/shutdown/shutdown +15
+shutdown -h +15
 notify-send -u critical "The Computer will shut down in 15 minutes"
