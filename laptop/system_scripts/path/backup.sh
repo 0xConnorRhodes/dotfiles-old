@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # nightly backup script running a variety of daily maintainance tasks
 # Connor Rhodes (connorrhodes.com)
 
@@ -55,5 +55,5 @@ exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearl
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
-shutdown -P +15
+shutdown -h +15
 notify-send -u critical "The Computer will shut down in 15 minutes"
