@@ -55,5 +55,5 @@ exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearl
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
-shutdown -h +15
+shutdown -P +15
 notify-send -u critical "The Computer will shut down in 15 minutes"
