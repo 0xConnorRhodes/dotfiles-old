@@ -96,7 +96,7 @@
 
 ;; Backup files settings (the ~ files)
 (setq backup-by-copying t      ; don't clobber symlinks
-      backup-directory-alist '(("." . "~/.local/config_sync/emacs_backup_files/"))    ; don't litter my fs tree
+      backup-directory-alist '(("." . "~/.cache/emacs_backup_files/"))    ; don't litter my fs tree
       delete-old-versions t
       kept-new-versions 10
       kept-old-versions 4
