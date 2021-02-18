@@ -52,8 +52,9 @@ export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
 #exec restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
 #exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
+echo "wemadeit"
 
 # cleaning up
-#/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
+/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
 /usr/bin/shutdown/shutdown +15
 notify-send -u critical "The Computer will shut down in 15 minutes"
