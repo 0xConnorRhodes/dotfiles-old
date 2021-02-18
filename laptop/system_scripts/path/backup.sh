@@ -41,10 +41,10 @@ pass git push
 # backup OS and user data
 sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
-sudo backintime backup
+#sudo backintime backup
 sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
-backintime backup
+#backintime backup
 rm /tmp/backintime/backup
 
 # backup VMs using restic for block-level deduplication
