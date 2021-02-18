@@ -34,6 +34,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	"{{{ SYNTAX HIGHLIGHTING }}}
+	    Plug 'RRethy/vim-hexokinase' "auto insert bullet on newline
 	    "Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
 
 call plug#end()
@@ -163,6 +164,10 @@ nmap '' ``zz
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 "highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 "highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+"
+"Vim Hexokinase
+set termguicolors
+let g:Hexokinase_highlighters = ['backgroundfull']
 "
 "=================================="
 "             VIM WIKI             "
