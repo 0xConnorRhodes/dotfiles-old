@@ -1,5 +1,5 @@
 [General]
-theme=Lyra-Redmond
+theme=commonality
 
 [Applications]
 Default=calibre-gui, calibre

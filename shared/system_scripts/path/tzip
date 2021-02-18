@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# first argument is name of the archive, second is the folder to be zipped
+#p preserves permissions eg. files owned by root will still be owned by root
+tar cpf - "$2" -P | pv -s $(du -sb "$2" | awk '{print $1}') | gzip > $1
