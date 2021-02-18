@@ -24,15 +24,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="957"
-     inkscape:window-height="540"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
      id="namedview3858"
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:showpageshadow="false"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="289.1247"
-     inkscape:cy="243.64484"
+     inkscape:zoom="22.627418"
+     inkscape:cx="124.07326"
+     inkscape:cy="120.42345"
      inkscape:current-layer="svg1710"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -46,7 +46,7 @@
      fit-margin-bottom="30"
      inkscape:document-rotation="0"
      inkscape:window-x="0"
-     inkscape:window-y="538"
+     inkscape:window-y="24"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -7856,21 +7856,21 @@
      y="572.66998"
      width="32"
      height="32"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-bottom"
      x="228.94002"
      y="604.66998"
      width="32"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-top"
      x="228.94002"
      y="568.66998"
      width="32"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-right"
      transform="rotate(90)"
@@ -7878,7 +7878,7 @@
      y="-264.94"
      width="32"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-left"
      transform="rotate(90)"
@@ -7886,7 +7886,7 @@
      y="-228.94002"
      width="32"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-bottomleft"
      transform="rotate(90)"
@@ -7894,7 +7894,7 @@
      y="-228.94002"
      width="4"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-topleft"
      transform="rotate(90)"
@@ -7902,7 +7902,7 @@
      y="-228.94002"
      width="4"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-topright"
      transform="rotate(90)"
@@ -7910,7 +7910,7 @@
      y="-264.94"
      width="4"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-normal-bottomright"
      transform="rotate(90)"
@@ -7918,7 +7918,7 @@
      y="-264.94"
      width="4"
      height="4"
-     style="opacity:0.15;fill:#282828" />
+     style="opacity:0.15;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled"
      class="ColorScheme-Highlight"
@@ -7926,21 +7926,21 @@
      y="573.40002"
      width="32"
      height="32"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-bottom"
      x="289.64001"
      y="605.40002"
      width="32"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-top"
      x="289.64001"
      y="569.40002"
      width="32"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-right"
      transform="rotate(90)"
@@ -7948,7 +7948,7 @@
      y="-325.64001"
      width="32"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-left"
      transform="rotate(90)"
@@ -7956,7 +7956,7 @@
      y="-289.64001"
      width="32"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-bottomleft"
      transform="rotate(90)"
@@ -7964,7 +7964,7 @@
      y="-289.64001"
      width="4"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-topleft"
      transform="rotate(90)"
@@ -7972,7 +7972,7 @@
      y="-289.64001"
      width="4"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-topright"
      transform="rotate(90)"
@@ -7980,7 +7980,7 @@
      y="-325.64001"
      width="4"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-toggled-bottomright"
      transform="rotate(90)"
@@ -7988,7 +7988,7 @@
      y="-325.64001"
      width="4"
      height="4"
-     style="opacity:0.3;fill:#282828" />
+     style="opacity:0.3;fill:#282828;fill-opacity:0" />
   <rect
      id="iview-focused"
      class="ColorScheme-Highlight"
@@ -10049,78 +10049,82 @@
      y="99.339996"
      width="32"
      height="32"
-     style="fill:#c6b2a8" />
+     style="fill:#afadbf;fill-opacity:1" />
   <g
      id="hdr-normal-left"
-     transform="translate(1975.4,513.6)">
+     transform="translate(1975.4,513.6)"
+     style="fill:#dad9e2;fill-opacity:1">
     <rect
        id="rect6266"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#dad9e2;fill-opacity:1" />
     <rect
        id="rect6254"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:url(#linearGradient6260)" />
+       style="fill:#dad9e2;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-top"
-     transform="rotate(90,-1122.9,846.25)">
+     transform="rotate(90,-1122.9,846.25)"
+     style="fill:#dad9e2;fill-opacity:1">
     <rect
        id="rect6268"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#dad9e2;fill-opacity:1" />
     <rect
        id="rect6270"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:url(#linearGradient6274)" />
+       style="fill:#dad9e2;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-topleft"
-     transform="translate(1972.7,515.11)">
+     transform="translate(1972.7,515.11)"
+     style="fill:#dad9e2;fill-opacity:1">
     <rect
        id="rect6288"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:#c6b2a8" />
+       style="fill:#dad9e2;fill-opacity:1" />
     <rect
        id="rect6276"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:url(#linearGradient6282)" />
+       style="fill:#dad9e2;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-topright"
-     transform="translate(2005.7,515.11)">
+     transform="translate(2005.7,515.11)"
+     style="fill:#dad9e2;fill-opacity:1">
     <rect
        id="rect6290"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:#c6b2a8" />
+       style="fill:#dad9e2;fill-opacity:1" />
     <rect
        id="rect6292"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:url(#linearGradient6296)" />
+       style="fill:#dad9e2;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-bottomleft"
@@ -10142,57 +10146,60 @@
   </g>
   <g
      id="hdr-normal-right"
-     transform="translate(2008.4,513.6)">
+     transform="translate(2008.4,513.6)"
+     style="fill:#57565f;fill-opacity:1">
     <rect
        id="rect6306"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#57565f;fill-opacity:1" />
     <rect
        id="rect6308"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:url(#linearGradient6312)" />
+       style="fill:#57565f;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-bottom"
-     transform="rotate(90,-1139.4,862.75)">
+     transform="rotate(90,-1139.4,862.75)"
+     style="fill:#57565f;fill-opacity:1">
     <rect
        id="rect6314"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#57565f;fill-opacity:1" />
     <rect
        id="rect6316"
        x="-1870.9"
        y="-414.26001"
        width="1"
        height="32"
-       style="fill:url(#linearGradient6320)" />
+       style="fill:#57565f;fill-opacity:1" />
   </g>
   <g
      id="hdr-normal-bottomright"
-     transform="translate(2005.7,548.11)">
+     transform="translate(2005.7,548.11)"
+     style="fill:#57565f;fill-opacity:1">
     <rect
        id="rect6322"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:#c6b2a8" />
+       style="fill:#57565f;fill-opacity:1" />
     <rect
        id="rect6324"
        x="-1868.2"
        y="-416.76999"
        width="1"
        height="1"
-       style="fill:url(#linearGradient6328)" />
+       style="fill:#57565f;fill-opacity:1" />
   </g>
   <g
      id="hdr-focused-left"
@@ -10340,21 +10347,22 @@
   </g>
   <g
      id="hdr-focused"
-     transform="translate(1971.3,563.8)">
+     transform="translate(1971.3,563.8)"
+     style="fill:#9a9faf;fill-opacity:1">
     <rect
        id="rect8257"
        x="-1803.8"
        y="-464.29001"
        width="32"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#9a9faf;fill-opacity:1" />
     <rect
        id="rect8251"
        x="-1803.8"
        y="-464.29001"
        width="32"
        height="32"
-       style="opacity:0.1;fill:#282828" />
+       style="opacity:0.1;fill:#9a9faf;fill-opacity:1" />
   </g>
   <g
      id="tbar-handle"

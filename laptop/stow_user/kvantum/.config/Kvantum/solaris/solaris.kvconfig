@@ -60,7 +60,7 @@ contrast=1.00
 dialog_button_layout=0
 hide_combo_checkboxes=false
 intensity=1.00
-no_inactiveness=false
+no_inactiveness=true
 no_window_pattern=false
 opaque=kaffeine,kmplayer,subtitlecomposer,kdenlive,vlc,smplayer,smplayer2,avidemux,avidemux2_qt4,avidemux3_qt4,avidemux3_qt5,kamoso,QtCreator,VirtualBox,VirtualBoxVM,trojita,dragon,digikam,lyx
 reduce_menu_opacity=0
@@ -74,7 +74,7 @@ check_size=16
 drag_from_buttons=false
 
 [GeneralColors]
-window.color=#c6b2a8
+window.color=#fff7e9
 base.color=#fff7e9
 alt.base.color=#feeac9
 button.color=#efebe7
@@ -88,12 +88,12 @@ text.color=black
 window.text.color=black
 button.text.color=black
 #disabled.text.color=#ffffff33
-tooltip.text.color=white
-highlight.text.color=white
+tooltip.text.color=black
+highlight.text.color=black
 highlight.color=#686f82
 link.color=#0000ff
 link.visited.color=#ff00ff
-progress.indicator.text.color=white
+progress.indicator.text.color=black
 text.focus.color=blue
 
 [Hacks]
@@ -140,7 +140,7 @@ text.margin.right=4
 text.normal.color=black
 text.focus.color=black
 text.press.color=#333333
-text.toggle.color=white
+text.toggle.color=black
 frame.expansion=0
 interior.element=defbtn
 interior=true
@@ -162,10 +162,10 @@ interior.element=toolbtn
 interior=true
 frame=true
 frame.element=toolbtn
-text.normal.color=white
-text.press.color=white
-text.focus.color=white
-text.toggle.color=white
+text.normal.color=black
+text.press.color=black
+text.focus.color=black
+text.toggle.color=black
 
 [DockTitle]
 text.bold=true
@@ -198,9 +198,9 @@ text.margin.bottom=4
 text.margin.left=4
 text.margin.right=4
 text.normal.color=yellow
-text.focus.color=white
+text.focus.color=black
 text.toggle.color=yellow
-text.press.color=white
+text.press.color=black
 interior=true
 
 [IndicatorSpinBox]
@@ -216,10 +216,10 @@ text.margin.top=4
 text.margin.bottom=4
 text.margin.left=4
 text.margin.right=4
-text.press.color=white
+text.press.color=black
 text.normal.color=#eeeeee
 text.toggle.color=yellow
-text.focus.color=white
+text.focus.color=black
 
 [Tab]
 frame.top=3
@@ -297,7 +297,7 @@ interior.element=mubar
 interior=true
 frame=true
 frame.element=mubar
-text.normal.color=white
+text.normal.color=black
 indicator.element=tbar
 
 [ToolbarButton]
@@ -305,7 +305,7 @@ interior=true
 interior.element=toolbtn
 frame=true
 frame.element=toolbtn
-text.normal.color=white
+text.normal.color=black
 text.margin=false
 frame.left=2
 frame.right=2
@@ -344,7 +344,7 @@ indicator.element=
 
 [Progressbar]
 text.bold=true
-text.normal.color=white
+text.normal.color=black
 frame.expansion=0
 interior.element=ledit
 frame.element=ledit
@@ -376,10 +376,10 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=2
 text.margin.right=2
-text.toggle.color=white
-text.press.color=white
-text.normal.color=white
-text.focus.color=white
+text.toggle.color=black
+text.press.color=black
+text.normal.color=black
+text.focus.color=black
 frame.expansion=0
 interior=true
 interior.element=iview
@@ -415,7 +415,7 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=4
 text.margin.right=4
-text.normal.color=white
+text.normal.color=black
 text.focus.color=#ededed
 frame.expansion=0
 indicator.element=marrow
@@ -432,8 +432,8 @@ frame.left=1
 frame.right=1
 frame.expansion=0
 text.press.color=#ededed
-text.focus.color=white
-text.toggle.color=white
+text.focus.color=black
+text.toggle.color=black
 
 [MenuBar]
 interior=true
@@ -445,10 +445,10 @@ frame.bottom=2
 frame.left=2
 frame.right=2
 frame.expansion=0
-text.normal.color=white
-text.press.color=white
-text.focus.color=white
-text.toggle.color=white
+text.normal.color=black
+text.press.color=black
+text.focus.color=black
+text.toggle.color=black
 
 [TitleBar]
 inherits=PanelButtonCommand
@@ -458,7 +458,7 @@ text.margin.left=3
 text.margin.right=3
 text.bold=true
 text.italic=true
-text.normal.color=white
+text.normal.color=black
 
 [ComboBox]
 #inherits=PanelButtonCommand
@@ -473,10 +473,10 @@ text.margin.top=4
 text.margin.bottom=4
 text.margin.left=4
 text.margin.right=4
-text.normal.color=white
-text.press.color=white
-text.focus.color=white
-text.toggle.color=white
+text.normal.color=black
+text.press.color=black
+text.focus.color=black
+text.toggle.color=black
 indicator.size=14
 indicator.element=cind
 

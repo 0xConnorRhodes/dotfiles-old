@@ -36,6 +36,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	"{{{ SYNTAX HIGHLIGHTING }}}
 	    Plug 'RRethy/vim-hexokinase' "auto insert bullet on newline
 	    "Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
+	"{{{ THEMES }}}
+	    Plug 'joshdick/onedark.vim'
+	    Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
@@ -47,9 +50,9 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"] " update when you enter 
 "set updatetime=2000 " in milliseconds
 
 " basic settings
-"set termguicolors
 set t_Co=256
 set undofile "undo history across close and open in a file
+"colorscheme onedark
 
 " turn hybrid line numbers on
 ":set number relativenumber
