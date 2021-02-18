@@ -1,0 +1,7 @@
+[General]
+theme=Lyra-Redmond
+
+[Applications]
+Default=calibre-gui, calibre
+KvAdapta=calibre
+KvArc=calibre, calibre-gui

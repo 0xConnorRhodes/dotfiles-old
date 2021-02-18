@@ -102,7 +102,7 @@
       kept-old-versions 4
       version-control t)       ; use versioned backups
 (setq auto-save-file-name-transforms
-      `((".*" "~/.local/config_sync/emacs_backup_files/" t)))
+      `((".*" "~/.cache/emacs_backup_files/" t)))
 ;; enable autosave by default
 (setq auto-save-default t) ; autosave by default
 (setq auto-save-timeout 5) ; autosave after 5 idle seconds
