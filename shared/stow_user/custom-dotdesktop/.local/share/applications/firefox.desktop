@@ -3,7 +3,7 @@ Version=1.0
 Name=Firefox
 GenericName=Web Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=/usr/lib/firefox/firefox %u
+Exec=env GTK_THEME="Redmond97 Firefox Solaris" /usr/lib/firefox/firefox %u
 Icon=firefox
 Terminal=false
 X-MultipleArgs=false
