@@ -1,0 +1,3 @@
+#!/bin/bash
+export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
+restic -r sftp:gb:/mnt/pool/restic mount /mnt/restic
