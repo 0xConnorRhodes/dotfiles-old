@@ -1,8 +1,8 @@
 /* base colors */
 @define-color bg_color #323234;
 @define-color fg_color #FFFFFF;
-@define-color base_color #FFF7E9;
-@define-color text_color #000000;
+@define-color base_color #000000;
+@define-color text_color #FFFFFF;
 @define-color selected_bg_color #B24D7A;
 @define-color selected_fg_color #F9E2E8;
 @define-color light_shadow #5A5A5C;

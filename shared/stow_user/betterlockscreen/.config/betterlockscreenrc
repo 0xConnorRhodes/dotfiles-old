@@ -2,13 +2,17 @@
 
 insidecolor=00000000
 ringcolor=ffffffff
-keyhlcolor=d23c3dff
-bshlcolor=d23c3dff
+#keyhlcolor=d23c3dff
+keyhlcolor=#B24D7A
+#bshlcolor=d23c3dff
+bshlcolor=#B24D7A
 separatorcolor=00000000
 insidevercolor=00000000
-insidewrongcolor=d23c3dff
+#insidewrongcolor=d23c3dff
+insidewrongcolor=#B24D7A
 ringvercolor=ffffffff
-ringwrongcolor=ffffffff
+#ringwrongcolor=ffffffff
+ringwrongcolor=#AFADBF
 verifcolor=ffffffff
 timecolor=ffffffff
 datecolor=ffffffff

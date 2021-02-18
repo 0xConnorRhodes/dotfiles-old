@@ -3,8 +3,8 @@ gtk_color_scheme =
 "fg_color:#FFFFFF\
 bg_color:#323234\
 disabled_fg_color:#282829\
-base_color:#FFF7E9\
-text_color:#000000\
+base_color:#000000\
+text_color:#FFFFFF\
 selected_bg_color:#B24D7A\
 selected_fg_color:#F9E2E8\
 tooltip_bg_color:#ffffe1\
