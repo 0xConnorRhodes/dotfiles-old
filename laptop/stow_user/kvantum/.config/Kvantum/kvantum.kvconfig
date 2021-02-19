@@ -1,5 +1,5 @@
 [General]
-theme=commonality
+theme=solaris
 
 [Applications]
 Default=calibre-gui, calibre

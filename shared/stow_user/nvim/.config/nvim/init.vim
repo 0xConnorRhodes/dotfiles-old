@@ -26,21 +26,28 @@ call plug#begin('~/.local/share/nvim/plugged')
             Plug '907th/vim-auto-save'
             "Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
             Plug 'unblevable/quick-scope' " f command highlighting
-            "Plug 'tweekmonster/startuptime.vim'
+            "Plug 'tweekmonster/startuptime.vim' test with ":StartupTime ~/foo.vim 100 , will test with opening the file 100 times
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
             Plug 'vimwiki/vimwiki' " Use Vimwiki
-	    Plug 'dhruvasagar/vim-table-mode' " table plugin closest to org-mode functionality
+	    "Plug 'dhruvasagar/vim-table-mode' " table plugin closest to org-mode functionality, but tabular + plasticboy markdown provide
+	    Plug 'godlygeek/tabular'
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	"{{{ SYNTAX HIGHLIGHTING }}}
 	    Plug 'RRethy/vim-hexokinase'
-	    Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
+	    Plug 'plasticboy/vim-markdown' " also tpope, may be faster.
 	"{{{ THEMES }}}
-	    "Plug 'tomasiser/vim-code-dark' "codedark
+	    Plug 'tomasiser/vim-code-dark' "codedark
 	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
 	    Plug 'liuchengxu/space-vim-theme' "space_vim_theme , set background=dark|light
-	    Plug 'laggardkernel/vim-one' "colorscheme one , set background=dark|light must be done after setting the theme
+	    Plug 'laggardkernel/vim-one' "one , set background=dark|light must be done after setting the theme
+	    "Plug 'ishan9299/modus-theme-vim' "this is lua, so you'll need to port to lua before using it "call with modus-operandi and modus-vivendi
+	    Plug '/home/connor/.local/share/nvim/plugged/vim-vividchalk' "vividchalk , cant get line numbers
+	    "to match
+	    Plug 'dracula/vim'
+	    Plug 'lifepillar/vim-colortemplate'
+	    
 
 call plug#end()
 
@@ -59,10 +66,11 @@ set undofile "undo history across close and open in a file
 
 " color scheme
 set t_Co=256
-let g:one_allow_italics = 1
-let g:one_dark_syntax_bg='#000000'
-colorscheme one
-set background=dark
+"let g:one_allow_italics = 1
+"let g:one_dark_syntax_bg='#000000'
+colorscheme vividchalk
+"let ayucolor="dark"
+"set background=dark
 
 
 " autocmd
