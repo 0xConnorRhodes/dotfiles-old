@@ -137,3 +137,10 @@ This is the css for disabling the top bar entirely
   box-shadow: 0 1px 4px rgba(0,0,0,.05) !important;
   animation: none !important;
 }
+
+/* increase font size in firefox url bar and menus*/
+#personal-bookmarks .toolbarbutton-text,
+#personal-bookmarks .menu-iconic-text, 
+#personal-bookmarks .openintabs-menuitem {
+  font-size: 18px !important;
+}
