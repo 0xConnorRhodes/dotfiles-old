@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Color Picker
+Comment=An intuitive Color Picker
+Exec=/home/connor/.local/dotfiles/shared/system_scripts/nopath/color-picker-launch.sh
+Icon=com.github.ronnydo.colorpicker
+Keywords=colorpicker;color;picker;selector;pipette;
+Terminal=false
+Type=Application
+Categories=GTK;Utility;Graphics;Development;
