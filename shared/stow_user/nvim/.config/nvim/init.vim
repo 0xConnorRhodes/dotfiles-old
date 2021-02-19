@@ -27,6 +27,7 @@ call plug#begin('~/.local/share/nvim/plugged')
             "Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
             Plug 'unblevable/quick-scope' " f command highlighting
             Plug 'vifm/vifm.vim' " integrates vifm as file browser
+            Plug 'tweekmonster/startuptime.vim'
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
             Plug 'vimwiki/vimwiki' " Use Vimwiki
@@ -37,8 +38,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'RRethy/vim-hexokinase' "auto insert bullet on newline
 	    "Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
 	"{{{ THEMES }}}
-	    Plug 'joshdick/onedark.vim'
-	    Plug 'tomasiser/vim-code-dark'
+	    "Plug 'tomasiser/vim-code-dark' "codedark
+	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
+	    Plug 'liuchengxu/space-vim-theme' "space_vim_theme , set background=dark|light
+	    Plug 'laggardkernel/vim-one' "colorscheme one , set background=dark|light must be done after setting the theme
 
 call plug#end()
 
@@ -50,13 +53,18 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"] " update when you enter 
 "set updatetime=2000 " in milliseconds
 
 " basic settings
-set t_Co=256
 set undofile "undo history across close and open in a file
-"colorscheme onedark
 
-" turn hybrid line numbers on
-":set number relativenumber
+":set number relativenumber "hybrid/relative line numbers
 :set number
+
+" color scheme
+set t_Co=256
+let g:one_allow_italics = 1
+let g:one_dark_syntax_bg='#000000'
+colorscheme one
+"set background=dark
+
 
 " autocmd
 autocmd BufWritePost /home/connor/.config/espanso/default.yml !/home/connor/bin/res
@@ -171,7 +179,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 "Vim Hexokinase
 set termguicolors
 let g:Hexokinase_highlighters = ['backgroundfull']
-"
+
 "=================================="
 "             VIM WIKI             "
 "=================================="

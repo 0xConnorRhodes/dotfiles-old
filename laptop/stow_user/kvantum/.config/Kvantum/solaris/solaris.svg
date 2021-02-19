@@ -30,9 +30,9 @@
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:showpageshadow="false"
-     inkscape:zoom="22.627418"
-     inkscape:cx="124.07326"
-     inkscape:cy="120.42345"
+     inkscape:zoom="2.8284273"
+     inkscape:cx="163.99365"
+     inkscape:cy="68.774655"
      inkscape:current-layer="svg1710"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -6668,66 +6668,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#hicommon"
-       id="linearGradient3672"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-2000.9699,-572.20102)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
-       id="linearGradient3674"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1975.5,-571.97)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
-       id="linearGradient3676"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1967.5,-593.97)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
-       id="linearGradient3678"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1944.6,-593.97)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
-       id="linearGradient3680"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1931.9,-572.44)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
-       id="linearGradient3682"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1923.9,-594.44)"
-       x1="-1826"
-       y1="-524"
-       x2="-1825"
-       y2="-524" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#hicommon"
        id="linearGradient3684"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(3.4765625e-5,2e-6)"
@@ -7415,7 +7355,7 @@
      y="43.100998"
      width="4"
      height="4"
-     style="fill:#4e4e4e" />
+     style="fill:#b9009e;fill-opacity:1" />
   <rect
      style="fill:none"
      height="16"
@@ -9419,21 +9359,22 @@
   </g>
   <g
      id="scrollslide-focused"
-     transform="translate(397.56001,109.25)">
+     transform="translate(397.56001,109.25)"
+     style="fill:#b9a79e;fill-opacity:1">
     <rect
        id="rect7991"
        x="43.951"
        y="115.99"
        width="32"
        height="32"
-       style="fill:#c6b2a8" />
+       style="fill:#b9a79e;fill-opacity:1" />
     <rect
        id="86jjjf"
        x="43.951"
        y="115.99"
        width="32"
        height="32"
-       style="fill:#282828;fill-opacity:0.07843101" />
+       style="fill:#b9a79e;fill-opacity:1" />
   </g>
   <g
      id="scrollslide-focused-right"
@@ -11276,572 +11217,580 @@
   <g
      id="sldrcurs-normal-left"
      transform="matrix(2,0,0,1.1111,3850.3698,628.65397)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5737"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5729"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5731)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-top"
      transform="matrix(6,0,0,0.11111,11195.57,93.599319)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5739"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5741"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5745)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-topleft"
      transform="matrix(2,0,0,0.11111,3850.3698,93.599319)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5747"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5749"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5753)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-right"
      transform="matrix(2,0,0,1.1111,3807.3701,627.92067)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5779"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5771"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5773)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-bottom"
      transform="matrix(6,0,0,0.11111,11042.57,115.52597)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5781"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5783"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5787)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-bottomright"
      transform="matrix(2,0,0,0.11111,3807.3701,115.52577)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5789"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5791"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5795)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-topright"
-     transform="translate(2000.97,572.20102)">
+     transform="translate(2000.97,572.20102)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5763"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5765"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient3672)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5799"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5769)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5803"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5805)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-normal-bottomleft"
-     transform="translate(1992.97,594.20102)">
+     transform="translate(1992.97,594.20102)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5813"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5815"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient5823)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5817"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5825)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5819"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5827)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-left"
      transform="matrix(2,0,0,1.1111,3825,628.42)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5831"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5833"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5888)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-top"
      transform="matrix(6,0,0,0.11111,11170,93.36)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5837"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5839"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5890)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-topleft"
      transform="matrix(2,0,0,0.11111,3825,93.36)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5843"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5845"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5892)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-right"
      transform="matrix(2,0,0,1.1111,3781.9,627.69)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5849"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5851"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5894)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-bottom"
      transform="matrix(6,0,0,0.11111,11017,115.29)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5855"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5857"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5896)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-bottomright"
      transform="matrix(2,0,0,0.11111,3781.9,115.29)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5861"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5863"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient5898)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-topright"
-     transform="translate(1975.5,571.97)">
+     transform="translate(1975.5,571.97)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5867"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5869"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient3674)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5871"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5901)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5874"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5905)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused-bottomleft"
-     transform="translate(1967.5,593.97)">
+     transform="translate(1967.5,593.97)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect5878"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5880"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient3676)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5882"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5907)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect5884"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient5911)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-focused"
-     transform="translate(2015.5,546.92)">
+     transform="translate(2015.5,546.92)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7586"
        x="-1860.1"
        y="-510.79001"
        width="6"
        height="20"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7580"
        x="-1860.1"
        y="-510.79001"
        width="6"
        height="20"
-       style="fill:#282828;fill-opacity:0.07783" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-left"
      transform="matrix(2,0,0,1.1111,3802.1,628.42)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7588"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7590"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7650)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-top"
      transform="matrix(6,0,0,0.11111,11147.3,93.35831)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7594"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7596"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7652)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-topleft"
      transform="matrix(2,0,0,0.11111,3802.1,93.36)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7600"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7602"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7654)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-right"
      transform="matrix(2,0,0,1.1111,3759,627.69)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7606"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7608"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7656)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-bottom"
      transform="matrix(6,0,0,0.11111,10994,115.29)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7612"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7614"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7658)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-bottomright"
      transform="matrix(2,0,0,0.11111,3759,115.29)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7618"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7620"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:url(#linearGradient7660)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-topright"
-     transform="translate(1952.6,571.97)">
+     transform="translate(1952.6,571.97)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7624"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7626"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient7662)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7628"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient7664)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7630"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient7666)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed-bottomleft"
-     transform="translate(1944.6,593.97)">
+     transform="translate(1944.6,593.97)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7634"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7636"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="fill:url(#linearGradient3678)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7638"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient7668)" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7640"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="fill:url(#linearGradient7672)" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-pressed"
-     transform="translate(1992.6,546.92)">
+     transform="translate(1992.6,546.92)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect7644"
        x="-1860.1"
        y="-510.79001"
        width="6"
        height="20"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect7646"
        x="-1860.1"
        y="-510.79001"
        width="6"
        height="20"
-       style="fill:#282828;fill-opacity:0.07783" />
+       style="fill:#b9009e;fill-opacity:1" />
   </g>
   <rect
      id="sldrcurs-disabled"
@@ -11849,184 +11798,186 @@
      y="36.609001"
      width="6"
      height="20"
-     style="fill:#c6b2a8" />
+     style="fill:#b9009e;fill-opacity:1" />
   <g
      id="sldrcurs-disabled-left"
      transform="matrix(2,0,0,1.1111,3781.4,628.9)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9390"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9392"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9446)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-top"
      transform="matrix(6,0,0,0.11111,11126.5,93.83828)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9396"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9398"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9448)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-topleft"
      transform="matrix(2,0,0,0.11111,3781.4,93.84)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9402"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9404"
        x="-1835.8"
        y="-533.06"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9450)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-right"
      transform="matrix(2,0,0,1.1111,3738.2,628.17)"
-     style="stroke-width:0.67082">
+     style="stroke-width:0.67082;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9408"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9410"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9452)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-bottom"
      transform="matrix(6,0,0,0.11111,10973.4,115.77)"
-     style="stroke-width:1.22469997">
+     style="stroke-width:1.22469997;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9414"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9416"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9454)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-bottomright"
      transform="matrix(2,0,0,0.11111,3738.2,115.77)"
-     style="stroke-width:2.12129998">
+     style="stroke-width:2.12129998;fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9420"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9422"
        x="-1810.3"
        y="-532.40002"
        width="1"
        height="18"
-       style="opacity:0.5;fill:url(#linearGradient9456)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-topright"
-     transform="translate(1931.9,572.44)">
+     transform="translate(1931.9,572.44)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9426"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9428"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient3680)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9430"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient9458)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9432"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient9462)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <g
      id="sldrcurs-disabled-bottomleft"
-     transform="translate(1923.9,594.44)">
+     transform="translate(1923.9,594.44)"
+     style="fill:#b9009e;fill-opacity:1">
     <rect
        id="rect9436"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="2"
-       style="fill:#c6b2a8" />
+       style="fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9438"
        x="-1814.2"
        y="-537.83002"
        width="2"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient3682)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9440"
        x="-1814.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient9464)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
     <rect
        id="rect9442"
        x="-1813.2"
        y="-536.83002"
        width="1"
        height="1"
-       style="opacity:0.5;fill:url(#linearGradient9468)" />
+       style="opacity:0.5;fill:#b9009e;fill-opacity:1" />
   </g>
   <rect
      style="fill:#afadbf"
@@ -13956,7 +13907,7 @@
        id="rect5808" />
   </g>
   <rect
-     style="fill:#afadbf"
+     style="fill:#afadbf;fill-opacity:1"
      id="mbitem-toggled"
      x="381.54654"
      y="282.96722"
@@ -18430,5 +18381,5 @@
      y="36.371002"
      width="6"
      height="20"
-     style="fill:#c6b2a8" />
+     style="fill:#b9009e;fill-opacity:1" />
 </svg>

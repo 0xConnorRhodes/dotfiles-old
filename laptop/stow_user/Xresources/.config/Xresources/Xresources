@@ -59,6 +59,7 @@ URxvt.background:	#000000
 URxvt.intensityStyles:	false
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
+URxvt.cursorColor2:	black
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
