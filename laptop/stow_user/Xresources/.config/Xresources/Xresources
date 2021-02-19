@@ -33,8 +33,10 @@ Xft.rgba: rgb
 *color5: #b30ad0
 *color13: #c397d8
 !! cyan
-*color6: #32d0fc
-*color14: #54ced6
+!*color6: #32d0fc
+*color6: #2cebeb
+*color14: #2cebeb
+!*color14: #54ced6
 !! white
 *color7: #eaeaea
 *color15: #eaeaea

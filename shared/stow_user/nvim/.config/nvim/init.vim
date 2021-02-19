@@ -26,8 +26,7 @@ call plug#begin('~/.local/share/nvim/plugged')
             Plug '907th/vim-auto-save'
             "Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
             Plug 'unblevable/quick-scope' " f command highlighting
-            Plug 'vifm/vifm.vim' " integrates vifm as file browser
-            Plug 'tweekmonster/startuptime.vim'
+            "Plug 'tweekmonster/startuptime.vim'
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
             Plug 'vimwiki/vimwiki' " Use Vimwiki
@@ -35,8 +34,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	"{{{ SYNTAX HIGHLIGHTING }}}
-	    Plug 'RRethy/vim-hexokinase' "auto insert bullet on newline
-	    "Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
+	    Plug 'RRethy/vim-hexokinase'
+	    Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
 	"{{{ THEMES }}}
 	    "Plug 'tomasiser/vim-code-dark' "codedark
 	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
@@ -63,7 +62,7 @@ set t_Co=256
 let g:one_allow_italics = 1
 let g:one_dark_syntax_bg='#000000'
 colorscheme one
-"set background=dark
+set background=dark
 
 
 " autocmd
@@ -185,9 +184,9 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 "=================================="
     " ~~~~~ Ensure files are read as what I want in vimwiki:
         let g:vimwiki_global_ext = 0
-        "let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'} "commented out because I want wiki style links in vimwiki syntax
+        let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'} "commented out because I want wiki style links in vimwiki syntax
         let g:vimwiki_root = '~/dox/notes'
 "change 'field' 2 for **default** for vimwiki syntax and **markdown** for markdown syntax
         let g:vimwiki_list = [
-            \{'path': '~/dox/notes', 'syntax': 'default', 'ext': '.md'},
+            \{'path': '~/dox/notes', 'syntax': 'markdown', 'ext': '.md'},
             \]
