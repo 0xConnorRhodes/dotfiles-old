@@ -13,9 +13,8 @@ Xft.rgba: rgb
 !!*background: rgba(0, 0, 0. .7)
 
 !! black
-!*color0: #000000
-!*color8: #000000
 *color0: #000000
+!*color8: #000000
 *color8: #666666
 !! red
 *color1: #ff3334
@@ -28,16 +27,29 @@ Xft.rgba: rgb
 *color11: #e6c547
 !! blue
 !*color4: #314ad0
-*color4: #5e78ff
+! ls folders are color 4
+!*color4: #5e78ff
+!*color4: #6881FF
+!*color4: #738AFF
+!*color4: #0073FF
+*color4: #2B8BFF
+!*color4: #61A3F2
+!*color4: #687FF2
+!*color4: #63AAFF
 *color12: #6fbdff
 !! magenta
 *color5: #b30ad0
 *color13: #c397d8
 !! cyan
-*color6: #32d0fc
+!*color6: #32d0fc
 !*color6: #2cebeb
+!*color6: #2cebeb
+*color6: #51D7E0
+!*color6: #53DBDB
+!*color6: #54ced6
 !*color14: #2cebeb
-*color14: #54ced6
+!*color14: #54ced6
+*color14: #56B1B6
 !! white
 *color7: #eaeaea
 *color15: #eaeaea
