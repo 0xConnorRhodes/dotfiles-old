@@ -26,7 +26,8 @@ call plug#begin('~/.local/share/nvim/plugged')
             Plug '907th/vim-auto-save'
             "Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
             Plug 'unblevable/quick-scope' " f command highlighting
-            "Plug 'tweekmonster/startuptime.vim' test with ":StartupTime ~/foo.vim 100 , will test with opening the file 100 times
+            Plug 'tweekmonster/startuptime.vim' 
+	    "test with ":StartupTime ~/foo.vim 100 , will test with opening the file 100 times
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
             Plug 'vimwiki/vimwiki' " Use Vimwiki
