@@ -26,21 +26,19 @@ call plug#begin('~/.local/share/nvim/plugged')
             Plug '907th/vim-auto-save'
             "Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
             Plug 'unblevable/quick-scope' " f command highlighting
-            Plug 'tweekmonster/startuptime.vim' 
 	    "test with ":StartupTime ~/foo.vim 100 , will test with opening the file 100 times
+            Plug 'tweekmonster/startuptime.vim' 
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
-            "Plug 'vimwiki/vimwiki' " Use Vimwiki
-            Plug '/home/connor/.local/share/nvim/plugged/vimwiki' " personal fork to disable features I don't use
-	    "Plug 'dhruvasagar/vim-table-mode' " table plugin closest to org-mode functionality, but tabular + plasticboy markdown provide
+            Plug '/home/connor/.local/share/nvim/plugged/vimwiki'
 	    Plug 'godlygeek/tabular'
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
-	"{{{ SYNTAX HIGHLIGHTING }}}
-	    Plug 'RRethy/vim-hexokinase'
-	    "Plug 'plasticboy/vim-markdown' " also tpope, may be faster.
 	    Plug 'Konfekt/FastFold'
 	    Plug 'masukomi/vim-markdown-folding'
+	    Plug 'zhimsel/vim-stay' "vim persistent folds
+	"{{{ SYNTAX HIGHLIGHTING }}}
+	    Plug 'RRethy/vim-hexokinase'
 	"{{{ THEMES }}}
 	    Plug 'tomasiser/vim-code-dark' "codedark
 	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
@@ -182,11 +180,14 @@ nmap '' ``zz
 
 " markdown folding
 "set foldexpr=NestedMarkdownFolds()
+":set foldtext='\ '.foldtext()
 autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
 autocmd FileType markdown nmap <Tab> za
 autocmd FileType vimwiki set foldmethod=expr
 autocmd FileType vimwiki set foldexpr=NestedMarkdownFolds()
 autocmd FileType vimwiki nmap <Tab> za
+set viewoptions=cursor,folds,slash,unix "for vim-stay
+let g:fastfold_savehook = 0 "for vim fastfold not update on save
 
 " 
 " Vim Quickscope
