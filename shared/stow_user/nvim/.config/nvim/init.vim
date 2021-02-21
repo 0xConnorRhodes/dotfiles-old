@@ -30,14 +30,17 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    "test with ":StartupTime ~/foo.vim 100 , will test with opening the file 100 times
         "{{{ MARKUP }}}
 	    Plug 'https://gitlab.com/dbeniamine/todo.txt-vim.git' "adds todo.txt support to vim
-            Plug 'vimwiki/vimwiki' " Use Vimwiki
+            "Plug 'vimwiki/vimwiki' " Use Vimwiki
+            Plug '/home/connor/.local/share/nvim/plugged/vimwiki' " personal fork to disable features I don't use
 	    "Plug 'dhruvasagar/vim-table-mode' " table plugin closest to org-mode functionality, but tabular + plasticboy markdown provide
 	    Plug 'godlygeek/tabular'
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	"{{{ SYNTAX HIGHLIGHTING }}}
 	    Plug 'RRethy/vim-hexokinase'
-	    Plug 'plasticboy/vim-markdown' " also tpope, may be faster.
+	    "Plug 'plasticboy/vim-markdown' " also tpope, may be faster.
+	    Plug 'Konfekt/FastFold'
+	    Plug 'masukomi/vim-markdown-folding'
 	"{{{ THEMES }}}
 	    Plug 'tomasiser/vim-code-dark' "codedark
 	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
@@ -176,7 +179,15 @@ nmap <Alt>p o<ESC>p
 nmap '' ``zz
 
 " plugin settings
-"
+
+" markdown folding
+"set foldexpr=NestedMarkdownFolds()
+autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
+autocmd FileType markdown nmap <Tab> za
+autocmd FileType vimwiki set foldmethod=expr
+autocmd FileType vimwiki set foldexpr=NestedMarkdownFolds()
+autocmd FileType vimwiki nmap <Tab> za
+
 " 
 " Vim Quickscope
 " Trigger a highlight in the appropriate direction when pressing these keys:

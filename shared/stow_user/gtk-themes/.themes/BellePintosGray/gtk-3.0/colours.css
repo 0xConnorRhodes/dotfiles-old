@@ -25,7 +25,17 @@
 @define-color selected_text #ffffff ;
 
 /* this means 'window background normal' */
+/*
 @define-color wbg_normal #FFF7E9 ;
+@define-color wbg_normal #EEEEEE ;
+
+this one is 
+@define-color wbg_normal #DEDEEE ;
+
+@define-color wbg_normal #DEDEDE ;
+@define-color wbg_normal #DEEEEE ;
+*/
+@define-color wbg_normal #EEEEEE ;
 
 
 /* some other stuff which may be left unused */
