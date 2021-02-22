@@ -42,15 +42,6 @@ pass git push
 sudo /etc/etckeeper/daily
 
 # backup OS and user data
-sudo rm /tmp/backintime.lock
-rm /home/connor/.local/share/backintime/worker.lock
-sudo backintime backup
-sudo rm /tmp/backintime.lock
-rm /home/connor/.local/share/backintime/worker.lock
-backintime backup
-rm /tmp/backintime/backup
-
-# backup VMs using restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
 restic --one-file-system --limit-upload 20000 --verbose backup /boot
