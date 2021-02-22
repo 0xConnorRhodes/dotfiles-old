@@ -41,7 +41,10 @@ pass git push
 ## runs etckeeper daily autocommit/push
 sudo /etc/etckeeper/daily
 
-# backup OS and user data
+# backup system using rsync
+#/home/connor/.local/dotfiles/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
+
+# backup VMs with restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
 restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
