@@ -44,8 +44,9 @@ sudo /etc/etckeeper/daily
 # backup OS and user data
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
-restic --one-file-system --limit-upload 20000 --verbose backup /boot
-sudo /home/connor/.local/dotfiles_secret/laptop/system_scripts/nopath/cron/laptop-restic-root-backup.sh
+restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
+#exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
+restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
