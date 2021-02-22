@@ -13,4 +13,5 @@ numlockx &
 export QT_STYLE_OVERRIDE=kvantum
 export QT_SCALE_FACTOR=1.5 
 export QT_FONT_DPI=115
-exec spectrwm
+#exec spectrwm
+exec dbus-launch spectrwm

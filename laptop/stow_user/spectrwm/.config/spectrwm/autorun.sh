@@ -4,6 +4,7 @@
 #xset r rate 300 45 &
 xrdb /home/connor/.config/Xresources/Xresources &
 lockargs="--timepos=x+105:h-70 --timestr=%H:%M" betterlockscreen -l
+urxvtd &
 xrdb /home/connor/.config/Xresources/Xresources &
 xdotool key meta+shift+r #this refreshes spectrwm which is necessary for the top bar to scale properly
 xset r rate 155 75 & # this is the best if I can manage to adjust to it.
@@ -18,11 +19,9 @@ syncthing -no-browser -logfile=/home/connor/.cache/syncthing/syncthing.log &
 unclutter --timeout 1 --jitter 5 --ignore-scrolling &
 pcmanfm -d &
 emacs --daemon &
-urxvtd &
 redshift &
 playerctld &
 #mpd &
-emacs --daemon
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
 #calcurse --daemon &
 picom &
