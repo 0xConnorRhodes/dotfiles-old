@@ -11,7 +11,7 @@ groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
 yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y sync
 ~/.emacs.d/bin/doom -y upgrade
-nvim --headless +PlugUpgrade +PlugUpdate +PlugInstall +qa
+nvim --headless +PlugClean +PlugUpgrade +PlugUpdate +PlugInstall +qa
 
 # push git repos
 cd /home/connor/.local/dotfiles
@@ -38,6 +38,9 @@ pass git add .
 pass git commit -m "nightly backup autocommit"
 pass git push
 
+## runs etckeeper daily autocommit/push
+sudo /etc/etckeeper/daily
+
 # backup OS and user data
 sudo rm /tmp/backintime.lock
 rm /home/connor/.local/share/backintime/worker.lock
@@ -48,10 +51,10 @@ backintime backup
 rm /tmp/backintime/backup
 
 # backup VMs using restic for block-level deduplication
-export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/restic
+export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
-restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
-restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
+restic --one-file-system --limit-upload 20000 --verbose backup /boot
+sudo /home/connor/.local/dotfiles_secret/laptop/system_scripts/nopath/cron/laptop-restic-root-backup.sh
 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
