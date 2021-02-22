@@ -45,7 +45,6 @@ sudo /etc/etckeeper/daily
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
 export RESTIC_PASSWORD=$(pass sysadmin/restic-laptop-backups-password | head -n1)
 restic --limit-upload 20000 --verbose backup /home/connor/.local/virtual_machines/
-#exec restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
 restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 --prune
 
 # cleaning up
