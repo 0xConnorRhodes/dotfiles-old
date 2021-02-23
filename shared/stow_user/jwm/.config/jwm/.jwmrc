@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<JWM>
+    <Include>$HOME/.config/jwm/sub_configs/start</Include>
+    <Include>$HOME/.config/jwm/sub_configs/menu</Include>
+    <Include>$HOME/.config/jwm/sub_configs/groups</Include>
+    <Include>$HOME/.config/jwm/sub_configs/tray</Include>
+    <Include>$HOME/.config/jwm/sub_configs/keys</Include>
+    <Include>$HOME/.config/jwm/sub_configs/preferences</Include>
+    <Include>$HOME/.config/jwm/sub_configs/theme</Include>
+</JWM>

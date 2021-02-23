@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<JWM>
+    <RootMenu onroot="3">
+      <Program label="Filemanager">
+        pcmanfm
+      </Program>
+      <Program label="Terminal">
+        termite
+      </Program>
+      <Separator/>
+      <Include>exec:xdgmenumaker -n -f jwm</Include>
+      <Separator/>
+
+	    <Program label="Jwm folder">pcmanfm ~/.config/jwm</Program>
+      <Separator/>
+      <Restart label="Restart Jwm"/>
+      <Program label="Exit">jwm -restart</Program>
+    </RootMenu>
+</JWM>
