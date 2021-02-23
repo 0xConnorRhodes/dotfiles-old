@@ -60,7 +60,6 @@ Xft.rgba: rgb
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
 Urxvt*buffered: false
-URxvt.intensityStyles: false
 URxvt.letterSpace: 0
 URxvt.font: xft:HackNerdFontMono:size=16, \
             xft:RobotoMono Nerd Font:size=16, \
@@ -101,10 +100,10 @@ URxvt.keysym.Control-KP_Left:   \033[1;5D
 URxvt.keysym.Control-KP_Right:  \033[1;5C
 
 !! Extensions
-URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select
+URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select,clipboard
 URxvt.colorUL:		#6fbdff
 !! url-select:
-URxvt.keysym.M-u:	perl:url-select:select_next
+URxvt.keysym.C-y:	perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 !! keyboard-select:
@@ -115,3 +114,4 @@ URxvt.resize-font.bigger:	C-plus
 !! matcher
 URxvt.url-launcher:	/usr/bin/xdg-open
 URxvt.matcher.button:	1
+URxvt.clipboard.autocopy: true
