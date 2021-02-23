@@ -23,7 +23,7 @@ URxvt.url-launcher:	/usr/bin/xdg-open
 |`C-y`|enter vim url selection mode|
 |`y`|within vim mode, yank url
 |`j/k`|move up and down
-|g/G|Select first/last URL (also with home/end key)
+|`g/G`|Select first/last URL (also with home/end key)
 |`o`|open url
 |`Return`|like `o` but deactivates url-select mode afterwards
 |`q/Escape`|exit url mode
