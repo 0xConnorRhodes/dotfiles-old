@@ -2,11 +2,9 @@
 # autorun script for Lenovo ThinkPad e15 by Connor Rhodes (connorrhodes.com)
 
 #xset r rate 300 45 &
-xrdb /home/connor/.config/Xresources/Xresources &
 lockargs="--timepos=x+105:h-70 --timestr=%H:%M" betterlockscreen -l
 urxvtd &
 xrdb /home/connor/.config/Xresources/Xresources &
-xdotool key meta+shift+r #this refreshes spectrwm which is necessary for the top bar to scale properly
 xset r rate 155 75 & # this is the best if I can manage to adjust to it.
 #xset r rate 200 50 & # I think this is the perfect one.
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
