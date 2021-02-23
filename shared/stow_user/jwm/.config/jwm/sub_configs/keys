@@ -25,7 +25,7 @@
     <Key mask="A" key="Left">ldesktop</Key>
     <Key mask="SA" key="Right">sendr</Key>
     <Key mask="SA" key="Left">sendl</Key>
-    <Key mask="A" key="t">exec:termite</Key>
+    <Key mask="A" key="t">exec:alacritty</Key>
     <Key mask="CA" key="space">exec:/usr/bin/rofi -show drun -modi drun</Key>
     <Key mask="CA" key="Up">maxtop</Key>
     <Key mask="CA" key="Down">maxbottom</Key>

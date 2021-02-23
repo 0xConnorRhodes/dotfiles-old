@@ -5,7 +5,7 @@
         pcmanfm
       </Program>
       <Program label="Terminal">
-        termite
+        alacritty
       </Program>
       <Separator/>
       <Include>exec:xdgmenumaker -n -f jwm</Include>

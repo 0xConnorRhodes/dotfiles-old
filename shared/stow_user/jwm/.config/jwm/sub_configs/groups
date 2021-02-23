@@ -5,7 +5,7 @@
     </Group>
     <!--centered applications -->
     <Group>
-        <Class>Termite</Class>
+	    <Class>Alacritty</Class>
         <Option>centered</Option>
         <Option>opacity:1.0</Option>        
     </Group>
