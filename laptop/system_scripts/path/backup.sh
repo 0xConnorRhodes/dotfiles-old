@@ -42,7 +42,7 @@ pass git push
 sudo /etc/etckeeper/daily
 
 # backup system using rsync
-#/home/connor/.local/dotfiles/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
+/home/connor/.local/dotfiles_secret/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
 
 # backup VMs with restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
