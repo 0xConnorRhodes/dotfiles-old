@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "$1" > /home/connor/.cache/spellcheck.txt
+
+urxvtc -e aspell --lang=en_US check /home/connor/.cache/spellcheck.txt
