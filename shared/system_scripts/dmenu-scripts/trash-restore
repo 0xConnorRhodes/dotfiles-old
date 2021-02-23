@@ -1,0 +1,5 @@
+#!/bin/bash
+# trash restore script by Connor Rhodes (connorrhodes.com)
+
+# echo 0 selects to restore the first option. when fzf filters down to 1 option, pressing 0 to select is unnecessary
+echo 0 | trash-restore $(trash-list | fzf | cut -d " " -f 3)

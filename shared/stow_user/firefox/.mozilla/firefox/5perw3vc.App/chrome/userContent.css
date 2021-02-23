@@ -3,3 +3,12 @@
 
 
 @namespace url(http://www.w3.org/1999/xhtml);
+
+/*hide reader mode controls*/
+/*change the color scheme with 
+ * `user_pref("reader.color_scheme", "sepia");`
+ * in user.js*/
+toolbar-container {
+    font-size: var(--font-size);
+    display: none;
+}

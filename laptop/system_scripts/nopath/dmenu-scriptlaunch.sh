@@ -4,7 +4,7 @@
 # show all dmenu script folder contents combined into one prompt
 SELECTION=$(ls \
 	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/* \
-	~/.local/dotfiles/laptop/system_scripts/dmenu-scripts | \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts | \
 	xargs -n 1 basename | \
 	dmenu -fn 'Hack:normal:pixelsize=32')
 
@@ -22,7 +22,7 @@ fi
 # get the full path of the selected script for the final exec command
 FULLPATH=$(ls -d \
 	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/* \
-	~/.local/dotfiles/laptop/system_scripts/dmenu-scripts/* \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/* \
 	| grep $NAME)
 
 # run the full path to the dmenu script with any arguments passed to it
