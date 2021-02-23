@@ -7,5 +7,5 @@ xset dpms force off
 xset s 5 5
 pkill obsidian #kills obsidian, so I can edit dayplanner on phone without sync conflict
 lockargs="--timepos=x+105:h-70 --timestr=%H:%M" betterlockscreen -l
-xset s off 300 300
+xset s 300 300
 obsidian &!
