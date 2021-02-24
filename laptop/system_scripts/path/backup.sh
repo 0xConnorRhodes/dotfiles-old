@@ -8,6 +8,7 @@ pacman -Qqm > /home/connor/.local/dotfiles_secret/laptop/aur_packages.txt
 pip list --user > /home/connor/.local/dotfiles_secret/laptop/pip_user_packages.txt
 pip list > /home/connor/.local/dotfiles_secret/laptop/pip_all_packages.txt
 groups > /home/connor/.local/dotfiles_secret/laptop/user_groups.txt
+modprobed-db store
 yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y sync
 ~/.emacs.d/bin/doom -y upgrade
