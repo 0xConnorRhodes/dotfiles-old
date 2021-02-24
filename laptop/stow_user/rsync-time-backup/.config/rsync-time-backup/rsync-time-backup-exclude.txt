@@ -1,4 +1,4 @@
-/tmp/*
+- /tmp/*
 - /home/connor/.cache/yay/*
 - /home/connor/.local/virtual_machines/*
 + /boot/*

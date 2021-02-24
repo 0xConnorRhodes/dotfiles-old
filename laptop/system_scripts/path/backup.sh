@@ -14,6 +14,9 @@ yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y upgrade
 nvim --headless +PlugClean +PlugUpgrade +PlugUpdate +PlugInstall +qa
 
+# copy some un-stowed configs to my dotfiles for version control
+/home/connor/.local/dotfiles/laptop/system_scripts/nopath/rsync-config-backup.sh
+
 # push git repos
 cd /home/connor/.local/dotfiles
 git pull
@@ -43,7 +46,7 @@ pass git push
 sudo /etc/etckeeper/daily
 
 # backup system using rsync
-sudo /home/connor/.local/dotfiles_secret/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
+sudo /home/connor/.local/dotfiles/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
 
 # backup VMs with restic for block-level deduplication
 export RESTIC_REPOSITORY=sftp:gb:/mnt/pool/nosync/restic
