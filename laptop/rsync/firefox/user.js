@@ -1,0 +1,12 @@
+user_pref("browser.backspace_action", 0);
+user_pref("browser.download.dir", "/home/connor/dwn");
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+user_pref("browser.tabs.warnOnClose", false);
+user_pref("browser.startup.page", 3);
+user_pref("browser.urlbar.placeholderName", "Google");
+user_pref("browser.urlbar.placeholderName.private", "Google");
+user_pref("layout.css.devPixelsPerPx", "1.2");
+user_pref("reader.color_scheme", "sepia");
+user_pref("reader.content_width", 1);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
