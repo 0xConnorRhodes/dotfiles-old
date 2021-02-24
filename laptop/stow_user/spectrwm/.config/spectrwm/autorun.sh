@@ -23,6 +23,6 @@ playerctld &
 #exec ~/.local/config_nosync/bin/autorun_nosync.sh &
 #calcurse --daemon &
 picom &
-~/bin/notifications-on.sh
+~/bin/notifications-on.sh &
 espanso daemon & #it only works if it's started here. Not in the systemd service.
 #~/bin/refbar
