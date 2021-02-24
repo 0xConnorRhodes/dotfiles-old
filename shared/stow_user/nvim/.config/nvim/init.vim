@@ -62,6 +62,7 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"] " update when you enter 
 
 " basic settings
 set undofile "undo history across close and open in a file
+set autoread "update file when contents changed
 
 ":set number relativenumber "hybrid/relative line numbers
 :set number
