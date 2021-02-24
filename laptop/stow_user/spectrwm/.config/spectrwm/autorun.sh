@@ -24,6 +24,5 @@ playerctld &
 #calcurse --daemon &
 picom &
 ~/bin/notifications-on.sh
+espanso daemon & #it only works if it's started here. Not in the systemd service.
 #~/bin/refbar
-#xterm -e mplayer -novideo -loop 0 -volume 1 -ao pulse /home/connor/.cache/mplayer/torukia.m4a &
-#systemctl --user restart xcape #this used to be necessary, but an update made it unneccessary

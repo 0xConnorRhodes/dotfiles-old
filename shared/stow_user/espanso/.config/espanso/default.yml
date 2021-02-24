@@ -10,6 +10,14 @@ matches:
   # Simple text replacement
   - trigger: "{{"
     replace: "- [ ] "
+  - trigger: "}}"
+    replace: "{--}"
+  - trigger: "spanmed"
+    replace: '<span style="font-size:medium"><i>$|$</i></span>'
+    word: true
+  - trigger: "stk"
+    replace: '<strike>$|$</strike>'
+    word: true
   - trigger: "td"
     replace: "TODO"
     word: true
@@ -19,7 +27,7 @@ matches:
   - trigger: "cr"
     replace: "Connor Rhodes"
     word: true
-  - trigger: "gtm"
+  - trigger: ";gtm"
     replace: "It was great to meet you at "
   - trigger: "sfg"
     replace: "Southlake Focus Group"
