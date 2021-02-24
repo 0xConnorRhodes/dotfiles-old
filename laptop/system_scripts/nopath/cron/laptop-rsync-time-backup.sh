@@ -8,7 +8,7 @@
 	--rsync-append-flags "--bwlimit=20000 \
 	--exclude-from /home/connor/.config/rsync-time-backup/rsync-time-backup-exclude.txt" \
 	/ \
-	connor@gb:/mnt/pool/nosync/rsync-time-backup
+	connor@gb:/mnt/pool/nosync/rsync-time-backup/laptop/root
 
 /home/connor/.local/source/rsync-time-backup/rsync_tmbackup.sh \
 	-p 45385 \
@@ -16,4 +16,4 @@
 	--rsync-append-flags "--bwlimit=20000 \
 	--exclude-from /home/connor/.config/rsync-time-backup/rsync-time-backup-exclude.txt" \
 	/boot \
-	connor@gb:/mnt/pool/nosync/rsync-time-backup
+	connor@gb:/mnt/pool/nosync/rsync-time-backup/laptop/boot
