@@ -16,6 +16,11 @@ hdd() {
 ## BATTERY
 bat() {
     cap1="$(cat /sys/class/power_supply/BAT0/capacity)"
+    acstatus=$(cat /sys/class/power_supply/AC/online)
+    if [ "$cap1" == 98 ] && [ "$acstatus" == 1 ]
+    then
+	    cap1="100" 
+    fi
     echo "$cap1"
 }
 
