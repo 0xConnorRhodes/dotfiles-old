@@ -26,4 +26,5 @@ FULLPATH=$(ls -d \
 	| grep $NAME)
 
 # run the full path to the dmenu script with any arguments passed to it
+# TODO add a case statement to custom open some scripts without a terminal (or maybe if it's a symlink, don't open in urxvt)
 exec urxvtc -e "$FULLPATH" "$ARGS"
