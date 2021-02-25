@@ -93,6 +93,7 @@ nls_iso8859_1
 nvme
 nvme_core
 nvram
+overlay
 pcspkr
 pinctrl_amd
 pkcs8_key_parser
