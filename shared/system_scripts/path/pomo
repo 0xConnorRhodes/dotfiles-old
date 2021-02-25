@@ -4,8 +4,8 @@
 # Modified by Connor Rhodes (connorrhodes.com) to: play custom sound, notifications, and output to tiling wm bar
 # TODO integrate with time tracker
 
-WORK=1
-PAUSE=1
+WORK=25
+PAUSE=5
 INTERACTIVE=true
 MUTE=false
 
@@ -72,7 +72,7 @@ while true
 do
 	for ((i=$WORK; i>0; i--))
 	do
-		printf "$time_left" $i "work" | tee | sed "s/\r//g" | awk '{ print $1}' | tee /home/connor/.cache/pomodoro-time.txt
+		printf "$time_left" $i "work" | tee | sed "s/\r//g" | awk '{ print "["$1"]"}' | tee /home/connor/.cache/pomodoro-time.txt
 		ref_bar
 		sleep 1m
 	done
@@ -81,7 +81,7 @@ do
 	if $INTERACTIVE; then
 		read -d '' -t 0.001
 		echo -e "\a"
-		echo "Work over" | tee /home/connor/.cache/pomodoro-time.txt
+		echo "[Work over]" | tee /home/connor/.cache/pomodoro-time.txt
 		notify-send -u critical Pomodoro "Work Over"
 		ref_bar
 		track_time	
@@ -98,7 +98,7 @@ do
 	if $INTERACTIVE; then
 		read -d '' -t 0.001
 		echo -e "\a"
-		echo "Break over" | tee /home/connor/.cache/pomodoro-time.txt
+		echo "[Break over]" | tee /home/connor/.cache/pomodoro-time.txt
 		ref_bar
 		notify-send -u critical Pomodoro "Break over"
 		track_time
