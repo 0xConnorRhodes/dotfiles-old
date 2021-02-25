@@ -24,7 +24,7 @@ show_help() {
 }
 
 play_notification() {
-	aplay -q /usr/lib/notifications/airplane_chime.wav&
+	aplay -q /usr/lib/notifications/airplane_chime_loud.wav&
 	ref_bar
 }
 
