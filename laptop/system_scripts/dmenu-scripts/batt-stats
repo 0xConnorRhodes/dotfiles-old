@@ -1,0 +1,7 @@
+#!/bin/bash
+# Scipt to display battery details on Lenovo ThinkPad E15
+# Connor Rhodes (connorrhodes.com)
+
+TIMELEFT=$(upower -d | grep -E "time to empty:" | head -n 1 | awk 'BEGIN { FS = ":" } ; { print $2 }')
+
+notify-send "$TIMELEFT left"
