@@ -3,15 +3,15 @@
 
 ## DISK
 hdd() {
-  hdd="$(df -h | awk 'NR==4{print $4}')"
+  hdd="$(df -h | grep nvme0n1p2 | awk '{print $4}')"
   echo -e "$hdd"
 }
 
-## VOLUME
-vol() {
-    vol=`amixer get Master | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on:/ /g' | sed 's/off:/ /g'`
-    echo -e "$vol"
-}
+### VOLUME
+#vol() {
+#    vol=`amixer get Master | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on:/ /g' | sed 's/off:/ /g'`
+#    echo -e "$vol"
+#}
 
 ## BATTERY
 bat() {
@@ -20,27 +20,27 @@ bat() {
 }
 
 ## INTERNET
-int() {
-    grep -q "down" /sys/class/net/w*/operstate && wifiicon="📡" ||
-    	wifiicon="$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')"
-    
-    lukecmd= printf "%s %s\n" "$wifiicon" "$(sed "s/down/❎/;s/up/🌐/" /sys/class/net/e*/operstate)" | awk '{print $1}'
-    
-    echo $lukecmd
-}
+#int() {
+#    grep -q "down" /sys/class/net/w*/operstate && wifiicon="📡" ||
+#    	wifiicon="$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')"
+#    
+#    lukecmd= printf "%s %s\n" "$wifiicon" "$(sed "s/down/❎/;s/up/🌐/" /sys/class/net/e*/operstate)" | awk '{print $1}'
+#    
+#    echo $lukecmd
+#}
 
 
 ## BLUETOOTH
-btooth() {
-    blt=$(bluetoothctl info | grep "Connected" | sed "s/Connected: yes//")
-    echo $blt
-}
+#btooth() {
+#    blt=$(bluetoothctl info | grep "Connected" | sed "s/Connected: yes//")
+#    echo $blt
+#}
 
 ## WEATHER
-wtr() {
-	wtr2=$()
-	echo $wtr2
-}
+#wtr() {
+#	wtr2=$()
+#	echo $wtr2
+#}
 
 
 ## work email
@@ -55,7 +55,15 @@ wtr() {
 #	echo $pmail2
 #}
 
-SLEEP_SEC=120
+# pomodoro time
+ptime() {
+	[ -z "$(pgrep pomo)" ] && echo "" > /home/connor/.cache/pomodoro-time.txt
+	pomtime=$(cat /home/connor/.cache/pomodoro-time.txt)
+	echo "$pomtime"
+}
+
+
+SLEEP_SEC=60
 #loops forever outputting a line every SLEEP_SEC secs
 
 # It seems that we are limited to how many characters can be displayed via
@@ -64,6 +72,6 @@ SLEEP_SEC=120
 # echo output too long to display correctly.
 while :; do
 	#echo "+@fg=1;  $(pmail) | +@fg=0;  $(hdd) | +@fg=0;  +@fn=0; $(vol) +@fg=0; |   $(bat)% |  $(btooth) |  $(int) |"
-	echo "+@fg=1; +@fg=0;  $(hdd) | +@fg=0;  +@fn=0;   $(bat)% |"
+	echo "+@fg=1;$(ptime) +@fg=0;  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
 	sleep $SLEEP_SEC
 done

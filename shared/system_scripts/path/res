@@ -1,3 +1,6 @@
 #!/bin/bash
+# espanso restart script
+# Connor Rhodes (connorrhodes.com)
+
 killall espanso
 espanso worker &
