@@ -1,0 +1,5 @@
+#!/bin/bash
+# use pwgen to generate a random readable username
+# Connor Rhodes (connorrhodes.com)
+
+pwgen -0 -A -B -1 | head -n 1
