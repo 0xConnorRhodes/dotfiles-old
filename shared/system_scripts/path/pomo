@@ -4,8 +4,8 @@
 # Modified by Connor Rhodes (connorrhodes.com) to: play custom sound, notifications, and output to tiling wm bar
 # TODO integrate with time tracker
 
-WORK=25
-PAUSE=5
+WORK=1
+PAUSE=1
 INTERACTIVE=true
 MUTE=false
 
@@ -30,6 +30,11 @@ play_notification() {
 
 ref_bar() {
 	kill $(pstree -lp | grep -- -baraction.sh | sed "s/.*sleep//" | sed "s/(//" | sed "s/)//") > /dev/null 2>&1
+}
+
+track_time() {
+	read -p "utt add " TRACK	
+	utt add "$TRACK"
 }
 
 while getopts :sw:b:m opt; do
@@ -79,7 +84,7 @@ do
 		echo "Work over" | tee /home/connor/.cache/pomodoro-time.txt
 		notify-send -u critical Pomodoro "Work Over"
 		ref_bar
-		read
+		track_time	
 	fi
 
 	for ((i=$PAUSE; i>0; i--))
@@ -96,6 +101,6 @@ do
 		echo "Break over" | tee /home/connor/.cache/pomodoro-time.txt
 		ref_bar
 		notify-send -u critical Pomodoro "Break over"
-		read
+		track_time
 	fi
 done
