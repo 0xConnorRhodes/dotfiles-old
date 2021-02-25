@@ -1,4 +1,11 @@
 #!/bin/zsh
+# nnn specific sections of my zshrc
+# Connor Rhodes (connorrhodes.com)
+
+# config variables
+export NNN_OPENER=~/.config/nnn/nnn_open.sh
+
+# custom functions
 # nnn cd on quit
 m ()
 {
