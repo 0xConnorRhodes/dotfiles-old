@@ -24,7 +24,7 @@ show_help() {
 }
 
 play_notification() {
-	aplay -q /usr/lib/notifications/airplane_chime_loud.wav&
+	aplay -q /usr/lib/notifications/airplane_chime.wav&
 	ref_bar
 }
 
@@ -101,6 +101,7 @@ do
 		echo "[Break over]" | tee /home/connor/.cache/pomodoro-time.txt
 		ref_bar
 		notify-send -u critical Pomodoro "Break over"
-		track_time
+		utt add "break **"
+		read
 	fi
 done

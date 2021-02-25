@@ -23,4 +23,4 @@ do
 done
 
 # launching obsidian this way is the only way I could get it to go to my x server
-urxvtc -e nohup /home/connor/.appimages/Obsidian-0.10.13_0632d66a95a85ab51525bd7325b85c39.AppImage --no-sandbox &
+urxvtc -e nohup obsidian &!
