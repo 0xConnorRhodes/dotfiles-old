@@ -1,0 +1,6 @@
+#!/bin/bash
+# script to copy the full path of the selected file into the clipboard.
+# Connor Rhodes (connorrhodes.com)
+
+# note that xcl is a seperate script in my path
+printf "$(ls $PWD/$1)" | sed 's/\n//g' | xcl

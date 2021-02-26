@@ -5,7 +5,7 @@
 [[ -p /dev/stdin ]] && { mapfile -t; set -- "${MAPFILE[@]}"; }
 
 for i in "$@"; do
-    echo "$i" | xclip -selection primary
-    echo "$i" | xclip -selection secondary
-    echo "$i" | xclip -selection clipboard
+    printf "$i" | xclip -selection primary
+    printf "$i" | xclip -selection secondary
+    printf "$i" | xclip -selection clipboard
 done

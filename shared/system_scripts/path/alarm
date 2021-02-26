@@ -1,0 +1,4 @@
+#!/bin/bash
+
+shalarm "$1"
+echo "$2"
