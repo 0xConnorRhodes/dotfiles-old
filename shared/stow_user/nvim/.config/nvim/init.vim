@@ -185,7 +185,6 @@ nmap <Tab> za
 set foldexpr=NestedMarkdownFolds()
 ":set foldtext='\ '.foldtext()
 let g:markdown_fold_override_foldtext=0
-"autocmd FileType vimwiki set foldmethod=expr #this line was bugging folds
 "autocmd FileType vimwiki set foldexpr=NestedMarkdownFolds()
 "autocmd FileType vimwiki nmap <Tab> za
 set viewoptions=cursor,folds,slash,unix "for vim-stay
