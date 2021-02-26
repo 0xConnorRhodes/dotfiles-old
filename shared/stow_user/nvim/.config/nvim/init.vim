@@ -34,9 +34,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'godlygeek/tabular'
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
-	    "Plug 'Konfekt/FastFold'
+	    Plug 'Konfekt/FastFold'
 	    Plug 'masukomi/vim-markdown-folding'
-	    "Plug 'zhimsel/vim-stay' "vim persistent folds, bugged when used
+	    Plug 'zhimsel/vim-stay' "vim persistent folds, bugged when used
 	    "with vim-markdown-holding
 	"{{{ SYNTAX HIGHLIGHTING }}}
 	    Plug 'RRethy/vim-hexokinase'
