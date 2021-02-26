@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# shows reminder and the + time
+ps aux | grep "/home/connor/bin/remind" | grep -v "colour" | awk -F/ '{print $9 $NF}' | sed "s/remind\s//g"
+
+# you'll have to awk another column to get the start time then probably echo them both as variables in a chart or on a line
