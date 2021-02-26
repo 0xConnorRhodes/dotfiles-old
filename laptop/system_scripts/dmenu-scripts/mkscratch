@@ -1,2 +1,6 @@
 #!/bin/zsh
-/home/connor/.local/config_sync/bin/set_wm_class $(xwininfo | grep "Window id:" | awk '{ print $4 }') scratchpad scratchpad
+# make selected window into a dynamic scratchpad (become transparent when window does not have focus.)
+# depends on xorg-xwininfo and set_wm_class
+# Connor Rhodes (connorrhodes.com)
+
+/home/connor/bin/set_wm_class $(xwininfo | grep "Window id:" | awk '{ print $4 }') dynamic-scratchpad dynamic-scratchpad
