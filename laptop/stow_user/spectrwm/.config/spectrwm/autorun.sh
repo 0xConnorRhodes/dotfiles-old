@@ -25,4 +25,6 @@ playerctld &
 picom &
 ~/bin/notifications-on.sh &
 espanso daemon & #it only works if it's started here. Not in the systemd service.
+# set dg80 input colume at 153%
+pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 100000
 #~/bin/refbar

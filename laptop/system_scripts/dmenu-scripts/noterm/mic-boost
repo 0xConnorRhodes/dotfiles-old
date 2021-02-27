@@ -1,0 +1,8 @@
+#!/bin/sh
+# script to set mic input on D880 to 153% (100000 in binary(
+# Connor Rhodes (connorrhodes.com)
+# find sink address with `pacmd list-sources | nvim` and search for the name from the pavucontrol input tab
+
+pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 100000
+notify-send "Volume" "DG80 Mic at 153%"
+
