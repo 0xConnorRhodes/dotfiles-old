@@ -30,7 +30,12 @@ else
 		# the first command is what workspace is it on, the second is what is the current workspace. if they are equal, this triggers
 		# if it is running, and if it is not hidden and if it is on the current workspace
 
-		then wmctrl -r "$winname" -b add,hidden
+		then 
+			wmctrl -r "$winname" -t 9 
+			# 9 is my desktop 10
+			# move it there before minimizing to avoid it cluttering my minimized window indicator in baraction.sh
+
+			wmctrl -r "$winname" -b add,hidden
 
 		else 
 			wmctrl -r "$winname" -t $(wmctrl -d | grep \* | awk '{ print $1 }') 
