@@ -139,6 +139,7 @@ stp
 syscopyarea
 sysfillrect
 sysimgblt
+tap
 thinkpad_acpi
 tpm
 tpm_crb
@@ -151,6 +152,9 @@ ucsi_acpi
 usbhid
 uvcvideo
 vfat
+vhost
+vhost_iotlb
+vhost_net
 video
 videobuf2_common
 videobuf2_memops
