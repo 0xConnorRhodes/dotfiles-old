@@ -6,9 +6,6 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-*foreground: #eaeaea
-*foreground_bold: #a8a19f
-*cursor: #a8a19f
 !!*backgroundURxvt.secondaryScreen:	[70]#1b1918
 !!*background: rgba(0, 0, 0. .7)
 
@@ -54,7 +51,11 @@ Xft.rgba: rgb
 *color7: #eaeaea
 *color15: #eaeaea
 
+! URxvt
 
+URxvt*foreground: #eaeaea
+URxvt*foreground_bold: #a8a19f
+URxvt*cursor: #a8a19f
 
 
 URxvt*imLocale: en_US.UTF-8
@@ -115,3 +116,7 @@ URxvt.resize-font.bigger:	C-plus
 URxvt.url-launcher:	/usr/bin/xdg-open
 URxvt.matcher.button:	1
 URxvt.clipboard.autocopy: true
+
+! xterm
+XTerm.vt100.faceName: Liberation Mono:size=10:antialias=false
+XTerm.vt100.font: 7x13

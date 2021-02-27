@@ -2,6 +2,9 @@
 # Script to launch or focus Pavucontrol and hide it if it is currently focused.
 # Connor Rhodes (connorrhodes.com)
 
+# make sure dg80 mic is set to 153%
+pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 100000
+
 winname="Volume Control"
 
 if [ -z "$(wmctrl -l | grep "$winname")" ]
