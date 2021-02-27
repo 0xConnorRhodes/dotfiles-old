@@ -3,8 +3,10 @@
 
 # show all dmenu script folder contents combined into one prompt
 SELECTION=$(ls \
-	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/* \
-	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts | \
+	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/term/* \
+	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/noterm/* \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/term/* \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/noterm/* | \
 	xargs -n 1 basename | \
 	dmenu -fn 'Hack:normal:pixelsize=32')
 
@@ -21,10 +23,19 @@ fi
 
 # get the full path of the selected script for the final exec command
 FULLPATH=$(ls -d \
-	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/* \
-	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/* \
+	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/term/* \
+	~/.local/dotfiles/shared/system_scripts/dmenu-scripts/noterm/* \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/term/* \
+	~/.local/dotfiles/$(hostname)/system_scripts/dmenu-scripts/noterm/* \
 	| grep $NAME)
 
 # run the full path to the dmenu script with any arguments passed to it
-# TODO add a case statement to custom open some scripts without a terminal (or maybe if it's a symlink, don't open in urxvt)
-exec urxvtc -e "$FULLPATH" "$ARGS"
+# TODO if noterm in pathh exec else urxvt exec
+
+case "$FULLPATH" in
+	*noterm*) 	
+		exec $FULLPATH "$ARGS";;
+	*)		
+		exec urxvtc -e "$FULLPATH" "$ARGS"
+esac
+
