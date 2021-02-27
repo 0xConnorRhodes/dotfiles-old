@@ -1,13 +1,13 @@
 #!/bin/bash
-# Script to launch or focus a web-based dictation app and hide it if it is currently focused.
+# Script to launch or focus Pavucontrol and hide it if it is currently focused.
 # Connor Rhodes (connorrhodes.com)
 
-winname="Voice Notepad - Speech to Text with Google Speech Recognition"
+winname="Volume Control"
 
 if [ -z "$(wmctrl -l | grep "$winname")" ]
 # -z triggers if it is empty. so this is, if it is not running...
 
-then exec chromium --app=https://dictation.io/speech &>/dev/null & #this syntax is necessary for output to go to /dev/null
+then exec 
 # then run it
 
 sleep 3 #might require some fiddling. It's the time it takes to launch google chrome

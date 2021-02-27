@@ -42,7 +42,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'RRethy/vim-hexokinase'
 	"{{{ THEMES }}}
 	    Plug 'tomasiser/vim-code-dark' "codedark
-	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor="dark|mirage|light"
+	    Plug 'ayu-theme/ayu-vim' "ayu , let ayucolor=dark|mirage|light
 	    Plug 'liuchengxu/space-vim-theme' "space_vim_theme , set background=dark|light
 	    Plug 'laggardkernel/vim-one' "one , set background=dark|light must be done after setting the theme
 	    "Plug 'ishan9299/modus-theme-vim' "this is lua, so you'll need to port to lua before using it "call with modus-operandi and modus-vivendi
