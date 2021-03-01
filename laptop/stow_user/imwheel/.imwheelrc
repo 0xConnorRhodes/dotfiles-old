@@ -1,0 +1,4 @@
+# speed up scrolling
+".*"
+	None, Up, Button4, 3
+	None, Down, Button5, 3
