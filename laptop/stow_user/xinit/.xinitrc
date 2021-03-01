@@ -33,7 +33,6 @@ then
 
 	# disable reverse scrolling on the scroll wheel of this mouse
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
-
 	imwheel -b 45 &
 
 	exec dbus-launch spectrwm

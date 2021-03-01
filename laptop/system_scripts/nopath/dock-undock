@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$internal_display=$(xrandr | grep -E "eDP connected.*).+$")
