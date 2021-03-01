@@ -2,9 +2,17 @@
 
 internal_display=$(xrandr | grep -E "eDP connected.*).+$")
 
-if [ -n $internal_display ];
+if [ -n "$internal_display" ];
 then
 	echo "undocked"
 else
 	echo "docked"
+	pkill imwheel
+	xrandr --output eDP --primary --mode 1920x1080 \
+		--pos 0x0 --rotate normal --output HDMI-A-0 \
+		--off --output DisplayPort-0 --off
+
+	xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
+	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
+	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0 #disables reverse scrolling on trackpoint while keeping it set on touchpad per /usr/share/X11/xorg.conf.d/40-libinput.conf
 fi
