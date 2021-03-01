@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 internal_display=$(xrandr | grep -E "eDP connected.*).+$")
 
