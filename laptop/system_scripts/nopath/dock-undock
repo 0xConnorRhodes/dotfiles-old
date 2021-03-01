@@ -1,3 +1,10 @@
 #!/bin/bash
 
-$internal_display=$(xrandr | grep -E "eDP connected.*).+$")
+internal_display=$(xrandr | grep -E "eDP connected.*).+$")
+
+if [ -n $internal_display ];
+then
+	echo "undocked"
+else
+	echo "docked"
+fi
