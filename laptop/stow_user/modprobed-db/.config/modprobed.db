@@ -150,6 +150,8 @@ typec
 typec_ucsi
 ucsi_acpi
 usbhid
+usbkbd
+usbmouse
 uvcvideo
 vfat
 vhost
