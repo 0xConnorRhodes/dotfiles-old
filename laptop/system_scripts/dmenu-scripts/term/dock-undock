@@ -11,12 +11,17 @@ then
 		--mode 1920x1080 --pos 0x0 --rotate normal
 
 	# disable reverse scrolling on the scroll wheel of this mouse
+
+	xset b off &
+	setxkbmap co
+	xset r rate 155 75 &
+	xmodmap ~/.config/xmodmap/xmodmap &
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
 
-	imwheel -b 45 &
+	#imwheel -b 45 &
 else
 	echo "docked"
-	pkill imwheel
+	#pkill imwheel
 	xrandr --output eDP --primary --mode 1920x1080 \
 		--pos 0x0 --rotate normal --output HDMI-A-0 \
 		--off --output DisplayPort-0 --off

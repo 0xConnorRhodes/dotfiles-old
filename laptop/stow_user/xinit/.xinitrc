@@ -32,8 +32,7 @@ then
 		--mode 1920x1080 --pos 0x0 --rotate normal
 
 	# disable reverse scrolling on the scroll wheel of this mouse
-	imwheel -b 45 &
-
+	#imwheel -b 45 &
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
 
 	exec dbus-launch spectrwm
