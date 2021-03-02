@@ -30,21 +30,15 @@ then
 		--mode 1920x1080 --pos 1920x0 --rotate normal \
 		--output DisplayPort-0 --primary \
 		--mode 1920x1080 --pos 0x0 --rotate normal
-
-	# disable reverse scrolling on the scroll wheel of this mouse
-	#imwheel -b 45 &
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
-
 	exec dbus-launch spectrwm
 else
 	xrandr --output eDP --primary --mode 1920x1080 \
 		--pos 0x0 --rotate normal --output HDMI-A-0 \
 		--off --output DisplayPort-0 --off
-
 	xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
 	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
-	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0 #disables reverse scrolling on trackpoint while keeping it set on touchpad per /usr/share/X11/xorg.conf.d/40-libinput.conf
-
+	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0
 	exec dbus-launch spectrwm
 fi
 #exec dbus-launch spectrwm
