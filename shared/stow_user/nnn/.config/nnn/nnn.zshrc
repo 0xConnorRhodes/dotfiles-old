@@ -3,6 +3,7 @@
 # Connor Rhodes (connorrhodes.com)
 
 # config variables
+export NNN_TRASH=1
 export NNN_OPENER=~/.config/nnn/nnn_open.sh
 
 # custom functions
