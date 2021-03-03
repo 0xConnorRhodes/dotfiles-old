@@ -17,7 +17,8 @@ hdd() {
 bat() {
     cap1="$(cat /sys/class/power_supply/BAT0/capacity)"
     acstatus=$(cat /sys/class/power_supply/AC/online)
-    if [ "$cap1" == 98 ] && [ "$acstatus" == 1 ]
+    chargestatus=$(upower -d | grep -m 1 "state:" | awk '{ print $2 }')
+    if [ "$chargestatus" == "fully-charged" ] && [ "$acstatus" == 1 ]
     then
 	    cap1="100" 
     fi

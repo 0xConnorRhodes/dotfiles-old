@@ -1,3 +1,4 @@
 #!/bin/bash
 termdown $1
 aplay -q /usr/lib/notifications/airplane_chime.wav&
+notify-send -u critical "Alarm"

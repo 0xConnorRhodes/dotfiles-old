@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo "ENACFIRE E60\nSony WH-1000XM3" | dmenu -fn 'Hack:normal:pixelsize=32'
+
+#case $CHOICE in
+#	pattern)
+#		command
+#		;;
+#	pattern2)
+#		command
+#		;;
+#esac
+#
+## volume for enacfire e60
+#pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 100000
+#
+## volume for sonly XM3s
+#pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 72000
