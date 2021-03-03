@@ -5,3 +5,4 @@
 .cargo
 .npm
 .mozilla
+.local/lib
