@@ -3,4 +3,9 @@ cd /home/connor/dwn
 
 NEWFILE="$(ls -t | head -n1)"
 
-FOLDER=$(find /home/connor/dox/notes -type d | fzf)
+echo $NEWFILE
+
+cd /home/connor
+FOLDER=$(fd --one-file-system --ignore-file /home/connor/.config/fd/folder-jump-ignore -H -d 6 -t d . | fzf)
+
+mv /home/connor/dwn/$NEWFILE /home/connor/$FOLDER
