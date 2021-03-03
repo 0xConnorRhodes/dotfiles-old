@@ -1,5 +1,6 @@
 #!/bin/bash
 # refiles an obsidian note by fzf
+# Connor Rhodes (connorrhodes.com)
 
 # output fzf selections one per line to this file. (this is the only way I could get file quotes for spaces to work with the mv command
 find ~/dox/notes -name '*.md' | fzf -m > ~/.cache/orefile-selection.txt
