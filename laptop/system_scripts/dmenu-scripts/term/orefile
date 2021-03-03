@@ -12,4 +12,4 @@ while read line || [[ $line ]]; do
   mv -n "$line" "$FOLDER"
 done < ~/.cache/orefile-selection.txt
 
-xdg-open obsidian:///"$FOLDER/$(sed -n 1p ~/.cache/orefile-selection.txt | awk -F/ '{ print $NF }')"
+#xdg-open obsidian:///"$FOLDER/$(sed -n 1p ~/.cache/orefile-selection.txt | awk -F/ '{ print $NF }')"
