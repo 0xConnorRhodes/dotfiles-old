@@ -1,0 +1,7 @@
+.cache
+.local/share/Trash
+.git
+.electron-gyp
+.cargo
+.npm
+.mozilla
