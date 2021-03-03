@@ -6,3 +6,4 @@
 .npm
 .mozilla
 .local/lib
+.audacity-data
