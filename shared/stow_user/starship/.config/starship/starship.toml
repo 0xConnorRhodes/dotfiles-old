@@ -1,6 +1,17 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
 
-# Disable the package module, hiding it from the prompt completely
+# disabled module
 [package]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+# git
+[git_branch]
+symbol = ""
+truncation_length = 6
+truncation_symbol = ""
+
+[git_commit]
 disabled = true
