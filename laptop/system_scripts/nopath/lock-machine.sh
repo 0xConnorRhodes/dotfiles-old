@@ -10,4 +10,4 @@ lockargs="--timepos=x+105:h-70 --timestr=%H:%M" betterlockscreen -l
 xset s 300 300
 # refresh top bar
 kill $(pstree -lp | grep -- -baraction.sh | sed "s/.*sleep//" | sed "s/(//" | sed "s/)//")
-obsidian &!
+#obsidian &! only necessary if I'm using the day planner addon
