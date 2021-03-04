@@ -1,17 +1,19 @@
-add_newline = false
+# this config was for zsh in urxvt (which is an unreliable combination.) I'm in the process of switching to fish for my interactive shell, which solves the icon flicker problem, even in urxvt. I'll come back and configure starship after I'm on fish as my daily driver
 
-# disabled module
-[package]
-disabled = true
-
-[cmd_duration]
-disabled = true
-
-# git
-[git_branch]
-symbol = ""
-truncation_length = 6
-truncation_symbol = ""
-
-[git_commit]
-disabled = true
+#add_newline = false
+#
+## disabled module
+#[package]
+#disabled = true
+#
+#[cmd_duration]
+#disabled = true
+#
+## git
+#[git_branch]
+#symbol = ""
+#truncation_length = 6
+#truncation_symbol = ""
+#
+#[git_commit]
+#disabled = true
