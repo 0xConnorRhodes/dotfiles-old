@@ -276,6 +276,7 @@ function setEndPosition()
     endPosition = newPosition
     initializeIfNeeded()
     updateTrimmingPositionsOSDASS()
+    mp.set_property("pause", "yes")
 end
 
 function writeOut()
