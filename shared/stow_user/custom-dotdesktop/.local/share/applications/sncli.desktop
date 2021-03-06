@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=sncli
 GenericName=Simplenote CLI
-Exec=urxvtc -e sncli -c /home/connor/.confic/sncli/snclirc
+Exec=urxvtc -e sncli -c /home/connor/.config/sncli/snclirc
 Terminal=true
 Type=Application
 Keywords=Text;editor;

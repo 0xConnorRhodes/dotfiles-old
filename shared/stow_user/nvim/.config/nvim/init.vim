@@ -35,7 +35,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	    Plug 'Konfekt/FastFold'
-	    Plug 'masukomi/vim-markdown-folding'
+	    Plug 'plasticboy/vim-markdown'
+	    "Plug 'masukomi/vim-markdown-folding'
 	    Plug 'zhimsel/vim-stay' "vim persistent folds, bugged when used
 	    "with vim-markdown-holding
 	"{{{ SYNTAX HIGHLIGHTING }}}
@@ -182,12 +183,12 @@ nmap <Tab> za
 " plugin settings
 
 " markdown folding
-set foldexpr=NestedMarkdownFolds()
+"set foldexpr=NestedMarkdownFolds()
 ":set foldtext='\ '.foldtext()
-let g:markdown_fold_override_foldtext=0
+"let g:markdown_fold_override_foldtext=0
 "autocmd FileType vimwiki set foldexpr=NestedMarkdownFolds()
 "autocmd FileType vimwiki nmap <Tab> za
-set viewoptions=cursor,folds,slash,unix "for vim-stay
+"set viewoptions=cursor,folds,slash,unix "for vim-stay
 let g:fastfold_savehook = 0 "for vim fastfold not update on save
 
 " 
