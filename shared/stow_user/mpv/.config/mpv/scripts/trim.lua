@@ -215,7 +215,8 @@ local function generateDestinationPath()
         files[f] = true
     end
 
-    local output = filename .. " $n." .. extension
+    --note sure where the extra dot in the filename is coming from
+    local output = filename .. " $n_cut." .. extension
 
     if not string.find(output, "$n") then
         return files[output] and nil or output
@@ -263,6 +264,7 @@ function setStartPosition()
 
     startPosition = newPosition
     updateTrimmingPositionsOSDASS()
+    mp.set_property("pause", "no")
 end
 
 function setEndPosition()

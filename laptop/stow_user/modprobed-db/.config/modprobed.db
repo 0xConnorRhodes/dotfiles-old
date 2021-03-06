@@ -148,10 +148,13 @@ tpm_tis_core
 ttm
 typec
 typec_ucsi
+uas
 ucsi_acpi
 usbhid
 usbkbd
+usblp
 usbmouse
+usb_storage
 uvcvideo
 vfat
 vhost
