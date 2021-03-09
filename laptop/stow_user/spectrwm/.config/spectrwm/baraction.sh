@@ -25,6 +25,11 @@ bat() {
     echo "$cap1"
 }
 
+## COUNTER
+#counter() {
+# tk
+#}
+
 ## INTERNET
 #int() {
 #    grep -q "down" /sys/class/net/w*/operstate && wifiicon="📡" ||

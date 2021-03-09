@@ -1,0 +1,23 @@
+#!/bin/sh
+# Script to set, increment, or decrement a counter. 
+# I use this to put a number of remaining tasks in my status bar
+# and modify it throughout the day.
+# Connor Rhodes (connorrhodes.com)
+
+FILE=$HOME/.cache/count.txt
+
+case $1 in
+
+  set)
+	  echo $2 > $FILE
+    ;;
+
+  inc)
+	  echo $(expr $(cat $FILE) + $2) > $FILE
+    ;;
+
+  dec)
+	  echo $(expr $(cat $FILE) - $2) > $FILE
+    ;;
+
+esac

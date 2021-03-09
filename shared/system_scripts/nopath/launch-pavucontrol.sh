@@ -8,7 +8,7 @@ if [ -z "$(wmctrl -l | grep "$winname")" ]
 # -z triggers if it is empty. so this is, if it is not running...
 
 
-then exec /usr/bin/pavucontrol -t 2 & 
+then exec /usr/bin/pavucontrol -t 4 &  # `-t n` specifies tab to open on
 # -t <num> specifies tab number to open on
 
 sleep 1 #might require some fiddling. It's the time it takes to launch google chrome
