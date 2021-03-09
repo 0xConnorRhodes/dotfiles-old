@@ -15,6 +15,7 @@ feh --bg-scale /home/connor/.local/share/wallpaper/circlogo.jpg &
 dunst &
 picom &
 redshift &
+keynav &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 export QT_STYLE_OVERRIDE=kvantum
 export QT_SCALE_FACTOR=1.5 

@@ -35,7 +35,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	    Plug 'danro/rename.vim'
 	    Plug 'dkarter/bullets.vim' "auto insert bullet on newline
 	    Plug 'Konfekt/FastFold'
-	    Plug 'plasticboy/vim-markdown'
+	    "Plug 'plasticboy/vim-markdown'
 	    "Plug 'masukomi/vim-markdown-folding'
 	    Plug 'zhimsel/vim-stay' "vim persistent folds, bugged when used
 	    "with vim-markdown-holding
