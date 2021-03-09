@@ -5,7 +5,9 @@ GenericName=Pluralsight Kaplan exam for CCNA
 Comment=Browse the World Wide Web
 Keywords=Internet;WWW;Browser;Web;Explorer
 #Exec=env GTK_THEME="Redmond97 Firefox Solaris" /usr/lib/firefox/firefox -P App -new-window https://app.pluralsight.com/paths/certificate/cisco-ccna-cisco-certified-network-associate-200-301
-Exec=chromium https://app.pluralsight.com/paths/certificate/cisco-ccna-cisco-certified-network-associate-200-301
+#Exec=chromium https://app.pluralsight.com/paths/certificate/cisco-ccna-cisco-certified-network-associate-200-301
+Exec=brave https://app.pluralsight.com/paths/certificate/cisco-ccna-cisco-certified-network-associate-200-301
+
 
 Icon=firefox
 Terminal=false

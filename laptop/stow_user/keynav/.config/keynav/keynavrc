@@ -27,6 +27,7 @@ shift+k move-up
 shift+l move-right
 a history-back
 t windowzoom # zooms to the active window
+c cursorzoom 300 300 # zooms to where the cursor last was
 
 # mouse commands
 space warp,click 1,end

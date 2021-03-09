@@ -89,7 +89,7 @@ do
 
 	for ((i=$PAUSE; i>0; i--))
 	do
-		printf "$time_left" $i "pause"
+		printf "$time_left" $i "pause" | tee | sed "s/\r//g" | awk '{ print "["$1"]"}' | tee /home/connor/.cache/pomodoro-time.txt
 		ref_bar
 		sleep 1m
 	done
