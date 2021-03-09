@@ -1,3 +1,43 @@
+# keynavrc
+# Connor Rhodes (connorrhodes.com)
+# 
+# key+key command1,command2,command3
+
 daemonize
 # clear removes all default keys allowing all keys to be explicitly defined in this file
 clear
+
+# meta commands
+ctrl+semicolon start
+Escape end
+
+# grid-nav
+# grid-nav on gives you qutebrowser style hints to jump to quadrants
+#f grid-nav toggle
+
+# movement commands
+h cut-left
+j cut-down
+k cut-up
+l cut-right
+shift+h move-left
+shift+j move-down
+shift+k move-up
+shift+l move-right
+a history-back
+t windowzoom # zooms to the active window
+
+# mouse commands
+space warp,click 1,end
+semicolon warp,end
+w warp
+1 click 1
+2 click 2
+3 click 3
+
+# macros
+# note that as of 2021-03-08, specifying macros file location doesn't work. 
+# I've hardlinked the default macro location to the .config directory
+# q record /home/connor/.config/keynav/keynav_macros
+q record
+shift+at playback
