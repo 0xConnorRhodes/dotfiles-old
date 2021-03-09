@@ -9,6 +9,7 @@ clear
 
 # meta commands
 ctrl+semicolon start
+#ctrl+semicolon start,grid-nav on,grid 4x4
 Escape end
 
 # grid-nav

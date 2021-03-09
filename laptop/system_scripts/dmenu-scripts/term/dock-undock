@@ -4,7 +4,7 @@ internal_display=$(xrandr | grep -E "eDP connected.*).+$")
 
 if [ -n "$internal_display" ];
 then
-	echo "undocked"
+	#echo "undocked"
 	xrandr --output eDP --off --output HDMI-A-0 \
 		--mode 1920x1080 --pos 1920x0 --rotate normal \
 		--output DisplayPort-0 --primary \
@@ -12,15 +12,25 @@ then
 	xset b off &
 	setxkbmap co
 	xset r rate 155 75 &
-	xmodmap ~/.config/xmodmap/xmodmap &
+
+	killall xmodmap
+	nohup xmodmap ~/.config/xmodmap/xmodmap
+
 	numlockx &
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
 else
-	echo "docked"
+	#echo "docked"
 	xrandr --output eDP --primary --mode 1920x1080 \
 		--pos 0x0 --rotate normal --output HDMI-A-0 \
 		--off --output DisplayPort-0 --off
 	numlockx &
+	xset b off &
+	setxkbmap co
+	xset r rate 155 75 &
+
+	killall xmodmap
+	nohup xmodmap ~/.config/xmodmap/xmodmap
+
 	xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" .3 #t460 setting was .2
 	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
 	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0

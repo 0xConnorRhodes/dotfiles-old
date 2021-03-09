@@ -1,0 +1,6 @@
+#!/bin/sh
+# script to fix xmodmap when it doesn't survive laptop docking
+# Connor Rhodes (connorrhodes.com)
+
+killall xmodmap
+nohup xmodmap ~/.config/xmodmap/xmodmap
