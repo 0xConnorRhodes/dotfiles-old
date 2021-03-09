@@ -15,10 +15,12 @@ NAME=$(echo $SELECTION | awk '{print $1}')
 
 ARGS=$(echo $SELECTION | awk '{sub($1 FS,"")}7')
 
+echo $NAME
+echo $ARGS
 
 # if NAME and ARGS are equal, there are no arguments. Unset that variable
 if [ "$ARGS" = "$NAME" ];then
-	unset ARGS
+	#unset ARGS
 fi
 
 # get the full path of the selected script for the final exec command
@@ -32,10 +34,11 @@ FULLPATH=$(ls -d \
 # run the full path to the dmenu script with any arguments passed to it
 # TODO if noterm in pathh exec else urxvt exec
 
+
 case "$FULLPATH" in
 	*noterm*) 	
-		exec $FULLPATH "$ARGS";;
+		# the echo substitution is necessary for this to run with the args
+		exec $(echo "$FULLPATH $ARGS");;
 	*)		
-		exec urxvtc -e "$FULLPATH" "$ARGS"
+		exec urxvtc -e "$FULLPATH" $ARGS
 esac
-
