@@ -21,3 +21,5 @@ case $1 in
     ;;
 
 esac
+
+/home/connor/.local/dotfiles/shared/system_scripts/path/refbar

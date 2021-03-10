@@ -26,9 +26,13 @@ bat() {
 }
 
 ## COUNTER
-#counter() {
-# tk
-#}
+counter() {
+    cat $HOME/.cache/count.txt
+}
+
+donenum() {
+    cat $HOME/.cache/donecount.txt
+}
 
 ## INTERNET
 #int() {
@@ -83,6 +87,6 @@ SLEEP_SEC=60
 # echo output too long to display correctly.
 while :; do
 	#echo "+@fg=1;  $(pmail) | +@fg=0;  $(hdd) | +@fg=0;  +@fn=0; $(vol) +@fg=0; |   $(bat)% |  $(btooth) |  $(int) |"
-	echo "+@fg=1;$(ptime) +@fg=0;  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
+	echo "+@fg=1;$(ptime) +@fg=0; $(counter)/$(donenum) |  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
 	sleep $SLEEP_SEC
 done

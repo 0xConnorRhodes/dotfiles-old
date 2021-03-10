@@ -13,6 +13,7 @@ yay -Syu --noconfirm
 ~/.emacs.d/bin/doom -y sync
 ~/.emacs.d/bin/doom -y upgrade
 nvim --headless +PlugClean +PlugUpgrade +PlugUpdate +PlugInstall +qa
+echo 0 > $HOME/.cache/donecount.txt # resets done-count in top bar to 0
 
 # copy some un-stowed configs to my dotfiles for version control
 /home/connor/.local/dotfiles/laptop/system_scripts/nopath/rsync-config-backup.sh
