@@ -30,7 +30,33 @@ else
 		# the first command is what workspace is it on, the second is what is the current workspace. if they are equal, this triggers
 		# if it is running, and if it is not hidden and if it is on the current workspace
 
-		then wmctrl -r "$winname" -b add,hidden
+		then 
+			wmctrl -r "$winname" -b add,hidden
+
+			# copy dictated text to clipboard and clear out dictation file
+			## note that every time dictation-scratch is LOFed it will copy and
+			## clear the doc, so if you want to hide and come back, use Mod4+BS
+
+			WORK_DIR=$HOME/.cache/google-docs-dictation
+			
+			# ignore times is necessary to force a sync
+			rclone sync -P \
+				--ignore-times \
+				--drive-export-formats odt \
+				personal_gdrive:100_Dictation.odt $WORK_DIR
+			
+			pandoc $WORK_DIR/100_Dictation.odt --to plain -o $WORK_DIR/output.txt
+			
+			cat $WORK_DIR/output.txt | xcl
+
+			notify-send "dictation" "Copied to Clipboard"
+			
+			pandoc $WORK_DIR/blank.txt --to odt -o $WORK_DIR/100_Dictation.odt
+			
+			rclone sync -P \
+				--drive-export-formats odt \
+				--drive-import-formats odt \
+				$WORK_DIR/100_Dictation.odt personal_gdrive:
 
 		else 
 			wmctrl -r "$winname" -t $(wmctrl -d | grep \* | awk '{ print $1 }') 
