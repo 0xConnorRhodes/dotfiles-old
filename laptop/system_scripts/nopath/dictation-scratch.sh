@@ -2,7 +2,8 @@
 # Script to launch or focus a web-based dictation app and hide it if it is currently focused.
 # Connor Rhodes (connorrhodes.com)
 
-winname="docs.google.com__document_d_1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc_edit"
+#winname="docs.google.com__document_d_1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc_edit"
+winname="100_Dictation - Google Docs"
 
 if [ -z "$(wmctrl -l | grep "$winname")" ]
 # -z triggers if it is empty. so this is, if it is not running...
