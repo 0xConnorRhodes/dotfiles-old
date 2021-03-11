@@ -2,12 +2,12 @@
 # Script to launch or focus a web-based dictation app and hide it if it is currently focused.
 # Connor Rhodes (connorrhodes.com)
 
-winname="Voice Notepad - Speech to Text with Google Speech Recognition"
+winname="docs.google.com__document_d_1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc_edit"
 
 if [ -z "$(wmctrl -l | grep "$winname")" ]
 # -z triggers if it is empty. so this is, if it is not running...
 
-then exec chromium --app=https://dictation.io/speech &>/dev/null & #this syntax is necessary for output to go to /dev/null
+then exec chromium --app=https://docs.google.com/document/d/1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc/edit &>/dev/null & #this syntax is necessary for output to go to /dev/null
 # then run it
 
 sleep 3 #might require some fiddling. It's the time it takes to launch google chrome
