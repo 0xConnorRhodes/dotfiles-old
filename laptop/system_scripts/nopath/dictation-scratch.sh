@@ -36,11 +36,13 @@ else
 			# copy dictated text to clipboard and clear out dictation file
 			## note that every time dictation-scratch is LOFed it will copy and
 			## clear the doc, so if you want to hide and come back, use Mod4+BS
+			## also, every new launch search and select Zoom:fit to fit text to
+			## window width
 
 			WORK_DIR=$HOME/.cache/google-docs-dictation
 			
 			# ignore times is necessary to force a sync
-			rclone sync -P \
+			rclone sync \
 				--ignore-times \
 				--drive-export-formats odt \
 				personal_gdrive:100_Dictation.odt $WORK_DIR
@@ -51,9 +53,10 @@ else
 
 			notify-send "dictation" "Copied to Clipboard"
 			
-			pandoc $WORK_DIR/blank.txt --to odt -o $WORK_DIR/100_Dictation.odt
+			cp $WORK_DIR/blank.odt $WORK_DIR/100_Dictation.odt
 			
-			rclone sync -P \
+			rclone sync \
+				--ignore-times \
 				--drive-export-formats odt \
 				--drive-import-formats odt \
 				$WORK_DIR/100_Dictation.odt personal_gdrive:
