@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script to launch or focus a web-based dictation app and hide it if it is currently focused.
+# upon hide, the script will 
 # Connor Rhodes (connorrhodes.com)
 
 #winname="docs.google.com__document_d_1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc_edit"
