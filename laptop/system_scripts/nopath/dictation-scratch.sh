@@ -1,6 +1,9 @@
 #!/bin/bash
 # Script to launch or focus a web-based dictation app and hide it if it is currently focused.
-# upon hide, the script will 
+# upon hide, the script will download the dictated file with rclone, extract the plaintext and
+# fix the formatting, and present it in vim for proofreading. A vim autocmd copies the proofed
+# text to the clipboard
+# 
 # Connor Rhodes (connorrhodes.com)
 
 #winname="docs.google.com__document_d_1o-rvkrU6t7xd40L2eGGvKD9xzY_pXbq0AKjBP6p4FXc_edit"
@@ -57,8 +60,10 @@ else
 
 			# open in vim or interactive correction.
 			## when this file closes, it gets copied to my clipboard
-			## with an autocmd
 			urxvtc -e nvim $WORK_DIR/output.txt
+
+			xclip -r -selection clipboard -i $WORK_DIR/output.txt 
+			xclip -r -selection primary -i $WORK_DIR/output.txt 
 
 			# replace dictation file with template to zero out text 
 			# but keep margins and text size

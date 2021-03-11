@@ -18,10 +18,11 @@ cd /home/connor/.cache/tesseract-ocr
 
 sed -i 's/\o14//g' ocr.txt
 
-sed -i '/^$/d'
+sed -i '/^$/d' ocr.txt
 
 rm /home/connor/.local/share/nvim/swap//%home%connor%.cache%tesseract-ocr%ocr.txt.swp
 
 urxvtc -e nvim /home/connor/.cache/tesseract-ocr/ocr.txt
 
-sed -i '/^$/d'
+xclip -r -selection clipboard -i /home/connor/.cache/tesseract-ocr/ocr.txt
+xclip -r -selection primary -i /home/connor/.cache/tesseract-ocr/ocr.txt
