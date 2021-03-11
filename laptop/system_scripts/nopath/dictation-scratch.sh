@@ -48,12 +48,20 @@ else
 				personal_gdrive:100_Dictation.odt $WORK_DIR
 			
 			pandoc $WORK_DIR/100_Dictation.odt --to plain -o $WORK_DIR/output.txt
-			
-			cat $WORK_DIR/output.txt | xcl
 
-			notify-send "dictation" "Copied to Clipboard"
-			
-			cp $WORK_DIR/blank.odt $WORK_DIR/100_Dictation.odt
+			# fix whitespace issued created by pandoc odt conversion
+			sed -i -E 's/- {2,4}/- /g' $WORK_DIR/output.txt
+			sed -i -E ':a;N;$!ba;s/(\n)(\w)/ \2/g' $WORK_DIR/output.txt
+			sed -i 's/^ //g' $WORK_DIR/output.txt
+
+			# open in vim or interactive correction.
+			## when this file closes, it gets copied to my clipboard
+			## with an autocmd
+			urxvtc -e nvim $WORK_DIR/output.txt
+
+			# replace dictation file with template to zero out text 
+			# but keep margins and text size
+			cp /home/connor/.config/dictation-scratch/blank.odt $WORK_DIR/100_Dictation.odt
 			
 			rclone sync \
 				--ignore-times \
