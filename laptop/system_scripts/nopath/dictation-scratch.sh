@@ -1,8 +1,7 @@
 #!/bin/bash
 # Script to launch or focus a web-based dictation app and hide it if it is currently focused.
 # upon hide, the script will download the dictated file with rclone, extract the plaintext and
-# fix the formatting, and present it in vim for proofreading. A vim autocmd copies the proofed
-# text to the clipboard
+# copy it to the clipboard.
 # 
 # Connor Rhodes (connorrhodes.com)
 
@@ -48,26 +47,18 @@ else
 			# ignore times is necessary to force a sync
 			rclone sync \
 				--ignore-times \
-				--drive-export-formats odt \
-				personal_gdrive:100_Dictation.odt $WORK_DIR
+				--drive-export-formats txt \
+				personal_gdrive:100_Dictation.txt $WORK_DIR
 			
-			pandoc $WORK_DIR/100_Dictation.odt --to plain -o $WORK_DIR/output.txt
-
 			# fix whitespace issued created by pandoc odt conversion
-			sed -i -E 's/- {2,4}/- /g' $WORK_DIR/output.txt
-			sed -i -E ':a;N;$!ba;s/(\n)(\w)/ \2/g' $WORK_DIR/output.txt
-			sed -i 's/^ //g' $WORK_DIR/output.txt
+			dos2unix $WORK_DIR/100_Dictation.txt
+			# remove duplicate blank lines added in the conversion process
+			sed -i '$!N; /^\(.*\)\n\1$/!P; D' $WORK_DIR/100_Dictation.txt
 
-			# open in vim or interactive correction.
-			## when this file closes, it gets copied to my clipboard
-			urxvtc -e nvim $WORK_DIR/output.txt
+			xclip -r -selection clipboard -i $WORK_DIR/100_Dictation.txt 
+			xclip -r -selection primary -i $WORK_DIR/100_Dictation.txt 
 
-			xclip -r -selection clipboard -i $WORK_DIR/output.txt 
-			xclip -r -selection primary -i $WORK_DIR/output.txt 
-
-			# replace dictation file with template to zero out text 
-			# but keep margins and text size
-			cp /home/connor/.config/dictation-scratch/blank.odt $WORK_DIR/100_Dictation.odt
+			notify-send "dictation" "Copied to Clipboard"
 			
 			rclone sync \
 				--ignore-times \
