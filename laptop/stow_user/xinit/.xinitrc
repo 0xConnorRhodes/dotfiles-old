@@ -14,6 +14,7 @@ numlockx &
 feh --bg-scale /home/connor/.local/share/wallpaper/circlogo.jpg &
 dunst &
 picom &
+clipmenud &
 redshift &
 keynav &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
