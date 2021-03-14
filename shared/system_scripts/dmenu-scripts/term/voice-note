@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # script to record a voice note with high audio quality 
 # and small file size for easy attachment using dwnrecent dmenu script
 #
@@ -8,5 +8,17 @@
 # launch pavucontrol to verify mic volume
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/launch-pavucontrol.sh
 
-ffmpeg -f pulse -ac 1 -i default -c:a libopus -b:a 40k -ar 16000 -application voip $HOME/dwn/$(date +"%Y-%m-%d_%H-%M-%S")_voice-note.opus
+INITNAME=$HOME/.cache/voice-note.opus
+
+ffmpeg -f pulse -ac 1 -i default -c:a libopus -b:a 40k -ar 16000 -application voip $INITNAME
+
+echo "TEST"
+
+#ffmpeg -f pulse -ac 1 -i default -c:a libopus -b:a 40k -ar 16000 -application voip $HOME/dwn/$(date +"%Y-%m-%d_%H-%M-%S")_voice-note.opus
+
+read -p "enter filename: " FNAME
+
+FINNAME=$(echo $FNAME | sed 's/ /-/g')
+
+mv $INITNAME $HOME/dwn/$(date +"%Y-%m-%d_%H-%M-%S")_voice-note_$FINNAME.opus
 
