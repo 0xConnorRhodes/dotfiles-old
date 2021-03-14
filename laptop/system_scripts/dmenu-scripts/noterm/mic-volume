@@ -9,6 +9,9 @@ case $CHOICE in
 		pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 100000
 		;;
 	"Sony WH-100XM3")
-		pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 72000
+		# 110%
+		#pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 72000
+		# 28%
+		pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 18000
 		;;
 esac
