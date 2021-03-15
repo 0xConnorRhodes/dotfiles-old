@@ -2,7 +2,7 @@
 # Script to set best microphone volume based on headset selected
 # Connor Rhodes (connorrhodes.com)
 
-CHOICE=$(echo "ENACFIRE E60\nSony WH-100XM3" | dmenu -fn 'Hack:normal:pixelsize=32')
+CHOICE=$(echo "ENACFIRE E60\nSony WH-100XM3\nMumble Lapel NoiseTorch" | dmenu -fn 'Hack:normal:pixelsize=32')
 
 case $CHOICE in
 	"ENACFIRE E60")
@@ -13,5 +13,9 @@ case $CHOICE in
 		pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 72000
 		# 28%
 		#pacmd set-source-volume alsa_input.usb-0a12_Avantree_DG80-00.mono-fallback 18000
+		;;
+	"Mumble Lapel NoiseTorch")
+		pacmd set-source-volume nui_mic_remap 55000
+		notify-send "mic-volume" "NoiseTorch Mic at 84%"
 		;;
 esac
