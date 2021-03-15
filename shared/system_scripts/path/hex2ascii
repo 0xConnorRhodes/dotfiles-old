@@ -1,0 +1,5 @@
+#!/bin/sh
+# shell script to convert hexadecimal to ASCII characters.
+# Author: Connor Rhodes (connorrhodes.com)
+
+echo -n $1 | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | xargs printf
