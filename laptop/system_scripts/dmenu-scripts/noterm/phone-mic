@@ -20,12 +20,7 @@ if [ -z "$(pacmd list-sources | grep "NoiseTorch Microphone")"  ]
 then
 	noisetorch -i # denoise default input
 
-	# get the pulse index of mumble
-	MUMINDEX=$(~/bin/pulsegrep | grep "Mumble" | awk -F: '{ print $NF }')
+	sleep 3
 
-	# get the sink number of the NoiseTorch raw input
-	RAWMIC=$(pactl list short sinks | grep "nui_mic_raw_in" | awk '{ print $1 }')
-
-	# switch output of 
-	pactl move-sink-input $MUMINDEX $RAWMIC
 fi
+	~/bin/pulseout mumble ntmic
