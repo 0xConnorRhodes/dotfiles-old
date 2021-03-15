@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to launch or focus Pavucontrol and hide it if it is currently focused.
+# Script to launch or focus Firefox and hide it if it is currently focused.
 # Connor Rhodes (connorrhodes.com)
 
 

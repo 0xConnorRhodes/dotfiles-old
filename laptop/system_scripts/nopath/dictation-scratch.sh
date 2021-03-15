@@ -34,6 +34,7 @@ else
 		# if it is running, and if it is not hidden and if it is on the current workspace
 
 		then 
+			wmctrl -r "$winname" -t 9
 			wmctrl -r "$winname" -b add,hidden
 
 			# copy dictated text to clipboard and clear out dictation file
