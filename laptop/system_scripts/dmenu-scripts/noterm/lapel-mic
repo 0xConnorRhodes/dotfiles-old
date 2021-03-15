@@ -1,0 +1,31 @@
+#!/bin/bash
+# Script to set up using phone as a microphone with a denoised mumble loopback
+
+# start mumble server
+sudo systemctl start murmur.service
+
+
+# Launch mumble client, move it to an unused workspace, and hide it.
+winname="Mumble -- 1.3.4"
+
+mumble mumble://laptop@localhost &
+
+sleep 3
+
+wmctrl -r "$winname" -b add,hidden
+
+# set up de-noised input
+
+if [ -z "$(pacmd list-sources | grep "NoiseTorch Microphone")"  ]
+then
+	noisetorch -i # denoise default input
+
+	# get the pulse index of mumble
+	MUMINDEX=$(~/bin/pulsegrep | grep "Mumble" | awk -F: '{ print $NF }')
+
+	# get the sink number of the NoiseTorch raw input
+	RAWMIC=$(pactl list short sinks | grep "nui_mic_raw_in" | awk '{ print $1 }')
+
+	# switch output of 
+	pactl move-sink-input $MUMINDEX $RAWMIC
+fi

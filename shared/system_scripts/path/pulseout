@@ -1,0 +1,35 @@
+#!/bin/bash
+# script to choose a new pulseaudio output based on window name and output name
+# edit the case statement with your own sinks
+# get your own sink names with `pactl list sinks | grep -C 2 Name`
+# 
+# the program name is the first name in xprop:
+# WM_CLASS(STRING) = [["mumble"]], "Mumble"
+# 
+# from https://bbs.archlinux.org/viewtopic.php?pid=1693617#p1693617
+
+if [ -n "${1}" ] && [ -n "${2}" ]; then
+  #CLI: $0 processname output
+
+  app=$1
+  out=$2
+  appstream=$(echo $(pactl list sink-inputs | grep -e "Sink\ Input" -e "application.process.binary") | grep -o "Sink\ Input\ #[0-9]*\ application\.process\.binary\ =\ \"$app\"" | sed -e 's/^.*#//' -e 's/\ .*//')
+else
+  #hotkey+pointer interface (xprop, zenity): Click window, choose output
+
+  app=$(xprop | grep _NET_WM_PID | grep -o [0-9]*)
+  out=$(zenity --list --radiolist --text "Set audio output for window:" --column "Select" --column "Output" FALSE "surround" FALSE "bluetooth" FALSE "headset" )
+  appstream=$(echo $(pactl list sink-inputs | grep -e "Sink\ Input" -e "application.process.id") | grep -o "Sink\ Input\ #[0-9]*\ application\.process\.id\ =\ \"$app\"" | sed -e 's/^.*#//' -e 's/\ .*//')
+fi
+
+case "$out" in
+  default|avantree|headphones|dg80|dongle)
+    output="alsa_output.usb-0a12_Avantree_DG80-00.analog-stereo"
+  ;;
+  ntmic)
+    output="nui_mic_raw_in"
+  ;;
+esac
+
+[[ $output ]] && for i in $appstream; do \
+  pactl move-sink-input $i $output; done
