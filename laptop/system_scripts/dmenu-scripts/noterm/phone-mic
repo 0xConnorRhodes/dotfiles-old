@@ -14,6 +14,8 @@ sleep 3
 
 wmctrl -r "$winname" -b add,hidden
 
+mumble rpc mute
+
 # set up de-noised input
 
 if [ -z "$(pacmd list-sources | grep "NoiseTorch Microphone")"  ]
