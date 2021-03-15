@@ -58,7 +58,7 @@ restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 
 # cleaning up
 /home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/daily_atomic_notes_log.sh
 
-# have the script wait to shutdown if an ffmpeg conversion is going
+# have the script wait to shutdown if an ffmpeg conversion is running
 while [ -n "$(pgrep ffmpeg)" ]
 do 
 	sleep 60
