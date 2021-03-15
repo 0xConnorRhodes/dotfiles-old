@@ -26,3 +26,5 @@ then
 
 fi
 	~/bin/pulseout mumble ntmic
+
+notify-send "phone-mic" "Ready"
