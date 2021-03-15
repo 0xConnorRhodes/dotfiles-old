@@ -22,5 +22,8 @@ sudo stow -R -t / * 2>&1 | grep -A 2 -E "^WARNING"
 cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_user/symlinked
 stow -R -t /home/connor * 2>&1 | grep -A 2 -E "^WARNING"
 
+cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_root
+sudo stow -R -t / * 2>&1 | grep -A 2 -E "^WARNING"
+
 #cd /home/connor/.local/dotfiles_secret/$(hostname)/stow_user/adopted
 #stow -R --adopt -t /home/connor * 2>&1 | grep -A 2 -E "^WARNING"

@@ -1,0 +1,28 @@
+#!/bin/sh
+# Script to set default audio out interactively.
+# to get these outputs, run `pacmd list-sinks`, 
+# search for pavucontrol output title and look for the <name: ...> it is nested under.
+# Setting the output with script will affect what your volume scripts control.
+# 
+# Author: Connor Rhodes (connorrhodes.com)
+
+
+CHOICE=$(echo "Avantree USB\nLaptop Speakers\nHDMI" | dmenu -fn 'Hack:normal:pixelsize=32')
+
+case $CHOICE in
+	"Avantree USB")
+		pactl set-default-sink alsa_output.usb-0a12_Avantree_DG80-00.analog-stereo
+		notify-send "audio-out" "Set to Avantree USB Dongle"
+		;;
+	"Laptop Speaker")
+		pactl set-default-sink alsa_output.pci-0000_05_00.6.analog-stereo
+		notify-send "audio-out" "Set to Laptop Speakers"
+		;;
+	"HDMI")
+		pactl set-default-sink alsa_output.pci-0000_05_00.1.hdmi-surround-extra1
+		notify-send "audio-out" "Set to HDMI"
+		;;
+esac
+
+
+
