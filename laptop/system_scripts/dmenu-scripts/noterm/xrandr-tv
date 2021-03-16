@@ -1,0 +1,20 @@
+#!/bin/sh
+# Script to prompt for audio output change and switch display to TV over HDMI
+#
+# Author: Connor Rhodes (connorrhodes.com)
+
+
+CHOICE=$(echo "Avantree USB\nLaptop Speakers\nHDMI" | dmenu -fn 'Hack:normal:pixelsize=32')
+
+case $CHOICE in
+	"Avantree USB")
+		pactl set-default-sink alsa_output.usb-0a12_Avantree_DG80-00.analog-stereo
+		notify-send "audio-out" "Set to Avantree USB Dongle"
+		;;
+	"HDMI")
+		pactl set-default-sink alsa_output.pci-0000_05_00.1.hdmi-surround-extra1
+		notify-send "audio-out" "Set to HDMI"
+		;;
+esac
+
+xrandr --output eDP --off --output HDMI-A-0 --mode 3840x2160 --pos 0x0 --rotate normal --output DisplayPort-0 --off
