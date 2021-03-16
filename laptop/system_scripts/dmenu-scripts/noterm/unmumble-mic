@@ -32,11 +32,16 @@ wmctrl -c 100_Dictation - Google Docs
 		$WORK_DIR/100_Dictation.odt personal_gdrive:
 
 # start mumble server
-sudo systemctl stop murmur.service
-
+sleep .5
 killall mumble
+sleep .5
 
-pacmd unload-module module-null-sink
-pacmd unload-module module-ladspa-sink
+#pacmd unload-module module-null-sink
+#pacmd unload-module module-ladspa-sink
+pulseaudio -k
+
+sleep .5
+
+sudo systemctl stop murmur.service
 
 notify-send "phone-mic" "unloaded"

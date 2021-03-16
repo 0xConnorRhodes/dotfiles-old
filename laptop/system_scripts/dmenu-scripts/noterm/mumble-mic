@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script to set up using phone as a microphone with a denoised mumble loopback
+# Author: Connor Rhodes (connorrhodes.com)
 
 # start mumble server
 sudo systemctl start murmur.service
@@ -26,5 +27,8 @@ then
 
 fi
 	~/bin/pulseout mumble ntmic
+
+# set denoised out as default mic
+pacmd set-default-source nui_mic_denoised_out.monitor
 
 notify-send "phone-mic" "Ready"
