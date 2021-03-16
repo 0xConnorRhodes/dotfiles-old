@@ -1,0 +1,19 @@
+#!/bin/sh
+# shell script to convert filenames in hexadecimal to ASCII characters.
+# useful for iwd filenames encoded in hex.
+# The included regex matches filenames that begin with any character and 
+# end with any extension but contain only hex characters in the middle.
+# The script prints "ascii:hex" allows you to call it and filter with awk
+# in your own scripts.
+#
+# Author: Connor Rhodes (connorrhodes.com)
+
+REGEX="^.?[A-Fa-f0-9]+\.[A-Za-z0-9]+"
+FILES=$(ls -1 | grep -E "$REGEX")
+
+for FILE in $FILES
+do
+	ASCII=$(echo $FILE | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | sed 's/=//g' | xargs printf)
+
+	echo "$ASCII:$FILE" 
+done
