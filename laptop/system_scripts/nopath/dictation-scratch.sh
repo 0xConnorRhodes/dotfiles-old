@@ -18,7 +18,7 @@ sleep 3 #might require some fiddling. It's the time it takes to launch google ch
 
 winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
 
-exec ~/bin/set_wm_class $winid dynamic-scratchpad dictationIO
+exec ~/bin/set_wm_class $winid opaque-scratchpad dictationIO
 # set custom class and window names
 
 else 
@@ -55,6 +55,17 @@ else
 			dos2unix $WORK_DIR/100_Dictation.txt
 			# remove duplicate blank lines added in the conversion process
 			sed -i '$!N; /^\(.*\)\n\1$/!P; D' $WORK_DIR/100_Dictation.txt
+			# remove leading space IFF there is one
+			sed -i -E 's/^ {1}//g' $WORK_DIR/100_Dictation.txt
+			# remove extra space google docs adds after parenthesis
+			sed -i -E 's/\( /(/g' $WORK_DIR/100_Dictation.txt
+			# remove duplicated spaces with tr
+			tr -s '[:space:]' < $WORK_DIR/100_Dictation.txt \
+				> $WORK_DIR/100_Dictation2.txt && \
+				mv $WORK_DIR/100_Dictation2.txt $WORK_DIR/100_Dictation.txt
+			# change random uppercase to lowercase only if it isn't the first
+			# word in a sentance
+			sed -i -E "s/([^\.] )([A-Z]{1}[a-z])/\1\L\2/g" $WORK_DIR/100_Dictation.txt
 
 			xclip -r -selection clipboard -i $WORK_DIR/100_Dictation.txt 
 			xclip -r -selection primary -i $WORK_DIR/100_Dictation.txt 

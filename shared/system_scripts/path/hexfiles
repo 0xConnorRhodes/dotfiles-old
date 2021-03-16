@@ -22,12 +22,11 @@ for FILE in $FILES
 do
 	ASCII=$(echo $FILE | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | sed 's/=//g' | xargs printf)
 
-	echo "$ASCII" >> $HOME/.cache/hexfiles.txt
+	echo "$ASCII $FILE" >> $HOME/.cache/hexfiles.txt
 done
 
-CHOICE=$(cat $CACHE | fzf)
+CHOICE=$(awk '{ print $1 }' $CACHE | fzf)
 
+HEXCHOICE=$(grep "$CHOICE" $CACHE | awk '{ print $2 }')
 
-HEXCHOICE=$(echo "$ASCII $FILE" | grep "$CHOICE" | awk '{ print $2 }')
-
-echo "$HEXCHOICE"
+echo $HEXCHOICE
