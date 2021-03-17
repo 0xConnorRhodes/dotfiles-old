@@ -1,0 +1,4 @@
+#!/bin/zsh
+#devour guvcview -d /dev/video0 -g none -e -x 1280x720 --fps=30 --profile="~/.config/guvcview2/e15-integrated-webcam.gpfl" --render_window=426x238 
+guvcview -d /dev/video0 -g none -e -x 1280x720 --fps=30 --profile="~/.config/guvcview2/e15-integrated-webcam.gpfl" --render_window=639x357 
+#--render_window=640x480 also works but is a bit large. this is just about exactly the size of the OBS corner cam

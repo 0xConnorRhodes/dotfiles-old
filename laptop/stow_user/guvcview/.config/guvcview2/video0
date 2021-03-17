@@ -11,7 +11,7 @@ capture=mmap
 #audio api
 audio=port
 #gui api
-gui=gtk3
+gui=none
 #render api
 render=sdl
 #video codec [raw mjpg mpeg flv1 wmv1 mpg2 mp43 dx50 h264 vp80 theo]
@@ -21,7 +21,7 @@ audio_codec=mp2
 #profile name
 profile_name=e15-integrated-webcam.gpfl
 #profile path
-profile_path=/home/connor
+profile_path=~/.config/guvcview2
 #video name
 video_name=my_video.mkv
 #video path
@@ -37,7 +37,7 @@ photo_sufix=1
 #fps numerator (def. 1)
 fps_num=1
 #fps denominator (def. 25)
-fps_denom=25
+fps_denom=30
 #audio device index (-1 - api default)
 audio_device=1
 #video fx mask 
