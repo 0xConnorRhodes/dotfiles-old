@@ -83,7 +83,7 @@ colorscheme vividchalk
 "autocmd BufWritePost /home/connor/.config/spectrwm/baraction.sh !/home/connor/bin/refbar
 "autocmd BufWritePost /home/connor/.confic/Xresources/Xresources !xrdb ~/.config/Xresources/Xresources
 "autocmd VimLeave /home/connor/.local/config_sync/clip.md !xclip -r -selection clipboard -i /home/connor/.local/config_sync/clip.md ; ~/bin/clip3.sh &
-"autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd BufNewFile,Filetype markdown setlocal tabstop=4 shiftwidth=4 expandtab
 "autocmd VimLeave /etc/** !echo $(pass sysadmin/laptop-password) | sudo alacritty -e /home/connor/.local/dotfiles/shared/system_scripts/nopath/vim-etckeeper-update.sh
 "autocmd VimLeave /dev/shm/pass** /home/connor/.local/dotfiles_secret/shared/system_scripts/nopath/pass-git-update.sh
 "autocmd BufReadPre /home/connor/dox/notes/mind/daily_notes/* !/home/connor/.local/dotfiles/shared/system_scripts/nopath/cron/vim-fix-daily-note.sh &
