@@ -3,6 +3,7 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 # close dictation scratch. (Chromium wont recognize the mic next time unless this is done.
+sleep .5
 wmctrl -c 100_Dictation - Google Docs
 
 # copy and clear out the dictation scratch
@@ -10,6 +11,7 @@ wmctrl -c 100_Dictation - Google Docs
 	WORK_DIR=$HOME/.cache/google-docs-dictation
 	
 	## ignore times is necessary to force a sync
+	sleep .5
 	rclone sync \
 		--ignore-times \
 		--drive-export-formats txt \
@@ -25,6 +27,7 @@ wmctrl -c 100_Dictation - Google Docs
 	
 	notify-send "dictation" "Copied to Clipboard"
 	
+	sleep 1
 	rclone sync \
 		--ignore-times \
 		--drive-export-formats odt \
@@ -32,15 +35,15 @@ wmctrl -c 100_Dictation - Google Docs
 		$WORK_DIR/100_Dictation.odt personal_gdrive:
 
 # start mumble server
-sleep .5
+sleep 3
 killall mumble
-sleep .5
+sleep 3
 
 #pacmd unload-module module-null-sink
 #pacmd unload-module module-ladspa-sink
 pulseaudio -k
 
-sleep .5
+sleep 3
 
 sudo systemctl stop murmur.service
 
