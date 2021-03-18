@@ -2,7 +2,6 @@
 # Script to count down pomodoro work and rest intervals
 # Original script by Bladtman242
 # Modified by Connor Rhodes (connorrhodes.com) to: play custom sound, notifications, and output to tiling wm bar
-# TODO integrate with time tracker
 
 WORK=25
 PAUSE=5
