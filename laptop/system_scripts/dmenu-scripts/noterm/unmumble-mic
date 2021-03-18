@@ -3,48 +3,48 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 # close dictation scratch. (Chromium wont recognize the mic next time unless this is done.
-sleep .5
-wmctrl -c 100_Dictation - Google Docs
+#sleep .5
+#wmctrl -c 100_Dictation - Google Docs
 
 # copy and clear out the dictation scratch
 
-	WORK_DIR=$HOME/.cache/google-docs-dictation
-	
-	## ignore times is necessary to force a sync
-	sleep .5
-	rclone sync \
-		--ignore-times \
-		--drive-export-formats txt \
-		personal_gdrive:100_Dictation.txt $WORK_DIR
-	
-	## fix whitespace issued created by pandoc odt conversion
-	dos2unix $WORK_DIR/100_Dictation.txt
-	## remove duplicate blank lines added in the conversion process
-	sed -i '$!N; /^\(.*\)\n\1$/!P; D' $WORK_DIR/100_Dictation.txt
-	
-	xclip -r -selection clipboard -i $WORK_DIR/100_Dictation.txt 
-	xclip -r -selection primary -i $WORK_DIR/100_Dictation.txt 
-	
-	notify-send "dictation" "Copied to Clipboard"
-	
-	sleep 1
-	rclone sync \
-		--ignore-times \
-		--drive-export-formats odt \
-		--drive-import-formats odt \
-		$WORK_DIR/100_Dictation.odt personal_gdrive:
+#	WORK_DIR=$HOME/.cache/google-docs-dictation
+#	
+#	## ignore times is necessary to force a sync
+#	sleep .5
+#	rclone sync \
+#		--ignore-times \
+#		--drive-export-formats txt \
+#		personal_gdrive:100_Dictation.txt $WORK_DIR
+#	
+#	## fix whitespace issued created by pandoc odt conversion
+#	dos2unix $WORK_DIR/100_Dictation.txt
+#	## remove duplicate blank lines added in the conversion process
+#	sed -i '$!N; /^\(.*\)\n\1$/!P; D' $WORK_DIR/100_Dictation.txt
+#	
+#	xclip -r -selection clipboard -i $WORK_DIR/100_Dictation.txt 
+#	xclip -r -selection primary -i $WORK_DIR/100_Dictation.txt 
+#	
+#	notify-send "dictation" "Copied to Clipboard"
+#	
+#	sleep 1
+#	rclone sync \
+#		--ignore-times \
+#		--drive-export-formats odt \
+#		--drive-import-formats odt \
+#		$WORK_DIR/100_Dictation.odt personal_gdrive:
 
 # start mumble server
-sleep 3
+#sleep 3
 killall mumble
-sleep 3
+#sleep 3
 
 #pacmd unload-module module-null-sink
 #pacmd unload-module module-ladspa-sink
 pulseaudio -k
 
-sleep 3
+#sleep 3
 
-sudo systemctl stop murmur.service
+#sudo systemctl stop murmur.service
 
 notify-send "phone-mic" "unloaded"

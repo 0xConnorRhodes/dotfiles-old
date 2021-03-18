@@ -1,0 +1,13 @@
+#!/bin/sh
+# re-apply laptop docked settings
+# Author: Connor Rhodes
+
+xset b off &
+setxkbmap co
+xset r rate 155 75 &
+
+killall xmodmap
+nohup xmodmap ~/.config/xmodmap/xmodmap
+
+numlockx &
+xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0

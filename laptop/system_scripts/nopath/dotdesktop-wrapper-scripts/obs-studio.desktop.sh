@@ -6,7 +6,7 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 killall unclutter
-hhpc -i 1 &
+#hhpc -i 1 &
 $HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-off.sh
 
 obs
