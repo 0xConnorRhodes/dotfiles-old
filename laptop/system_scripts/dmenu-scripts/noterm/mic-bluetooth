@@ -4,16 +4,12 @@
 
 pulseaudio -k
 
-
 killall mumble
 
 #sudo systemctl stop murmur.service
 
 wmctrl -c Voice - Calls — Mozilla Firefox
 wmctrl -c 100_Dictation - Google Docs
-
-# pacmd set-default-source alsa_card.usb-0a12_Avantree_DG80-00
-
 
 noisetorch -i # denoise default input
 # sleep here?
@@ -34,7 +30,6 @@ winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
 
 
 wmctrl -r "$winname" -b add,hidden
-
 
 
 # copy and clear out the dictation scratch
