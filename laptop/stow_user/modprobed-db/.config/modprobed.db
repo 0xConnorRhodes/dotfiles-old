@@ -20,6 +20,7 @@ btusb
 cbc
 ccm
 ccp
+cdc_ether
 cec
 cfg80211
 cmac
@@ -82,6 +83,7 @@ mbcache
 mc
 md4
 mdio_devres
+mii
 mousedev
 nf_conntrack
 nf_defrag_ipv4
@@ -98,6 +100,7 @@ pcspkr
 pinctrl_amd
 pkcs8_key_parser
 psmouse
+r8152
 r8169
 rapl
 rc_core
@@ -154,6 +157,7 @@ usbhid
 usbkbd
 usblp
 usbmouse
+usbnet
 usb_storage
 uvcvideo
 vfat

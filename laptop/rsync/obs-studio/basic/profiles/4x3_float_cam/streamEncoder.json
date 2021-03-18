@@ -1,0 +1,5 @@
+{
+    "preset": "ultrafast",
+    "rate_control": "CBR",
+    "tune": "zerolatency"
+}
