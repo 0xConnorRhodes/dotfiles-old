@@ -2,22 +2,24 @@
 # Script to set up using phone as a microphone with a denoised mumble loopback
 # Author: Connor Rhodes (connorrhodes.com)
 
+pulseaudio -k
+
+
 killall mumble
 
-pulseaudio -k
+#sudo systemctl stop murmur.service
 
 wmctrl -c Voice - Calls — Mozilla Firefox
 wmctrl -c 100_Dictation - Google Docs
 
 # pacmd set-default-source alsa_card.usb-0a12_Avantree_DG80-00
 
-/home/connor/.local/dotfiles/laptop/system_scripts/nopath/dotdesktop-wrapper-scripts/voice.desktop.sh &
+
+noisetorch -i # denoise default input
+# sleep here?
+pacmd set-default-source nui_mic_denoised_out.monitor
 
 notify-send "gvoice-mic" "Ready"
-
-
-
-sudo systemctl stop murmur.service
 
 winname="Voice - Calls — Mozilla Firefox"
 

@@ -17,7 +17,7 @@ wmctrl -c 100_Dictation - Google Docs # does it work better if it's here?
 # kill and restart google voice to give it audio access again
 wmctrl -c Voice - Calls — Mozilla Firefox
 
-sudo systemctl stop murmur.service
+#sudo systemctl stop murmur.service
 
 notify-send "phone-mic" "unloaded"
 
