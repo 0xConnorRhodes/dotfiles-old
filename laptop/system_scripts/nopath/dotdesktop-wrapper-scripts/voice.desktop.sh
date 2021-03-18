@@ -20,6 +20,8 @@ then
 	winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
 	wmctrl -r "$winname" -t $(wmctrl -d | grep \* | awk '{ print $1 }') 
 else 
+
+	wmctrl -r "$winname" -b remove,hidden
         winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
 
 	wmctrl -r "$winname" -t $(wmctrl -d | grep \* | awk '{ print $1 }') 

@@ -3,7 +3,7 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 # start mumble server
-# sudo systemctl start murmur.service 
+sudo systemctl start murmur.service 
 
 
 # Launch mumble client, move it to an unused workspace, and hide it.

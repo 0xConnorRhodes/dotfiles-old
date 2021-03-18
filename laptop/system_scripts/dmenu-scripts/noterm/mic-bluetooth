@@ -2,25 +2,22 @@
 # Script to set up using phone as a microphone with a denoised mumble loopback
 # Author: Connor Rhodes (connorrhodes.com)
 
-
 killall mumble
 
-#pacmd unload-module module-null-sink
-#pacmd unload-module module-ladspa-sink
 pulseaudio -k
 
-
-# close dictation scratch. (Chromium wont recognize the mic next time unless this is done.
-# this must go after puleaudio is killed to prevent kernel panics
-wmctrl -c 100_Dictation - Google Docs # does it work better if it's here?
-
-# kill and restart google voice to give it audio access again
 wmctrl -c Voice - Calls — Mozilla Firefox
+wmctrl -c 100_Dictation - Google Docs
+
+# pacmd set-default-source alsa_card.usb-0a12_Avantree_DG80-00
+
+/home/connor/.local/dotfiles/laptop/system_scripts/nopath/dotdesktop-wrapper-scripts/voice.desktop.sh &
+
+notify-send "gvoice-mic" "Ready"
+
+
 
 sudo systemctl stop murmur.service
-
-notify-send "phone-mic" "unloaded"
-
 
 winname="Voice - Calls — Mozilla Firefox"
 
