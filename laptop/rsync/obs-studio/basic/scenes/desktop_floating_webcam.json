@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.33417761325836182
+        "volume": 0.21663334965705872
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -87,7 +87,7 @@
         },
         "scripts-tool": []
     },
-    "name": "laptop_floating_webcam",
+    "name": "desktop_floating_webcam",
     "preview_locked": false,
     "quick_transitions": [
         {
@@ -133,13 +133,9 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [
-                    {
-                        "key": "OBS_KEY_NUM5"
-                    }
-                ],
-                "libobs.hide_scene_item.Video Capture Device (V4L2)": [],
-                "libobs.show_scene_item.Video Capture Device (V4L2)": []
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.logitech_webcam": [],
+                "libobs.show_scene_item.logitech_webcam": []
             },
             "id": "scene",
             "mixers": 0,
@@ -154,7 +150,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 5,
+                "id_counter": 1,
                 "items": [
                     {
                         "align": 5,
@@ -169,9 +165,9 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 5,
-                        "locked": true,
-                        "name": "Video Capture Device (V4L2)",
+                        "id": 1,
+                        "locked": false,
+                        "name": "logitech_webcam",
                         "pos": {
                             "x": 1920.0,
                             "y": 0.0
@@ -198,11 +194,11 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xshm_input",
+            "id": "v4l2_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Screen Capture (XSHM)",
+            "name": "logitech_webcam",
             "prev_ver": 436273154,
             "private_settings": {},
             "push-to-mute": false,
@@ -210,10 +206,13 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "advanced": true
+                "device_id": "/dev/video2",
+                "input": 0,
+                "pixelformat": 842093913,
+                "resolution": 83886800
             },
             "sync": 0,
-            "versioned_id": "xshm_input",
+            "versioned_id": "v4l2_input",
             "volume": 1.0
         },
         {
@@ -288,11 +287,11 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "v4l2_input",
+            "id": "xshm_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Video Capture Device (V4L2)",
+            "name": "Screen Capture (XSHM)",
             "prev_ver": 436273154,
             "private_settings": {},
             "push-to-mute": false,
@@ -300,14 +299,10 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device_id": "/dev/video0",
-                "framerate": -1,
-                "input": 0,
-                "pixelformat": 842093913,
-                "resolution": 83886800
+                "advanced": true
             },
             "sync": 0,
-            "versioned_id": "v4l2_input",
+            "versioned_id": "xshm_input",
             "volume": 1.0
         }
     ],

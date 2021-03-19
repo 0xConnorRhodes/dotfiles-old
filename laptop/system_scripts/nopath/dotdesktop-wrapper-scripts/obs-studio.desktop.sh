@@ -24,4 +24,4 @@ sleep .5
 #insert script to convert and process and upload etc. the final file (you will need to have OBS store in a cache directory first.
 #also, have the script start this ffmpeg conversion in a tmux window you can access and open a tmux session there (as your previous ffmpeg script
 
-
+# for f in ~/.cache/screencasts/raw; mv to processing and then process it. then mv it to final when done

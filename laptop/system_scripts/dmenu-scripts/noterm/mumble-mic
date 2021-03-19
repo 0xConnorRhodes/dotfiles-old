@@ -5,6 +5,10 @@
 # start mumble server
 #sudo systemctl start murmur.service 
 
+killall mumble
+
+pulseaudio -k
+
 wmctrl -c Voice - Calls — Mozilla Firefox
 
 # Launch mumble client, move it to an unused workspace, and hide it.

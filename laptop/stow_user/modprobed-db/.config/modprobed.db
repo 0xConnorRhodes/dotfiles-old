@@ -78,6 +78,7 @@ libdes
 libphy
 llc
 mac80211
+mac80211_hwsim
 mac_hid
 mbcache
 mc

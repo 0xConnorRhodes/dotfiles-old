@@ -6,4 +6,4 @@ read -p "daily log: " LOGITEM
 DAY=$(date +%Y-%m-%d)
 TIMESTAMP=$(date +%H:%M)
 
-echo "- [x] $LOGITEM <!--$TIMESTAMP-->" >> /home/connor/dox/notes/mind/daily_notes/$DAY.md
+echo "- $LOGITEM <!--$TIMESTAMP-->" >> /home/connor/dox/notes/mind/daily_notes/$DAY.md
