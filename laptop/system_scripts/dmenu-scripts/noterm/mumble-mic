@@ -4,6 +4,7 @@
 
 # start mumble server
 #sudo systemctl start murmur.service 
+sudo systemctl restart murmur.service 
 
 killall mumble
 
