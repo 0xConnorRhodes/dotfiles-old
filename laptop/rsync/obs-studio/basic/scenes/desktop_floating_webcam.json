@@ -44,7 +44,7 @@
         "id": "pulse_output_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": true,
+        "muted": false,
         "name": "Desktop Audio",
         "prev_ver": 436273154,
         "private_settings": {},
@@ -192,6 +192,33 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "async_delay_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "mumble_mic",
+                    "prev_ver": 436273154,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "delay_ms": 100
+                    },
+                    "sync": 0,
+                    "versioned_id": "async_delay_filter",
+                    "volume": 1.0
+                }
+            ],
             "flags": 0,
             "hotkeys": {},
             "id": "v4l2_input",

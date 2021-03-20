@@ -3,12 +3,15 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 
-killall mumble
-
 pulseaudio -k
+
+sleep 1
 
 # close dictation scratch. (Chromium wont recognize the mic next time unless this is done.
 # this must go after puleaudio is killed to prevent kernel panics
+
+killall mumble
+
 wmctrl -c 100_Dictation - Google Docs # does it work better if it's here?
 
 # kill and restart google voice to give it audio access again

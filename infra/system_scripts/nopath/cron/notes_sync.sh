@@ -28,6 +28,8 @@ fi
 # then exit with no error code `exit 0` if there are changes,
 # then continue on with the script
 
+#echo "syncing"
+
 git pull
 
 git add .

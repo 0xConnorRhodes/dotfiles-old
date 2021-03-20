@@ -4,6 +4,8 @@
 
 pulseaudio -k
 
+sleep 1
+
 killall mumble
 
 #sudo systemctl stop murmur.service
