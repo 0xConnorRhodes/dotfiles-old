@@ -34,6 +34,7 @@ then
 		--mode 1920x1080 --pos 0x0 --rotate normal
 	xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
 	exec dbus-launch spectrwm
+	#exec spectrwm
 else
 	xrandr --output eDP --primary --mode 1920x1080 \
 		--pos 0x0 --rotate normal --output HDMI-A-0 \
@@ -42,5 +43,6 @@ else
 	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" .3 #the t460 setting was .2
 	xinput --set-prop "ETPS/2 Elantech TrackPoint" "libinput Natural Scrolling Enabled" 0
 	exec dbus-launch spectrwm
+	#exec spectrwm
 fi
 #exec dbus-launch spectrwm
