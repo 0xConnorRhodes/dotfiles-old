@@ -3,19 +3,28 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 
-pulseaudio -k
-
-sleep 1
+#pulseaudio -k
 
 # close dictation scratch. (Chromium wont recognize the mic next time unless this is done.
 # this must go after puleaudio is killed to prevent kernel panics
 
+notify-send "run pulseaudio -k"
+#alacritty -e zsh
+alacritty -e "pulseaudio -k"
+# I think the crash might be related to bash, try changing script to zsh and running without alacritty
+
+#pulseaudio -k
+
+sleep 3
+
+sudo systemctl restart murmur.service 
+
 killall mumble
 
-wmctrl -c 100_Dictation - Google Docs # does it work better if it's here?
+#wmctrl -c 100_Dictation - Google Docs # does it work better if it's here?
 
 # kill and restart google voice to give it audio access again
-wmctrl -c Voice - Calls — Mozilla Firefox
+#wmctrl -c Voice - Calls — Mozilla Firefox
 
 #sudo systemctl stop murmur.service
 

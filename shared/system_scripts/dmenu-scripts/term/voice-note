@@ -12,8 +12,6 @@ INITNAME=$HOME/.cache/voice-note.opus
 
 ffmpeg -f pulse -ac 1 -i default -c:a libopus -b:a 40k -ar 16000 -application voip $INITNAME
 
-echo "TEST"
-
 #ffmpeg -f pulse -ac 1 -i default -c:a libopus -b:a 40k -ar 16000 -application voip $HOME/dwn/$(date +"%Y-%m-%d_%H-%M-%S")_voice-note.opus
 
 read -p "enter filename: " FNAME

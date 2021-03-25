@@ -2,13 +2,20 @@
 # Script to set up using phone as a microphone with a denoised mumble loopback
 # Author: Connor Rhodes (connorrhodes.com)
 
+
+#pulseaudio -k
+
+notify-send "run pulseaudio -k"
+#alacritty -e zsh
+alacritty -e "pulseaudio -k"
+
+sleep 3
+
 # start mumble server
 #sudo systemctl start murmur.service 
 sudo systemctl restart murmur.service 
 
 killall mumble
-
-pulseaudio -k
 
 wmctrl -c Voice - Calls — Mozilla Firefox
 
