@@ -10,7 +10,7 @@
 
 notify-send "run pulseaudio -k"
 #alacritty -e zsh
-alacritty -e "pulseaudio -k"
+xterm -e "pulseaudio -k"
 # I think the crash might be related to bash, try changing script to zsh and running without alacritty
 
 #pulseaudio -k
@@ -28,7 +28,7 @@ killall mumble
 
 #sudo systemctl stop murmur.service
 
-notify-send "phone-mic" "unloaded"
+notify-send "mumble-mic" "unloaded"
 
 #winname="Voice - Calls — Mozilla Firefox"
 #

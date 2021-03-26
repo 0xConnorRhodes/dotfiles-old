@@ -7,7 +7,7 @@
 
 notify-send "run pulseaudio -k"
 #alacritty -e zsh
-alacritty -e "pulseaudio -k"
+xterm -e "pulseaudio -k"
 
 sleep 3
 
@@ -44,7 +44,7 @@ fi
 # set denoised out as default mic
 pacmd set-default-source nui_mic_denoised_out.monitor
 
-notify-send "phone-mic" "Ready"
+notify-send "mumble-mic" "Ready"
 
 
 #winname="Voice - Calls — Mozilla Firefox"
