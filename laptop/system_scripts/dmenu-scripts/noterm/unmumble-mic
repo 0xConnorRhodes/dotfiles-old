@@ -30,18 +30,18 @@ killall mumble
 
 notify-send "phone-mic" "unloaded"
 
-winname="Voice - Calls — Mozilla Firefox"
-
-winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
-
-exec env GTK_THEME="Redmond97 Firefox Solaris" \
-		/usr/lib/firefox/firefox -P App \
-		--new-window https://voice.google.com/u/0/calls &
-sleep 3 #might require some fiddling. It's the time it takes to launch google chrome
-
-winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
-
-wmctrl -r "$winname" -b add,hidden
+#winname="Voice - Calls — Mozilla Firefox"
+#
+#winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
+#
+#exec env GTK_THEME="Redmond97 Firefox Solaris" \
+#		/usr/lib/firefox/firefox -P App \
+#		--new-window https://voice.google.com/u/0/calls &
+#sleep 3 #might require some fiddling. It's the time it takes to launch google chrome
+#
+#winid=$(wmctrl -l | grep "$winname" | awk '{ print $1 }')
+#
+#wmctrl -r "$winname" -b add,hidden
 
 
 

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+alacritty -e "pulseaudio -k"
+
+sleep 1
+
+sudo systemctl restart murmur.service 
+
+sleep 1
+
+killall mumble
+
+
+# set up de-noised input
+
+if [ -z "$(pacmd list-sources | grep "NoiseTorch Microphone")"  ]
+then
+	# improve. you need a way to manually specify use family 17 with mic in here
+	# or to enable noisetorch and then switch things around.
+	noisetorch -i # denoise default input
+
+	sleep 3
+
+fi
+	~/bin/pulseout mumble ntmic
+
+# set denoised out as default mic
+pacmd set-default-source nui_mic_denoised_out.monitor
+
+
+notify-send "line-mic" "Ready"
