@@ -59,8 +59,8 @@
         "versioned_id": "pulse_output_capture",
         "volume": 1.0
     },
-    "current_program_scene": "nocam",
-    "current_scene": "nocam",
+    "current_program_scene": "fullscreen_camera",
+    "current_scene": "fullscreen_camera",
     "current_transition": "Cut",
     "groups": [],
     "modules": {

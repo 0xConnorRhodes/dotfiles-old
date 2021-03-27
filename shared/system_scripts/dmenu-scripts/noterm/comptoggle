@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z $(pgrep picom) ]
+
+then 
+	picom &
+	notify-send "Compositor started"
+
+else 
+	killall picom 
+	notify-send "Compositor killed"
+
+fi

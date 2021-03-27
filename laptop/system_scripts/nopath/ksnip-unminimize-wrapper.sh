@@ -1,5 +1,5 @@
 #!/bin/bash
-# Wrapper script to unminimize Ksnip if it starts minimized
+# Wrapper script to unminimize Ksnip if it starts minimized.
 # Connor Rhodes (connorrhodes.com)
 
 # start Ksnip and fork into the background
