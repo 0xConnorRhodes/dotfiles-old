@@ -40,6 +40,8 @@ killall unclutter
 #hhpc -i 1 &
 #$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-off.sh
 
+killall obsidian
+xdg-open obsidian:///"/home/connor/dox/notes/Engineers_Notes/Engineers Notes.md" &
 
 obs
 
