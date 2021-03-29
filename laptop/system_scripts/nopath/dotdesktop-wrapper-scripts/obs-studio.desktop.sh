@@ -5,6 +5,11 @@
 # OBS_dotdesktop_name: com.obsproject.Studio.desktop
 # Author: Connor Rhodes (connorrhodes.com)
 
+# TODO:
+# 1. change md-sync to public version
+# 2. add herbe for notifications while streaming https://www.youtube.com/watch?v=ARdIRGgG3SI
+# 3. add spectrwm shortcut to print herbe notifications when obs keyboard shortcuts are called (will spectrwm steal the whole keypress?
+
 # edit spectrwm to redefine from key presses
 ## search only public notes in Obsidian
 sed -i \
