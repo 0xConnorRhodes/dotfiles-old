@@ -23,9 +23,6 @@ follow = mouse
     # width is 0.
     shrink = no
 
-    # The transparency of the window.  Range: [0; 100].
-    # This option will only work if a compositing window manager is
-    # present (e.g. xcompmgr, compiz, etc.).
     transparency = 0
 
     # The height of the entire notification.  If the height is smaller
@@ -159,7 +156,7 @@ follow = mouse
     sticky_history = yes
 
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 200
 
     ### Misc/Advanced ###
 
@@ -199,16 +196,6 @@ follow = mouse
     # notification height to avoid clipping text and/or icons.
     corner_radius = 0
 
-    ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
     force_xinerama = false
 
     ### mouse
@@ -272,13 +259,21 @@ follow = mouse
     # Icon for notifications with normal urgency, uncomment to enable
     icon = /home/connor/.config/dunst/normal.png
 
+
 [urgency_critical]
-    background = "#900000"
+    background = "#2b2b2b"
     foreground = "#ffffff"
-    frame_color = "#ff0000"
     timeout = 5
-    # Icon for notifications with critical urgency, uncomment to enable
-    icon = /home/connor/.config/dunst/critical.png
+    # Icon for notifications with normal urgency, uncomment to enable
+    icon = /home/connor/.config/dunst/normal.png
+
+#[urgency_critical]
+#    background = "#900000"
+#    foreground = "#ffffff"
+#    frame_color = "#ff0000"
+#    timeout = 5
+#    # Icon for notifications with critical urgency, uncomment to enable
+#    icon = /home/connor/.config/dunst/critical.png
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
@@ -361,11 +356,6 @@ follow = mouse
 #    summary = "foobar"
 #    format = ""
 
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
-
 #[history-ignore]
 #    # This notification will not be saved in history
 #    summary = "foobar"
@@ -380,27 +370,6 @@ follow = mouse
 #    appname = Pidgin
 #    summary = "*signed on*"
 #    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-#[stack-volumes]
-#    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
-#
-# vim: ft=cfg
 
 # FILTERS
 # the [bracket words] don't matter. set to format = "" to disable message
@@ -411,3 +380,15 @@ follow = mouse
 #[mutt-wizard]
 #   appname = mutt-wizard
 #   format = ""
+
+
+#[hide-low-urgency] #screencast_setting
+#    msg_urgency = low #screencast_setting
+#    skip_display = yes #screencast_setting
+
+#[hide-normal-urgency] #screencast_setting
+#    msg_urgency = normal #screencast_setting
+#    skip_display = yes #screencast_setting
+
+
+# vim: ft=cfg

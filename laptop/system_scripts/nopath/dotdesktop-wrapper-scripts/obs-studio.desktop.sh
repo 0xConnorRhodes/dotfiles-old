@@ -16,14 +16,19 @@ sed -i \
 	-e "s/^\#program\[screencast-notes\]/program\[screencast-notes\]/g" \
 	-e "s/^\#bind\[screencast-notes\]/bind\[screencast-notes\]/g" \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
-
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
 
+# disable all non-critical dunst messages by 
+sed -Ei 's/^#(.*#screencast_setting$)/\1/g' $HOME/.config/dunst/dunstrc
+
+killall dunst
+notify-send -u critical "screencast" "ready"
 
 killall unclutter
 #hhpc -i 1 &
-$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-off.sh
+#$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-off.sh
+
 
 obs
 
@@ -37,12 +42,18 @@ sed -i \
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
 
+# re-enable all notifications by commenting screencast settings in dunstrc
+sed -Ei 's/^(.*#screencast_setting$)/#\1/g' $HOME/.config/dunst/dunstrc
+
+killall dunst
+notify-send -u normal "Notifications ON"
+
 #sleep 1
 killall hhpc
 #sleep 1
 #nohup unclutter --timeout 1 --jitter 5 --ignore-scrolling >/dev/null 2>&1
 #sleep 1
-$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-on.sh
+#$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-on.sh
 #sleep .5
 unclutter --timeout 1 --jitter 5 --ignore-scrolling &
 #sleep .5
