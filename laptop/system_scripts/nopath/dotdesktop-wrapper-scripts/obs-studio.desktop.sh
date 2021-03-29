@@ -16,6 +16,17 @@ sed -i \
 	-e "s/^\#program\[screencast-notes\]/program\[screencast-notes\]/g" \
 	-e "s/^\#bind\[screencast-notes\]/bind\[screencast-notes\]/g" \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+# comment private search
+sed -Ei \
+	's/^(program\[zk-vim-search\].*md-sync\.sh$)/#\1/g' \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+# uncomment public-search
+sed -Ei \
+	's/^#(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/\1/g' \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
 
@@ -38,6 +49,17 @@ sed -i \
 	-e "s/^program\[screencast-notes\]/\#program\[screencast-notes\]/g" \
 	-e "s/^bind\[screencast-notes\]/\#bind\[screencast-notes\]/g" \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+# uncomment private search
+sed -Ei \
+	's/^#(program\[zk-vim-search\].*md-sync\.sh$)/\1/g' \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+# comment public-search
+sed -Ei \
+	's/^(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/#\1/g' \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
 
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
