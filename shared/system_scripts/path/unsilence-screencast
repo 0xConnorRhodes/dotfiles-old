@@ -1,0 +1,3 @@
+#!/bin/sh
+
+unsilence -y -t 6 -sv 1 -ss 4 -sl -45 -st .30 $1 $2

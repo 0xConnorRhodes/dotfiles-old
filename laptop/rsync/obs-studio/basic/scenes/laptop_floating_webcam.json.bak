@@ -59,8 +59,8 @@
         "versioned_id": "pulse_output_capture",
         "volume": 1.0
     },
-    "current_program_scene": "fullscreen_camera",
-    "current_scene": "fullscreen_camera",
+    "current_program_scene": "nocam",
+    "current_scene": "nocam",
     "current_transition": "Cut",
     "groups": [],
     "modules": {
@@ -112,7 +112,15 @@
             "name": "Fade"
         }
     ],
-    "saved_projectors": [],
+    "saved_projectors": [
+        {
+            "alwaysOnTopOverridden": false,
+            "geometry": "AdnQywADAAAAAAMf/////wAABQAAAAEOAAADIAAAAAAAAAT/AAABDQAAAAAAAAAABQAAAAMgAAAAAAAABP8AAAEN",
+            "monitor": -1,
+            "name": "fullscreen_camera",
+            "type": 1
+        }
+    ],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
