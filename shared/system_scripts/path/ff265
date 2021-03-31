@@ -4,6 +4,6 @@
 
 QUOTE=$(echo "$1" | sed 's/\\ / /g')
 
-FILE=$(echo "$QUOTE" | sed 's/ /_/g' | sed 's/.mkv/_x265.mkv/g')
+FILE=$(echo "$QUOTE" | sed 's/ /_/g' | sed 's/\.mkv/_x265\.mkv/g' | sed 's/\.mp4/_x265\.mkv/g')
 
 ffmpeg -i "$QUOTE" -vcodec libx265 -acodec libopus $FILE

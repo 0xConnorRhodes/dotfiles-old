@@ -11,5 +11,5 @@ if [ -z $FILE ];
 then
     exit 0
 else
-    xdg-open obsidian:///"/home/connor/dox/notes/Engineers_Notes/$FILE"
+    xdg-open obsidian:///"/home/connor/dox/notes/engineers_notes/$FILE"
 fi

@@ -5,10 +5,8 @@
 # OBS_dotdesktop_name: com.obsproject.Studio.desktop
 # Author: Connor Rhodes (connorrhodes.com)
 
-# TODO:
-# 1. change md-sync to public version
-# 2. add herbe for notifications while streaming https://www.youtube.com/watch?v=ARdIRGgG3SI
-# 3. add spectrwm shortcut to print herbe notifications when obs keyboard shortcuts are called (will spectrwm steal the whole keypress?
+
+echo "off" > $HOME/.cache/obs-status.txt
 
 # edit spectrwm to redefine from key presses
 ## search only public notes in Obsidian
@@ -27,6 +25,13 @@ sed -Ei \
 	's/^#(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/\1/g' \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
+# enable notification scripts for OBS notifications
+sed -Ei \
+	-e "s/^\#program\[obs-(.*)\]/program\[obs-\1\]/g" \
+	-e "s/^\#bind\[obs-(.*)\]/bind\[obs-\1\]/g" \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
 
@@ -41,7 +46,7 @@ killall unclutter
 #$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-off.sh
 
 killall obsidian
-xdg-open obsidian:///"/home/connor/dox/notes/Engineers_Notes/Engineers Notes.md" &
+xdg-open obsidian:///"/home/connor/dox/notes/engineers_notes/000 Engineers Notes.md" &
 
 obs
 
@@ -62,6 +67,11 @@ sed -Ei \
 	's/^(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/#\1/g' \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
+# disable spectrwm obs shortcut notification scripts
+sed -Ei \
+	-e "s/^program\[obs-(.*)\]/\#program\[obs-\1\]/g" \
+	-e "s/^bind\[obs-(.*)\]/\#bind\[obs-\1\]/g" \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
@@ -72,17 +82,12 @@ sed -Ei 's/^(.*#screencast_setting$)/#\1/g' $HOME/.config/dunst/dunstrc
 killall dunst
 notify-send -u normal "Notifications ON"
 
-#sleep 1
 killall hhpc
-#sleep 1
-#nohup unclutter --timeout 1 --jitter 5 --ignore-scrolling >/dev/null 2>&1
-#sleep 1
+
+echo "off" > $HOME/.cache/obs-status.txt
+
 #$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-on.sh
-#sleep .5
 unclutter --timeout 1 --jitter 5 --ignore-scrolling &
-#sleep .5
-
-
 
 #insert script to convert and process and upload etc. the final file (you will need to have OBS store in a cache directory first.
 #also, have the script start this ffmpeg conversion in a tmux window you can access and open a tmux session there (as your previous ffmpeg script

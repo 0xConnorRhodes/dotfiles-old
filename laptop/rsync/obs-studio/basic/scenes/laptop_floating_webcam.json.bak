@@ -44,7 +44,7 @@
         "id": "pulse_output_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": true,
+        "muted": false,
         "name": "Desktop Audio",
         "prev_ver": 436273154,
         "private_settings": {},
@@ -57,7 +57,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_output_capture",
-        "volume": 1.0
+        "volume": 0.42868432402610779
     },
     "current_program_scene": "nocam",
     "current_scene": "nocam",
@@ -112,15 +112,7 @@
             "name": "Fade"
         }
     ],
-    "saved_projectors": [
-        {
-            "alwaysOnTopOverridden": false,
-            "geometry": "AdnQywADAAAAAAMf/////wAABQAAAAEOAAADIAAAAAAAAAT/AAABDQAAAAAAAAAABQAAAAMgAAAAAAAABP8AAAEN",
-            "monitor": -1,
-            "name": "fullscreen_camera",
-            "type": 1
-        }
-    ],
+    "saved_projectors": [],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
