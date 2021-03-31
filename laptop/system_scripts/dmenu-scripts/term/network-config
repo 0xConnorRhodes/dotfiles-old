@@ -1,0 +1,39 @@
+#!/bin/sh
+# Script to present list of network config files and open the file selected.
+# Script supports hardlinked IWD files and seamlessly converts them from hexadecimal
+# to ASCII if needed.
+# Author: Connor Rhodes (connorrhodes.com)
+
+
+IWDASCII=$(ls -1 $HOME/.local/dotfiles_secret/laptop/hardlinks/iwd | rg "^[^=]")
+
+IWDHEX=$(
+	ls -1 $HOME/.local/dotfiles_secret/laptop/hardlinks/iwd | rg "^.?[A-Fa-f0-9]+\.[A-Za-z0-9]+"
+)
+
+CACHE=$HOME/.cache/hexfiles.txt
+
+rm $CACHE
+touch $CACHE
+
+for FILE in $IWDHEX
+do
+	ASCII=$(echo $FILE | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | sed 's/=//g' | xargs printf)
+
+	echo "$ASCII $FILE" >> $HOME/.cache/hexfiles.txt
+done
+
+CONFIGS=$(
+	printf "%s\n" $IWDASCII
+	awk '{ print $1 }' $CACHE
+)
+
+CHOICE=$(printf "%s\n" $CONFIGS | fzf)
+
+#
+#FULLPATH=$(ls -d \
+#	$HOME/.local/dotfiles_secret/laptop/hardlinks/iwd/* | rg "^[^=]" \
+#	| grep $NAME)
+#
+echo "$CHOICE"
+#echo $IWDHEX
