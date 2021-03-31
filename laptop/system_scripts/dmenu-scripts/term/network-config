@@ -1,39 +1,28 @@
 #!/bin/sh
 # Script to present list of network config files and open the file selected.
-# Script supports hardlinked IWD files and seamlessly converts them from hexadecimal
-# to ASCII if needed.
 # Author: Connor Rhodes (connorrhodes.com)
 
 
-IWDASCII=$(ls -1 $HOME/.local/dotfiles_secret/laptop/hardlinks/iwd | rg "^[^=]")
+IWDPATH="$HOME/.local/dotfiles_secret/laptop/hardlinks/iwd"
 
-IWDHEX=$(
-	ls -1 $HOME/.local/dotfiles_secret/laptop/hardlinks/iwd | rg "^.?[A-Fa-f0-9]+\.[A-Za-z0-9]+"
-)
+LIST="
+For_Aiur_2.4GHz
+For_Aiur_5GHz
+He668fen104
+J&J
+J&JB
+"
 
-CACHE=$HOME/.cache/hexfiles.txt
 
-rm $CACHE
-touch $CACHE
+CHOICE=$(printf "%s\n" $LIST | fzf)
 
-for FILE in $IWDHEX
-do
-	ASCII=$(echo $FILE | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | sed 's/=//g' | xargs printf)
+echo $CHOICE
 
-	echo "$ASCII $FILE" >> $HOME/.cache/hexfiles.txt
-done
 
-CONFIGS=$(
-	printf "%s\n" $IWDASCII
-	awk '{ print $1 }' $CACHE
-)
-
-CHOICE=$(printf "%s\n" $CONFIGS | fzf)
-
-#
-#FULLPATH=$(ls -d \
-#	$HOME/.local/dotfiles_secret/laptop/hardlinks/iwd/* | rg "^[^=]" \
-#	| grep $NAME)
-#
-echo "$CHOICE"
-#echo $IWDHEX
+case $CHOICE in
+	"For_Aiur_2.4GHz") nvim "$IWDPATH/=466f725f416975725f322e3447487a.psk";;
+	"For_Aiur_5GHz") nvim "$IWDPATH/For_Aiur_5GHz.psk";;
+	"He668fen104") nvim "$IWDPATH/He668fen104.psk";;
+	"J&J") nvim "$IWDPATH/=4a264a.psk";;
+	"J&JB") nvim "$IWDPATH/=4a264a42.psk";;
+esac
