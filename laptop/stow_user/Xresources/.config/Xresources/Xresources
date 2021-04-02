@@ -59,7 +59,8 @@ URxvt*cursor: #a8a19f
 
 
 URxvt*imLocale: en_US.UTF-8
-URxvt*termName: rxvt-unicode-256color
+!URxvt*termName: rxvt-unicode-256color
+URxvt*termName: xterm-256color
 Urxvt*buffered: false
 URxvt.letterSpace: 0
 URxvt.font: xft:HackNerdFontMono:size=16, \
