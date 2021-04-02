@@ -1,7 +1,7 @@
 #!/bin/bash
 # if desired, can convert to a case statement per mkvimnote.sh and create spreadsheets etc in the same directory
 
-FOLDER=$(find /home/connor/dox/notes -type d | fzf)
+FOLDER=$(fd . '/home/connor/dox/notes' --type directory | fzf)
 read -p "enter filename.ext: " FNAME
 
 if [[ $FNAME == *".org"* ]];
