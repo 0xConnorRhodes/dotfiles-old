@@ -1,3 +1,5 @@
 #!/bin/sh
 
-unsilence -y -t 6 -sv 1 -ss 4 -sl -45 -st .30 $1 $2
+NEWFILE=$(echo "$1" | sed 's/\\ / /g' | sed 's/.mkv/_nosilence.mkv/g')
+
+unsilence -y -t 6 -sv 1 -ss 4 -sl -45 -st .30 "$1" "$NEWFILE"

@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.23919770121574402
+        "volume": 0.58772283792495728
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -112,7 +112,15 @@
             "name": "Fade"
         }
     ],
-    "saved_projectors": [],
+    "saved_projectors": [
+        {
+            "alwaysOnTopOverridden": false,
+            "geometry": "AdnQywADAAAAAAMf/////wAABQAAAAEOAAADIAAAAAAAAAT/AAABDQAAAAAAAAAABQAAAAMgAAAAAAAABP8AAAEN",
+            "monitor": -1,
+            "name": "fullscreen_camera",
+            "type": 1
+        }
+    ],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,

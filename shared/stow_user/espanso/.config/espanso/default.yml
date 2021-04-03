@@ -8,9 +8,9 @@ toggle_key: META # sets it to super key on my keymap
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: "{{"
+  - trigger: ";cb"
     replace: "- [ ] "
-  - trigger: "}}"
+  - trigger: ";fc"
     replace: "{--}"
   - trigger: "spanmed"
     replace: '<span style="font-size:medium"><i>$|$</i></span>'
