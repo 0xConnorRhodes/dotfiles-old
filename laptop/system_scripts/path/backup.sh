@@ -43,8 +43,9 @@ pass git add .
 pass git commit -m "nightly backup autocommit"
 pass git push
 
-## runs etckeeper daily autocommit/push
-sudo /etc/etckeeper/daily
+#bare repo nightly backup
+
+sudo /usr/bin/git --git-dir=/configs/.git --work-tree=/ commit -a -m "nightly auto commit $(date +'%Y-%m-%d_%H-%M-%S')"
 
 # backup system using rsync
 sudo /home/connor/.local/dotfiles/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh

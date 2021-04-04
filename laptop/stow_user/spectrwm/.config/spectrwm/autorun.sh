@@ -15,5 +15,6 @@ playerctld &
 ~/bin/notifications-on.sh &
 espanso daemon & #it only works if it's started here. Not in the systemd service.
 # set dg80 input colume at 153%
+xdotool click 1 # click to enable keys to be captured by spectrwm
 systemctl --user restart xcape.service
 #~/bin/refbar

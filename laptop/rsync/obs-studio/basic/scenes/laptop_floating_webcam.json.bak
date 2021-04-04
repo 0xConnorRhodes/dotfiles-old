@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.58772283792495728
+        "volume": 0.37136828899383545
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -115,7 +115,7 @@
     "saved_projectors": [
         {
             "alwaysOnTopOverridden": false,
-            "geometry": "AdnQywADAAAAAAMf/////wAABQAAAAEOAAADIAAAAAAAAAT/AAABDQAAAAAAAAAABQAAAAMgAAAAAAAABP8AAAEN",
+            "geometry": "AdnQywADAAAAAAMfAAABwQAABQAAAALQAAADIAAAAcIAAAT/AAACzwAAAAAAAAAABQAAAAMgAAABwgAABP8AAALP",
             "monitor": -1,
             "name": "fullscreen_camera",
             "type": 1
