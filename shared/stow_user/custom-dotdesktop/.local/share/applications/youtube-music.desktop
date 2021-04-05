@@ -5,7 +5,8 @@ GenericName=Youtube Music
 Comment=Browse the World Wide Web
 Keywords=Internet;WWW;Browser;Web;Explorer
 #Exec=/usr/lib/firefox/firefox -P App -new-window https://www.google.com/search?client=firefox-b-1-d&q=youtube+music
-Exec=/usr/lib/firefox/firefox -P App -new-window https://music.youtube.com/library/playlists
+#Exec=/usr/lib/firefox/firefox -P App -new-window https://music.youtube.com/library/playlists
+Exec=brave --profile-directory="Profile 1" --app="https://www.youtube.com/channel/UCGxwTeS3AJb6FggrIExn8eQ/playlists?view=1&sort=dd&shelf_id=0"
 Icon=firefox
 Terminal=false
 X-MultipleArgs=false
