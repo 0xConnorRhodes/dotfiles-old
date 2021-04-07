@@ -1,0 +1,8 @@
+#!/bin/bash
+# script to create tracking branches for all git branches allowing you to see and switch to all branches in a remote repo
+# Source: https://stackoverflow.com/a/4754797
+
+for branch in $(git branch --all | grep '^\s*remotes' | egrep --invert-match '(:?HEAD|master)$'); do
+    git branch --track "${branch##*/}" "$branch"
+done
+
