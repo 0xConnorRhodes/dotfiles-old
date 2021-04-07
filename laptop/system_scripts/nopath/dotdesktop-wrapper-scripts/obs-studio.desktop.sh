@@ -6,7 +6,7 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 
-echo "obs_off" > $HOME/.cache/obs-status.txt
+echo "REC" > $HOME/.cache/obs-status.txt
 
 # edit spectrwm to redefine from key presses
 ## search only public notes in Obsidian
@@ -53,7 +53,8 @@ killall obsidian
 xdg-open obsidian:///"/home/connor/dox/notes/engineers_notes/000 Engineers Notes.md" &
 
 # obs-control only works if the recording has been started. you can stop and start again or you can r
-obs --startrecording
+#obs --startrecording
+obs
 
 for movie in /home/connor/.cache/screencasts/raw/*.mkv
 do

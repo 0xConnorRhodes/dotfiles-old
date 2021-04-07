@@ -86,7 +86,7 @@ obsstat() {
 
 # mic-status
 micstat() {
-	micstatus=$(amixer -D pulse get Capture | grep "Mono:" | awk '{print $NF}')
+	micstatus=$(amixer -D pulse get Capture | grep -m 1 'off' | awk '{print $NF}')
 	if [ $micstatus == "[off]" ];then
 		echo "  "
 	fi
