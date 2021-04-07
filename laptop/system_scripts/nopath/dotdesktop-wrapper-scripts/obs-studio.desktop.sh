@@ -6,7 +6,7 @@
 # Author: Connor Rhodes (connorrhodes.com)
 
 
-echo "off" > $HOME/.cache/obs-status.txt
+echo "obs_off" > $HOME/.cache/obs-status.txt
 
 # edit spectrwm to redefine from key presses
 ## search only public notes in Obsidian
@@ -84,7 +84,7 @@ notify-send -u normal "Notifications ON"
 
 killall hhpc
 
-echo "off" > $HOME/.cache/obs-status.txt
+echo "obs_off" > $HOME/.cache/obs-status.txt
 
 #$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-on.sh
 unclutter --timeout 1 --jitter 5 --ignore-scrolling &

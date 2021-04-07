@@ -77,6 +77,12 @@ ptime() {
 	echo "$pomtime"
 }
 
+# screencast status
+obsstat() {
+	obsstatus=$(cat /home/connor/.cache/obs-status.txt)
+	echo "$obsstatus"
+}
+
 
 SLEEP_SEC=60
 #loops forever outputting a line every SLEEP_SEC secs
@@ -87,6 +93,6 @@ SLEEP_SEC=60
 # echo output too long to display correctly.
 while :; do
 	#echo "+@fg=1;  $(pmail) | +@fg=0;  $(hdd) | +@fg=0;  +@fn=0; $(vol) +@fg=0; |   $(bat)% |  $(btooth) |  $(int) |"
-	echo "+@fg=1;$(ptime) +@fg=0; $(counter)/$(donenum) |  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
+	echo "+@fg=1;$(ptime) $(obsstat) +@fg=0; $(counter)/$(donenum) |  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
 	sleep $SLEEP_SEC
 done

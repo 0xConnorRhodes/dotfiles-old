@@ -3,7 +3,7 @@
 # note in Obsidian.
 # Author: Connor Rhodes (connorrhodes.com)
 
-cd /home/connor/dox/notes/Engineers_Notes
+cd /home/connor/dox/notes/engineers_notes
 FILE=$(fd --extension md . | rofi -dmenu -i)
 
 # Only run the open command if there is a selection. Otherwise exit.
