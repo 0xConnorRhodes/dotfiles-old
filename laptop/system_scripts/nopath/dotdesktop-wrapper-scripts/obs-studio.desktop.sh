@@ -52,7 +52,20 @@ killall unclutter
 killall obsidian
 xdg-open obsidian:///"/home/connor/dox/notes/engineers_notes/000 Engineers Notes.md" &
 
-obs
+# obs-control only works if the recording has been started. you can stop and start again or you can r
+obs --startrecording
+
+for movie in /home/connor/.cache/screencasts/raw/*.mkv
+do
+	duration=$(ffprobe "$movie" -show_entries format=format=duration 2>&1| grep DURATION | awk 'NR==1{print $3}')
+	duration_float=$(echo "$duration" | awk -F: '{ print ($1 * 3600) + ($2 * 60) + $3 }')
+	duration_integer=${duration_float%.*}
+
+
+ if [ $duration_integer -lt 30 ];then
+ 	trash-put $movie
+ fi
+done
 
 # reset spectrwm config to non-screencast keyboard shortcuts
 ## search all notes in Obsidian
@@ -93,7 +106,8 @@ notify-send -u normal "Notifications ON"
 
 killall hhpc
 
-echo "obs_off" > $HOME/.cache/obs-status.txt
+echo "" > $HOME/.cache/obs-status.txt
+refbar
 
 #$HOME/.local/dotfiles/shared/system_scripts/nopath/notifications-on.sh
 unclutter --timeout 1 --jitter 5 --ignore-scrolling &
