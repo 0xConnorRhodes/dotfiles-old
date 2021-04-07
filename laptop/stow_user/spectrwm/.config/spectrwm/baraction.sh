@@ -80,7 +80,7 @@ ptime() {
 # screencast status
 obsstat() {
 	obsstatus=$(cat /home/connor/.cache/obs-status.txt)
-	echo "$obsstatus"
+	echo "$obsstatus "
 }
 
 
@@ -88,7 +88,7 @@ obsstat() {
 micstat() {
 	micstatus=$(amixer -D pulse get Capture | grep "Mono:" | awk '{print $NF}')
 	if [ $micstatus == "[off]" ];then
-		echo ""
+		echo "  "
 	fi
 }
 
@@ -102,6 +102,6 @@ SLEEP_SEC=60
 # echo output too long to display correctly.
 while :; do
 	#echo "+@fg=1;  $(pmail) | +@fg=0;  $(hdd) | +@fg=0;  +@fn=0; $(vol) +@fg=0; |   $(bat)% |  $(btooth) |  $(int) |"
-	echo "+@fg=1;$(ptime) $(obsstat) +@fg=4;$(micstat)  +@fg=0; $(counter)/$(donenum) |  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
+	echo "+@fg=1;$(ptime)$(obsstat)+@fg=4;$(micstat)+@fg=0; $(counter)/$(donenum) |  $(hdd) | +@fg=0;+@fn=0; $(bat)% |"
 	sleep $SLEEP_SEC
 done
