@@ -4,5 +4,6 @@
 
 amixer -D pulse sset Capture toggle
 dunstify -r 19987 -t 2000 -u critical "mic" "$(amixer get Capture | awk 'NR==5' | awk '{ print $NF }')"
+refbar
 
 # add mic status to the top bar
