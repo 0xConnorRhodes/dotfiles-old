@@ -25,12 +25,16 @@ sed -Ei \
 	's/^#(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/\1/g' \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
-# enable notification scripts for OBS notifications
+# enable obs-control
 sed -Ei \
-	-e "s/^\#program\[obs-(.*)\]/program\[obs-\1\]/g" \
-	-e "s/^\#bind\[obs-(.*)\]/bind\[obs-\1\]/g" \
+	-e "s/^\#program\[obs-control\]/program\[obs-control\]/g" \
+	-e "s/^\#bind\[obs-control\]/bind\[obs-control\]/g" \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
+# disable screen off script
+sed -Ei \
+	-e "s/^bind\[screenoff\]/\#bind\[screenoff\]/g" \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
 ## reset spectrwm to apply changes
 xdotool key Meta_L+shift+r
@@ -67,10 +71,15 @@ sed -Ei \
 	's/^(program\[zk-vim-search\].*zk-vimsearch-screencast\.sh$)/#\1/g' \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
-# disable spectrwm obs shortcut notification scripts
+# disable OBS control script
 sed -Ei \
-	-e "s/^program\[obs-(.*)\]/\#program\[obs-\1\]/g" \
-	-e "s/^bind\[obs-(.*)\]/\#bind\[obs-\1\]/g" \
+	-e "s/^program\[obs-control\]/\#program\[obs-control\]/g" \
+	-e "s/^bind\[obs-control\]/\#bind\[obs-control\]/g" \
+	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
+
+# enable screen off script
+sed -Ei \
+	-e "s/\#bind\[screenoff\]/bind\[screenoff\]/g" \
 	$HOME/.local/dotfiles/laptop/stow_user/spectrwm/.config/spectrwm/spectrwm.conf
 
 ## reset spectrwm to apply changes
