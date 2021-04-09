@@ -43,6 +43,9 @@ pass git add .
 pass git commit -m "nightly backup autocommit"
 pass git push
 
+cd /home/connor/.cfg
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -a -m "nightly auto-commit"
+
 #bare repo nightly backup
 
 #sudo /usr/bin/git --git-dir=/configs/.git --work-tree=/ commit -a -m "nightly auto commit $(date +'%Y-%m-%d_%H-%M-%S')"

@@ -1,0 +1,6 @@
+#!/bin/bash
+# script to allow executing root git aliases for bare git repo configs
+# Author: Connor Rhodes https://connor.engineer
+
+sudo bash -ci "/usr/bin/git --git-dir=/.cfg/ --work-tree=/ commit -a -m "$@""
+
