@@ -11,7 +11,7 @@ case $STATUS in
 		echo "REC" > $HOME/.cache/obs-status.txt
 		amixer -D pulse sset Capture cap
 		notify-send -t 500 -u critical "Recording Started"
-		xdotool key --window "$WINID" "KP_Divide"
+		xdotool key --window "$WINID" "F7"
 		refbar
 		;;
 
@@ -19,7 +19,7 @@ case $STATUS in
 	REC)
 		echo "pause" > $HOME/.cache/obs-status.txt
 		notify-send -t 1000 -u critical "Recording Paused"
-		xdotool key --window "$WINID" "KP_Multiply"
+		xdotool key --window "$WINID" "F8"
 		refbar
 		;;
 
@@ -28,7 +28,7 @@ case $STATUS in
 		echo "REC" > $HOME/.cache/obs-status.txt
 		amixer -D pulse sset Capture cap
 		notify-send -t 500 -u critical "Recording Resumed"
-		xdotool key --window "$WINID" "KP_Add"
+		xdotool key --window "$WINID" "F9"
 		refbar
 		;;
 

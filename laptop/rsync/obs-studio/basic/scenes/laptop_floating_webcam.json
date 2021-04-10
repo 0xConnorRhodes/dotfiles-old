@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.37136828899383545
+        "volume": 0.21134603023529053
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -162,11 +162,7 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [
-                    {
-                        "key": "OBS_KEY_NUM2"
-                    }
-                ],
+                "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Screen Capture (XSHM)": [],
                 "libobs.show_scene_item.Screen Capture (XSHM)": []
             },
@@ -252,11 +248,7 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [
-                    {
-                        "key": "OBS_KEY_NUM5"
-                    }
-                ],
+                "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Video Capture Device (V4L2)": [],
                 "libobs.show_scene_item.Video Capture Device (V4L2)": []
             },

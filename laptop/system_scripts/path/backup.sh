@@ -43,12 +43,12 @@ pass git add .
 pass git commit -m "nightly backup autocommit"
 pass git push
 
-cd /home/connor/.cfg
+# commit home bare git repo
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -a -m "nightly auto-commit"
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push
 
-#bare repo nightly backup
-
-#sudo /usr/bin/git --git-dir=/configs/.git --work-tree=/ commit -a -m "nightly auto commit $(date +'%Y-%m-%d_%H-%M-%S')"
+# commit root and ansible configs
+sudo /home/connor/.local/scripts/system-scripts/nightly-config-repo-push.sh
 
 # backup system using rsync
 sudo /home/connor/.local/dotfiles/laptop/system_scripts/nopath/cron/laptop-rsync-time-backup.sh
