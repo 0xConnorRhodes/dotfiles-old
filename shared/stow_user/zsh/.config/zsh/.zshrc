@@ -47,10 +47,11 @@ bindkey '^[[33~' kill-word #urxvt sends this fake f19 key with ctrl backspace, t
 export KEYTIMEOUT=1
 
 # Change cursor shape for different vi modes.
+# for cursor echo options, see https://unix.stackexchange.com/a/614203
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
+    echo -ne '\e[2 q' #solid cursors
 
   elif [[ ${KEYMAP} == main ]] ||
        [[ ${KEYMAP} == viins ]] ||
