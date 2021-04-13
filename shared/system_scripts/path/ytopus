@@ -1,0 +1,5 @@
+#!/bin/bash
+# add --yes-playlist to download a whole playlist
+# Source: https://stackoverflow.com/a/64526840
+
+youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format opus $@

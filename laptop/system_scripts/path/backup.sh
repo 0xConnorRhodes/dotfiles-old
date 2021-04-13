@@ -65,7 +65,7 @@ restic forget --keep-daily 7 --keep-weekly 8 --keep-monthly 24 --keep-yearly 10 
 # have the script wait to shutdown if an ffmpeg conversion is running
 while [ -n "$(pgrep ffmpeg)" ]
 do 
-	sleep 60
+	sleep 300
 done
 
 shutdown -h +15
