@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/connor/.local/dotfiles/laptop/system_scripts/nopath/ksnip-unminimize-wrapper.sh
+Exec=ksnip
 Icon=ksnip
 Terminal=false
 StartupNotify=false
@@ -11,21 +11,21 @@ Categories=Utility;
 Actions=Area;LastArea;FullScreen;Window;
 
 [Desktop Action Area]
-Exec=/home/connor/.local/dotfiles/laptop/system_scripts/nopath/ksnip-unminimize-wrapper.sh -r
+Exec=ksnip
 Icon=ksnip
 Name=Capture a rectangular area
 
 [Desktop Action LastArea]
-Exec=/home/connor/.local/dotfiles/laptop/system_scripts/nopath/ksnip-unminimize-wrapper.sh -l
+Exec=ksnip
 Icon=ksnip
 Name=Capture last selected rectangular area
 
 [Desktop Action FullScreen]
-Exec=/home/connor/.local/dotfiles/laptop/system_scripts/nopath/ksnip-unminimize-wrapper.sh -m
+Exec=ksnip
 Icon=ksnip
 Name=Capture a fullscreen
 
 [Desktop Action Window]
-Exec=/home/connor/.local/dotfiles/laptop/system_scripts/nopath/ksnip-unminimize-wrapper.sh -a
+Exec=ksnip
 Icon=ksnip
 Name=Capture the focused window

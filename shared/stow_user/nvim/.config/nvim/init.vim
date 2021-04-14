@@ -99,6 +99,9 @@ set clipboard+=unnamedplus
 "nnoremap gj :normal! j<CR>
 "nnoremap k :normal! gk<CR>
 "nnoremap gk :normal! k<CR>
+
+" keymaps
+let mapleader = ']'
 noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 g0
