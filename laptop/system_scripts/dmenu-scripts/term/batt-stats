@@ -3,5 +3,7 @@
 # Connor Rhodes (connorrhodes.com)
 
 TIMELEFT=$(upower -d | grep -E "time to empty:" | head -n 1 | awk 'BEGIN { FS = ":" } ; { print $2 }')
+STATE=$(upower -d | grep -E "state:" | head -n 1 | awk 'BEGIN { FS = ":" } ; {gsub(/^[ \t]+/, "", $2); print $2 ":"}')
 
-notify-send "$TIMELEFT left"
+notify-send "$STATE
+$TIMELEFT left"
