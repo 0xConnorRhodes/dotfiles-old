@@ -9,7 +9,7 @@ xset r rate 155 75 &
 killall xmodmap
 nohup xmodmap ~/.config/xmodmap/xmodmap
 
-#numlockx &
+numlockx off &
 xinput --set-prop pointer:"HID 1bcf:08a0 Mouse" "libinput Natural Scrolling Enabled" 0
 
 echo 3 > /tmp/libinput_discrete_deltay_multiplier

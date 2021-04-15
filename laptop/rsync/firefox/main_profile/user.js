@@ -10,3 +10,7 @@ user_pref("layout.css.devPixelsPerPx", "1.2");
 user_pref("reader.color_scheme", "sepia");
 user_pref("reader.content_width", 1);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+// theme override to make web forms readable
+user_pref("widget.content.gtk-theme-override", "Adwaita:light");
+user_pref("widget.disable-native-theme-for-content", true);
+user_pref("widget.content.allow-gtk-dark-theme", false);
