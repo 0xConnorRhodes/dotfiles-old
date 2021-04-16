@@ -67,7 +67,7 @@
     visibility: collapse;
   
   }
-  
+
   
   
   #sidebar-box {
@@ -144,3 +144,5 @@ This is the css for disabling the top bar entirely
 #personal-bookmarks .openintabs-menuitem {
   font-size: 18px !important;
 }
+
+#tabbrowser-tabs { visibility: collapse }

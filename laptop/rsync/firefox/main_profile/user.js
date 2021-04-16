@@ -11,6 +11,7 @@ user_pref("reader.color_scheme", "sepia");
 user_pref("reader.content_width", 1);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 // theme override to make web forms readable
-user_pref("widget.content.gtk-theme-override", "Adwaita:light");
+user_pref("widget.content.gtk-theme-override", "Adwaita:light"); //this might need to just be "Adwaita" forums are unclear
 user_pref("widget.disable-native-theme-for-content", true);
 user_pref("widget.content.allow-gtk-dark-theme", false);
+user_pref("toolkit.zoomManager.zoomValues", ".3,.5,.67,.8,.9,1,1.1,1.2,1.33,1.4,1.45,1.5,1.7,2,2.4,3,4,5");
