@@ -1,0 +1,4 @@
+#!/bin/bash
+# enter 9 hours or somethign for the end time. It's fine to specify end time too high as long as you dont add another digit
+
+ffmpeg -ss "$2" -to "$3" -i "$1" -codec copy "$4"
