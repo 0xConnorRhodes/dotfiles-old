@@ -8,6 +8,7 @@ algif_aead
 algif_hash
 algif_skcipher
 amdgpu
+asix
 autofs4
 binfmt_misc
 bluetooth
