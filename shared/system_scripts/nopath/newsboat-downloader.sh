@@ -6,7 +6,7 @@
 # if a music file or pdf, it will download,
 # otherwise it opens link in browser.
 
-/home/connor/.local/dotfiles/shared/system_scripts/nopath/vidwn.sh "$1" &
+nohup /home/connor/.local/dotfiles/shared/system_scripts/nopath/vidwn.sh "$1" >/dev/null 2>&1 &
 
 
 #case "$1" in
