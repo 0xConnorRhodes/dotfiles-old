@@ -112,15 +112,7 @@
             "name": "Fade"
         }
     ],
-    "saved_projectors": [
-        {
-            "alwaysOnTopOverridden": false,
-            "geometry": "AdnQywADAAAAAAMf/////wAABQAAAAEOAAADIAAAAAAAAAT/AAABDQAAAAAAAAAABQAAAAMgAAAAAAAABP8AAAEN",
-            "monitor": -1,
-            "name": "fullscreen_camera",
-            "type": 1
-        }
-    ],
+    "saved_projectors": [],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,

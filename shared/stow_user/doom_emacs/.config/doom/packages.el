@@ -54,3 +54,4 @@
 (package! org-table-wrap-functions :recipe
 	  (:host github :repo "analyticd/org-table-wrap-functions"))
 (package! zoom-window)
+(package! org-autolist) ; auto add new list item

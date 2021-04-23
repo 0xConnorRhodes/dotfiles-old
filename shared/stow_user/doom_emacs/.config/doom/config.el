@@ -36,9 +36,11 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+; ORG MODE
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/dox/org/")
+(add-hook 'org-mode-hook (lambda () (org-autolist-mode))) ; enable auto-list-mode by default
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'. For absolute, absolute.
