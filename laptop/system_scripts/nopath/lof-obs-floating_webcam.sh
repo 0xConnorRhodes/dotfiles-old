@@ -3,7 +3,7 @@
 # desktop, unhide it and move it to the current desktop. Otherwise, hide it and 
 # move it to my unused desktop.
 # 
-# Author: Connor Rhodes (connorrhodes.com)
+# Author: Connor Rhodes (https://connor.engineer)
 
 
 winname="Windowed Projector (Scene) - fullscreen_camera"
@@ -17,7 +17,7 @@ if [[ -z $(xprop -id $winid | grep "HIDDEN") ]]; #triggers if it is not hidden
 then
 
 	if [[ $(wmctrl -l | grep "$winname" | awk '{ print $2 }') == $(wmctrl -d | grep \* | awk '{ print $1 }') ]];
-	# the first command is what workspace is it on, the second is what is the current workspace. if they are equal, this triggers
+	# the first command is what workspace is it on, the second is what is the current workspace. if they are equal, then this triggers.
 	# if it is running, and if it is not hidden and if it is on the current workspace
 
 	then 
