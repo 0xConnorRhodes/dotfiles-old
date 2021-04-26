@@ -53,11 +53,11 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "alsa_output.usb-0a12_Avantree_DG80-00.analog-stereo.monitor"
+            "device_id": "alsa_output.usb-0a12_Avantree_DG80-00.iec958-stereo.monitor"
         },
         "sync": 0,
         "versioned_id": "pulse_output_capture",
-        "volume": 0.42868432402610779
+        "volume": 1.0
     },
     "current_program_scene": "nocam",
     "current_scene": "nocam",
@@ -112,15 +112,7 @@
             "name": "Fade"
         }
     ],
-    "saved_projectors": [
-        {
-            "alwaysOnTopOverridden": false,
-            "geometry": "AdnQywADAAAAAAMY/////wAABPkAAAEOAAADGQAAAAAAAAT4AAABDQAAAAAAAAAABQAAAAMZAAAAAAAABPgAAAEN",
-            "monitor": -1,
-            "name": "fullscreen_camera",
-            "type": 1
-        }
-    ],
+    "saved_projectors": [],
     "scaling_enabled": false,
     "scaling_level": 0,
     "scaling_off_x": 0.0,
