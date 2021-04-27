@@ -382,13 +382,13 @@ follow = mouse
 #   format = ""
 
 
-#[hide-low-urgency] #screencast_setting
-#    msg_urgency = low #screencast_setting
-#    skip_display = yes #screencast_setting
+##[hide-low-urgency] #screencast_setting
+##    msg_urgency = low #screencast_setting
+##    skip_display = yes #screencast_setting
 
-#[hide-normal-urgency] #screencast_setting
-#    msg_urgency = normal #screencast_setting
-#    skip_display = yes #screencast_setting
+##[hide-normal-urgency] #screencast_setting
+##    msg_urgency = normal #screencast_setting
+##    skip_display = yes #screencast_setting
 
 
 # vim: ft=cfg

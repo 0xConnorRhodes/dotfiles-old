@@ -59,8 +59,8 @@
         "versioned_id": "pulse_output_capture",
         "volume": 1.0
     },
-    "current_program_scene": "fullscreen_camera",
-    "current_scene": "fullscreen_camera",
+    "current_program_scene": "nocam",
+    "current_scene": "nocam",
     "current_transition": "Cut",
     "groups": [],
     "modules": {
@@ -132,100 +132,12 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.logitech_webcam": [],
-                "libobs.show_scene_item.logitech_webcam": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "fullscreen_camera",
-            "prev_ver": 436273154,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 1,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "logitech_webcam",
-                        "pos": {
-                            "x": 1920.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": -1.5,
-                            "y": 1.5
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "filters": [
-                {
-                    "balance": 0.5,
-                    "deinterlace_field_order": 0,
-                    "deinterlace_mode": 0,
-                    "enabled": true,
-                    "flags": 0,
-                    "hotkeys": {},
-                    "id": "async_delay_filter",
-                    "mixers": 0,
-                    "monitoring_type": 0,
-                    "muted": false,
-                    "name": "mumble_mic",
-                    "prev_ver": 436273154,
-                    "private_settings": {},
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "settings": {
-                        "delay_ms": 100
-                    },
-                    "sync": 0,
-                    "versioned_id": "async_delay_filter",
-                    "volume": 1.0
-                }
-            ],
-            "flags": 0,
             "hotkeys": {},
-            "id": "v4l2_input",
+            "id": "xshm_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "logitech_webcam",
+            "name": "Screen Capture (XSHM)",
             "prev_ver": 436273154,
             "private_settings": {},
             "push-to-mute": false,
@@ -233,13 +145,10 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device_id": "/dev/video2",
-                "input": 0,
-                "pixelformat": 842093913,
-                "resolution": 83886800
+                "advanced": true
             },
             "sync": 0,
-            "versioned_id": "v4l2_input",
+            "versioned_id": "xshm_input",
             "volume": 1.0
         },
         {
@@ -312,13 +221,40 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "async_delay_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "mumble_mic",
+                    "prev_ver": 436273154,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "delay_ms": 100
+                    },
+                    "sync": 0,
+                    "versioned_id": "async_delay_filter",
+                    "volume": 1.0
+                }
+            ],
             "flags": 0,
             "hotkeys": {},
-            "id": "xshm_input",
+            "id": "v4l2_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Screen Capture (XSHM)",
+            "name": "logitech_webcam",
             "prev_ver": 436273154,
             "private_settings": {},
             "push-to-mute": false,
@@ -326,10 +262,74 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "advanced": true
+                "device_id": "/dev/video2",
+                "input": 0,
+                "pixelformat": 842093913,
+                "resolution": -1
             },
             "sync": 0,
-            "versioned_id": "xshm_input",
+            "versioned_id": "v4l2_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.logitech_webcam": [],
+                "libobs.show_scene_item.logitech_webcam": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "fullscreen_camera",
+            "prev_ver": 436273154,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 1,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "logitech_webcam",
+                        "pos": {
+                            "x": 1920.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": -1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
             "volume": 1.0
         }
     ],
