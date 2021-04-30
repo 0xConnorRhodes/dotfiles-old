@@ -1,5 +1,5 @@
 --local sense=-20
-local sense=-27
+local sense=-35
 local speed = mp.get_property("speed")
 local detect = false
 function f(msg)
