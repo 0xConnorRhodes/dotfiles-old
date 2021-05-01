@@ -22,7 +22,7 @@ sed -i '/^$/d' ocr.txt
 
 rm /home/connor/.local/share/nvim/swap//%home%connor%.cache%tesseract-ocr%ocr.txt.swp
 
-urxvtc -e nvim /home/connor/.cache/tesseract-ocr/ocr.txt
+alacritty -e nvim /home/connor/.cache/tesseract-ocr/ocr.txt
 
 xclip -r -selection clipboard -i /home/connor/.cache/tesseract-ocr/ocr.txt
 xclip -r -selection primary -i /home/connor/.cache/tesseract-ocr/ocr.txt

@@ -1,0 +1,2 @@
+#!/bin/bash
+mpv --speed=1.0 ~/vid/pre-golden_hour_meditation.mp4
