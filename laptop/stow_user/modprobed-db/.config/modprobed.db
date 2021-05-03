@@ -22,6 +22,7 @@ btusb
 cbc
 ccm
 ccp
+cdc_acm
 cdc_ether
 cec
 cfg80211
