@@ -3,7 +3,7 @@
 # Original script by Bladtman242
 # Modified by Connor Rhodes (connorrhodes.com) to: play custom sound, notifications, and output to tiling wm bar
 
-WORK=45
+WORK=60
 PAUSE=10
 INTERACTIVE=true
 MUTE=false
