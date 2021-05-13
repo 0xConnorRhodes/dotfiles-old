@@ -1,5 +1,6 @@
 88XXau
 ac97_bus
+acpi_call
 acpi_cpufreq
 aesni_intel
 af_alg
@@ -89,6 +90,7 @@ md4
 mdio_devres
 mii
 mousedev
+msr
 nf_conntrack
 nf_defrag_ipv4
 nf_defrag_ipv6
